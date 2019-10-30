@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.RootLayoutController">
+   <top>
+      <AnchorPane prefHeight="45.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="270.0" />
+         </BorderPane.margin>
+         <children>
+            <Button layoutX="935.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" text="Help" textAlignment="RIGHT">
+               <font>
+                  <Font name="PT Sans" size="13.0" />
+               </font>
+            </Button>
+            <Button layoutX="849.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" text="Settings" textAlignment="RIGHT">
+               <font>
+                  <Font name="PT Sans" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="800.0" prefWidth="270.0" style="-fx-background-color: #2B3132;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="-45.0" />
+         </BorderPane.margin>
+         <children>
+            <ImageView fitHeight="125.0" fitWidth="250.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Resources/logo.png" />
+               </image>
+            </ImageView>
+            <VBox layoutY="130.0" onMousePressed="#homeMenuPressed" prefHeight="670.0" prefWidth="270.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#homeMenuPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+                     <font>
+                        <Font name="PT Sans Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="1.0" top="1.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#kanbanMenuPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Kanban" textFill="WHITE">
+                     <font>
+                        <Font name="PT Sans Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="1.0" top="1.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="57.0" mnemonicParsing="false" onAction="#deepMenuPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Deep Focus" textFill="WHITE">
+                     <font>
+                        <Font name="PT Sans Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets bottom="1.0" top="1.0" />
+                     </VBox.margin>
+                  </Button>
+               </children></VBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="content" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
