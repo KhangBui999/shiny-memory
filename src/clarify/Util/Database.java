@@ -142,23 +142,21 @@ public class Database {
             rs = dbmd.getTables(null, null, "TASKS", null);
             if (!rs.next()) {
                 ArrayList<String> statementString = new ArrayList<String>();
-                statementString.add("CREATE TABLE IF NOT EXISTS TASKS "
-                        + " (task_id INTEGER PRIMARY KEY AUTOINCREMENT"
-                        + ",taskTitle TEXT NOT NULL"
-                        + ",taskDescription TEXT"
-                        + ",do_date DATE"
-                        + ",due_date DATE"
+                statementString.add("CREATE TABLE TASKS "
+                        + "(task_id INTEGER PRIMARY KEY AUTOINCREMENT"
+                        + ",task_title TEXT NOT NULL"
+                        + ",task_desc TEXT"
+                        + ",do_date TEXT"
+                        + ",due_date TEXT"
                         + ",priority INTEGER NOT NULL"
                         + ");");
-                System.out.println("Task table created");
+                System.out.println("Tasks table created");
                 
                 statementString.add(
-                        "INSERT INTO TASKS (taskTitle, taskDecription, do_date"
-                        + ", due_date, priority)"
+                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority) "
                         + "VALUES ('Complete Wireframes', 'Draw up wireframes for 2605', '29-11-2019 12:00:00.000', '30-11-2019 12:00:00.000', '70');");
                 statementString.add(
-                        "INSERT INTO TASKS (taskTitle, taskDecription, do_date"
-                        + ", due_date, priority)"
+                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority) "
                         + "VALUES ('Write code for database', 'Create tables for Data Capture', '04-11-2019 12:00:00.000','07-11-2019 12:00:00.000','100');");
 
                 for (String thisStatement : statementString) {
@@ -170,7 +168,7 @@ public class Database {
                     }
                 }
             } else {
-                System.out.println("TASKS TABLE already Exists.");
+                System.out.println("Tasks TABLE already Exists.");
             }
         } catch (Exception e) {
             e.printStackTrace();
