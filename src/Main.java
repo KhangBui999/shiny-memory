@@ -1,5 +1,7 @@
+import clarify.Util.Database;
 import clarify.View.RootLayoutController;
 import java.io.IOException;
+import java.sql.SQLException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +13,8 @@ import javafx.stage.Stage;
 public class Main extends Application {
         
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws Exception {
+        loadDatabase();
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("clarify/View/RootLayout.fxml"));
         
@@ -20,6 +23,12 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    
+    public void loadDatabase() throws SQLException{
+        Database.createCategoriesTable();
+        Database.createEntriesTable();
+        Database.createTaskTable();
     }
     
     /**
