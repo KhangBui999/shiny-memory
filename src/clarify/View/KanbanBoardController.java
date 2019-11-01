@@ -14,8 +14,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 /**
- * FXML Controller class
- *
+ * FXML Controller class for KanbanBoard
+ * TODO:
+ * - Figure out what's going to be displayed on task
+ * - Load tasks into listView
+ * - Sort tasks based on date
  * @author khang
  */
 public class KanbanBoardController implements Initializable {
@@ -29,9 +32,4 @@ public class KanbanBoardController implements Initializable {
         // TODO
     }
 
-    @FXML
-    public void handleButton(ActionEvent event) throws IOException {
-        p.changeCenter(event, "DeepFocus.fxml");
-    }
-    
 }

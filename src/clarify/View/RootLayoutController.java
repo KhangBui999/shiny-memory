@@ -21,9 +21,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 /**
- *
+ * Please do not touch this file in any way, shape or form
+ * If you need rootLayout to do something, please message me on Messenger.
+ * (Insert smiley face here)
  * @author khang
  */
+
 public class RootLayoutController{
 
     @FXML
