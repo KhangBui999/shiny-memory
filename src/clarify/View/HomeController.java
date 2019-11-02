@@ -156,7 +156,7 @@ public class HomeController implements Initializable {
         set1.getData().add(new XYChart.Data(top5entriesList.get(4), top5perDay.get(4)));
 
         dailyBarChart.getData().addAll(set1);
-        
+
         st.close();
         conn.close();
 
