@@ -111,10 +111,10 @@ public class Database {
 
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('29-10-2019 12:00:00.000', '29-10-2019 13:00:00.000', 'First entry', '1');");
+                        + "VALUES ('2019-10-29 12:00:00', '2019-10-29 13:00:00', 'First entry', '1');");
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('31-10-2019 10:00:00.000', '31-10-2019 14:00:00.000', 'Another entry', '2');");
+                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Another entry', '2');");
 
                 for (String thisStatement : statementString) {
                     try {
@@ -154,10 +154,10 @@ public class Database {
                 
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority) "
-                        + "VALUES ('Complete Wireframes', 'Draw up wireframes for 2605', '29-11-2019 12:00:00.000', '30-11-2019 12:00:00.000', '70');");
+                        + "VALUES ('Complete Wireframes', 'Draw up wireframes for 2605', '2019-11-29 12:00:00', '2019-11-30 12:00:00', '70');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority) "
-                        + "VALUES ('Write code for database', 'Create tables for Data Capture', '04-11-2019 12:00:00.000','07-11-2019 12:00:00.000','100');");
+                        + "VALUES ('Write code for database', 'Create tables for Data Capture', '2019-11-04 12:00:00','2019-11-07 12:00:00','100');");
 
                 for (String thisStatement : statementString) {
                     try {
