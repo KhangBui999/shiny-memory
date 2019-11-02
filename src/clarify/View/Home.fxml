@@ -7,9 +7,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.HomeController">
    <children>
-      <PieChart fx:id="lifePieChart" layoutX="61.0" layoutY="55.0" title="Pie Chart of My Life" />
+      <PieChart fx:id="lifePieChart" layoutX="61.0" layoutY="55.0" prefHeight="303.0" prefWidth="402.0" title="Pie Chart of My Life" />
+      <BarChart fx:id="dailyBarChart" layoutX="510.0" layoutY="66.0" prefHeight="303.0" prefWidth="402.0" title="Daily Breakdown">
+        <xAxis>
+          <CategoryAxis label="Top 5 Activities" side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Hours per day" side="LEFT" />
+        </yAxis>
+      </BarChart>
    </children>
 </AnchorPane>

@@ -17,7 +17,11 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Side;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 
 /**
  * FXML Controller class
@@ -31,14 +35,23 @@ public class HomeController implements Initializable {
     @FXML
     private PieChart lifePieChart;
 
+    @FXML
+    private BarChart<?, ?> dailyBarChart;
+
+    @FXML
+    private CategoryAxis x;
+
+    @FXML
+    private NumberAxis y;
+
     Database d = new Database();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
         try {
-
             loadPieChart();
+            loadDailyBarChart();
         } catch (SQLException ex) {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -54,20 +67,20 @@ public class HomeController implements Initializable {
         Statement st = conn.createStatement();
 
         String selectQuery = "SELECT entryDescription FROM ENTRIES WHERE ent_id IS NOT NULL;";
-        ResultSet rs = st.executeQuery(selectQuery);
+        ResultSet rs1 = st.executeQuery(selectQuery);
 
-        while (rs.next()) {
-            entriesList.add(rs.getString(1));
+        while (rs1.next()) {
+            entriesList.add(rs1.getString(1));
         }
 
-        System.out.println("Activities entered: "+ entriesList);
+        System.out.println("Activities entered: " + entriesList);
 
         ArrayList<String> durations = new ArrayList<>();
 
         String selectQuerys = "SELECT ((strftime('%s',endTime) - strftime('%s',startTime))/60)FROM ENTRIES WHERE ent_id IS NOT NULL;";
-        ResultSet rss = st.executeQuery(selectQuerys);
-        while (rss.next()) {
-            durations.add(rss.getString(1));
+        ResultSet rs2 = st.executeQuery(selectQuerys);
+        while (rs2.next()) {
+            durations.add(rs2.getString(1));
         }
 
         //System.out.println(durations);
@@ -87,6 +100,16 @@ public class HomeController implements Initializable {
 
         st.close();
         conn.close();
+    }
+
+    public void loadDailyBarChart() {
+        XYChart.Series set1 = new XYChart.Series<>();
+        set1.getData().add(new XYChart.Data("Dancing", 5));
+        set1.getData().add(new XYChart.Data("Singing", 2));
+        set1.getData().add(new XYChart.Data("Mooing", 10));
+
+        dailyBarChart.getData().addAll(set1);
+
     }
 
 }
