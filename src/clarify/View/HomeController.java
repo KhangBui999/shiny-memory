@@ -93,7 +93,10 @@ public class HomeController implements Initializable {
         ObservableList<PieChart.Data> pieChartData
                 = FXCollections.observableArrayList(
                         new PieChart.Data(entriesList.get(0), durationsInt.get(0)),
-                        new PieChart.Data(entriesList.get(1), durationsInt.get(1)));
+                        new PieChart.Data(entriesList.get(1), durationsInt.get(1)),
+                        new PieChart.Data(entriesList.get(2), durationsInt.get(2)),
+                        new PieChart.Data(entriesList.get(3), durationsInt.get(3)),
+                        new PieChart.Data(entriesList.get(4), durationsInt.get(4)));
 
         lifePieChart.setData(pieChartData);
         lifePieChart.setStartAngle(90);
@@ -102,13 +105,60 @@ public class HomeController implements Initializable {
         conn.close();
     }
 
-    public void loadDailyBarChart() {
+    public void loadDailyBarChart() throws SQLException {
+        System.out.println("Loading Daily Breakdown Bar Chart");
+
+        Connection conn = DriverManager.getConnection("jdbc:sqlite:INFS2605.db");
+        Statement st = conn.createStatement();
+
+        //TOP 5 ENTRIES BY TOTAL HOURS
+        ArrayList<String> top5entriesList = new ArrayList<>();
+
+        String selectQuery = "SELECT entryDescription FROM ENTRIES ORDER BY ((strftime('%s',endTime) - strftime('%s',startTime))/60) DESC LIMIT 5;";
+        ResultSet rs3 = st.executeQuery(selectQuery);
+
+        while (rs3.next()) {
+            top5entriesList.add(rs3.getString(1));
+        }
+        //DAYS ELAPSED
+        ArrayList<Integer> daysElapsed = new ArrayList<>();
+
+        String selectQuery3 = "SELECT round(MAX(julianday(endtime)-julianday(startTime))+0.5)FROM ENTRIES;";
+        ResultSet rs4 = st.executeQuery(selectQuery3);
+
+        while (rs4.next()) {
+            daysElapsed.add(rs4.getInt(1));
+        }
+
+        //TOP 5 HOURS TOTAL
+        ArrayList<Integer> top5hours = new ArrayList<>();
+
+        String selectQuery4 = "SELECT ((strftime('%s',endTime) - strftime('%s',startTime))/3600) entryDescription FROM ENTRIES ORDER BY ((strftime('%s',endTime) - strftime('%s',startTime))/60) DESC LIMIT 5;";
+        ResultSet rs5 = st.executeQuery(selectQuery4);
+
+        while (rs5.next()) {
+            top5hours.add(rs5.getInt(1));
+        }
+
+        //TOP 5 HOURS PER DAY
+        ArrayList<Integer> top5perDay = new ArrayList<>();
+
+        for (int f = 0; f < top5hours.size(); f++) {
+            top5perDay.add(top5hours.get(f) / daysElapsed.get(0));
+        }
+        System.out.println(top5perDay);
+
         XYChart.Series set1 = new XYChart.Series<>();
-        set1.getData().add(new XYChart.Data("Dancing", 5));
-        set1.getData().add(new XYChart.Data("Singing", 2));
-        set1.getData().add(new XYChart.Data("Mooing", 10));
+        set1.getData().add(new XYChart.Data(top5entriesList.get(0), top5perDay.get(0)));
+        set1.getData().add(new XYChart.Data(top5entriesList.get(1), top5perDay.get(1)));
+        set1.getData().add(new XYChart.Data(top5entriesList.get(2), top5perDay.get(2)));
+        set1.getData().add(new XYChart.Data(top5entriesList.get(3), top5perDay.get(3)));
+        set1.getData().add(new XYChart.Data(top5entriesList.get(4), top5perDay.get(4)));
 
         dailyBarChart.getData().addAll(set1);
+        
+        st.close();
+        conn.close();
 
     }
 
