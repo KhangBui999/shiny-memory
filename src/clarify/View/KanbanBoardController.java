@@ -5,13 +5,16 @@
  */
 package clarify.View;
 
+import clarify.Model.Task;
 import clarify.Util.PageSwitchHelper;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ListView;
 
 /**
  * FXML Controller class for KanbanBoard
@@ -24,12 +27,18 @@ import javafx.fxml.Initializable;
 public class KanbanBoardController implements Initializable {
 
     PageSwitchHelper p = new PageSwitchHelper();
+
+    @FXML
+    private ListView<Task> todayList;
+    private ObservableList<Task> obsToday;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        todayList.setItems(obsToday);
+        //todayList.setCellFactory(cellData -> cellData.getValue().getTaskTitle());
     }
 
 }
