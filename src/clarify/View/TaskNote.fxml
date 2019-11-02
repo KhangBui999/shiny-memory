@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="210.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.TaskNoteController">
+   <children>
+      <Text boundsType="VISUAL" layoutX="2.8949999809265137" layoutY="13.100000381469727" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="171.18075561523438" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="4.0">
+         <font>
+            <Font name="PT Sans" size="13.0" />
+         </font>
+      </Text>
+      <Button layoutX="175.0" layoutY="2.0" mnemonicParsing="false" text="Edit">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="4.0" layoutY="51.0" mnemonicParsing="false" text="24 Sep">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <Button layoutX="55.0" layoutY="51.0" mnemonicParsing="false" text="          " textAlignment="JUSTIFY">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
