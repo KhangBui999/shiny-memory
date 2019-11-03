@@ -43,6 +43,9 @@ public class TaskNoteController extends ListCell<Task> {
     @FXML
     private Button dateBtn;
     
+    @FXML
+    private Button status;
+    
     @Override
     protected void updateItem(Task task, boolean empty){
         super.updateItem(task, empty);
@@ -67,11 +70,28 @@ public class TaskNoteController extends ListCell<Task> {
             this.taskInfo.setText(task.getString(task.getTitleProperty()));
             String date = convertDate(task.getString(task.getDueDateProperty()));
             this.dateBtn.setText(date);
+            priorityStatus(task.getInt(task.getPriorityProperty()), task);
             setGraphic(this.anchorPane);
             }
         }
     }
     
+    private void priorityStatus(int input, Task task) {
+        this.status.setText("Priority (" +input+")");
+        completeStatus(task);
+        //TODO: Colour change based on priority
+    }
+    
+    private void completeStatus(Task task){
+        int completeId = task.getInt(task.getCompleteProperty());
+        if(completeId == 0) {
+            //Nothing happens :)
+        }
+        else if(completeId == 1) {
+            this.status.setVisible(false);
+        }
+    }
+     
     private String convertDate(String input) {
         String day = input.substring(8,10);
         String month = retrieveMonth(input.substring(5,7));

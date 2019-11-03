@@ -36,7 +36,7 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" text="+ Add Task">
+                  <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="PT Sans Bold" size="14.0" />
                      </font>
@@ -64,7 +64,7 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" text="+ Add Task">
+                  <Button mnemonicParsing="false" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="PT Sans Bold" size="14.0" />
                      </font>
@@ -92,7 +92,7 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" text="+ Add Task">
+                  <Button mnemonicParsing="false" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="PT Sans Bold" size="14.0" />
                      </font>
@@ -115,12 +115,12 @@
                         <Insets bottom="5.0" left="5.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <ListView maxHeight="525.0" maxWidth="220.0" prefHeight="525.0" prefWidth="220.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
+                  <ListView fx:id="compList" maxHeight="525.0" maxWidth="220.0" prefHeight="525.0" prefWidth="220.0" stylesheets="@../Resources/KanbanBoard.css">
                      <VBox.margin>
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" text="+ Add Task">
+                  <Button mnemonicParsing="false" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="PT Sans Bold" size="14.0" />
                      </font>

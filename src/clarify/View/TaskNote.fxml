@@ -19,12 +19,12 @@
             <Font size="9.0" />
          </font>
       </Button>
-      <Button fx:id="dateBtn" layoutX="6.0" layoutY="51.0" mnemonicParsing="false" text="Date" textAlignment="CENTER">
+      <Button fx:id="dateBtn" layoutX="6.0" layoutY="51.0" mnemonicParsing="false" text="31 Mar" textAlignment="CENTER">
          <font>
             <Font size="9.0" />
          </font>
       </Button>
-      <Button fx:id="colour" layoutX="52.0" layoutY="51.0" mnemonicParsing="false" text="          " textAlignment="JUSTIFY">
+      <Button fx:id="status" layoutX="52.0" layoutY="51.0" mnemonicParsing="false" text="Priority (0)" textAlignment="CENTER">
          <font>
             <Font size="9.0" />
          </font>

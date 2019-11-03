@@ -49,6 +49,10 @@ public class KanbanBoardController implements Initializable {
     private ListView<Task> weekList;
     private ObservableList<Task> obsWeek;
     
+    @FXML
+    private ListView<Task> compList;
+    private ObservableList<Task> obsComp;
+    
     /**
      * Initializes the controller class.
      */
@@ -67,15 +71,21 @@ public class KanbanBoardController implements Initializable {
         weekList.setItems(this.obsWeek);
         weekList.setCellFactory(taskListView -> new TaskNoteController());
         
+        getCompTask();
+        compList.setItems(this.obsComp);
+        compList.setCellFactory(taskListView -> new TaskNoteController());
+        
     }
     
     public void getTodayTask(){
+        System.out.println("Today ListView loaded");
         List<Task> task = new ArrayList<>();
         try {
             ResultSet rs = d.getResultSet("SELECT * FROM TASKS"
-                    + " WHERE DATE(due_date) = DATE('now', 'localtime');");
+                    + " WHERE DATE(due_date) = DATE('now', 'localtime')"
+                    + " AND status = 0;");
             while (rs.next()){
-                task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6)));  
+                task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));
             }
         }
         catch (SQLException e){
@@ -85,12 +95,14 @@ public class KanbanBoardController implements Initializable {
     }
     
     public void getTomorrowTask(){
+        System.out.println("Tomorrow ListView loaded");
         List<Task> task = new ArrayList<>();
         try {
             ResultSet rs = d.getResultSet("SELECT * FROM TASKS"
-                    + " WHERE DATE(due_date) = DATE('now', '+1 day', 'localtime');");
+                    + " WHERE DATE(due_date) = DATE('now', '+1 day', 'localtime')"
+                    + " AND status = 0;");
             while (rs.next()){
-                task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6)));  
+                task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));  
             }
         }
         catch (SQLException e){
@@ -100,13 +112,15 @@ public class KanbanBoardController implements Initializable {
     }
     
     public void getWeeklyTask(){
+        System.out.println("Weekly ListView loaded");
         List<Task> task = new ArrayList<>();
         try {
             ResultSet rs = d.getResultSet("SELECT * FROM TASKS"
                     + " WHERE DATE(due_date) > DATE('now', '+1 day', 'localtime')"
-                    + " AND DATE(due_date) < DATE('now', '+7 day', 'localtime');");
+                    + " AND DATE(due_date) < DATE('now', '+7 day', 'localtime')"
+                    + " AND status = 0;");
             while (rs.next()){
-                task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6)));  
+                task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));  
             }
         }
         catch (SQLException e){
@@ -115,6 +129,26 @@ public class KanbanBoardController implements Initializable {
         this.obsWeek = FXCollections.observableArrayList(task);
     }
 
+    public void getCompTask(){
+        System.out.println("Completed ListView loaded");
+        List<Task> task = new ArrayList<>();
+        try {
+            ResultSet rs = d.getResultSet("SELECT * FROM TASKS"
+                    + " WHERE DATE(due_date) = DATE('now', 'localtime')"
+                    + " AND status = 1;");
+            while (rs.next()){
+                task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));
+            }
+        }
+        catch (SQLException e){
+            System.out.println("SQL error");
+        }
+        this.obsComp = FXCollections.observableArrayList(task);
+    }
+    
+    public void handleAddTaskBtn(ActionEvent event) throws IOException {
+        p.changeCenter(event, "/clarify/View/AddTask.fxml");
+    }
 
 }
 

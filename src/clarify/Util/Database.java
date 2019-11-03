@@ -149,15 +149,16 @@ public class Database {
                         + ",do_date TEXT"
                         + ",due_date TEXT"
                         + ",priority INTEGER NOT NULL"
+                        + ",status INTEGER NOT NULL"
                         + ");");
                 System.out.println("Tasks table created");
                 
                 statementString.add(
-                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority) "
-                        + "VALUES ('Complete Wireframes', 'Draw up wireframes for 2605', '2019-11-29 12:00:00', '2019-11-30 12:00:00', '70');");
+                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
+                        + "VALUES ('Complete Wireframes', 'Draw up wireframes for 2605', '2019-11-04 12:00:00', '2019-11-04 12:00:00', '70', '0');");
                 statementString.add(
-                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority) "
-                        + "VALUES ('Write code for database', 'Create tables for Data Capture', '2019-11-04 12:00:00','2019-11-07 12:00:00','100');");
+                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
+                        + "VALUES ('Write code for database', 'Create tables for Data Capture', '2019-11-04 12:00:00','2019-11-04 12:00:00','100', '0');");
 
                 for (String thisStatement : statementString) {
                     try {
