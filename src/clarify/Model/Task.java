@@ -1,5 +1,7 @@
 package clarify.Model;
 
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
@@ -11,24 +13,34 @@ import javafx.beans.property.StringProperty;
 
 public class Task {
     
+    private IntegerProperty taskId;
     private StringProperty title;
     private StringProperty desc;
     private StringProperty doDate;
     private StringProperty dueDate;
-    private StringProperty priority;
+    private IntegerProperty priority;
     
-     public Task() {
-        this("","","","","");
+    public Task() {
     }
 
-    public Task(String title, String desc, String doDate, String dueDate, String priority) {
+    public Task(int taskId, String title, String desc, String doDate, String dueDate, int priority) {
+        this.taskId = new SimpleIntegerProperty(taskId);
         this.title = new SimpleStringProperty(title);
         this.desc= new SimpleStringProperty(desc);
         this.doDate= new SimpleStringProperty(doDate);
         this.dueDate= new SimpleStringProperty(dueDate);
-        this.priority = new SimpleStringProperty(priority);
+        this.priority = new SimpleIntegerProperty(priority);
 
     }
+    
+    public final IntegerProperty getTaskId() {
+        return taskId;
+    }
+    
+    public final void setTasId(IntegerProperty taskId) {
+        this.taskId = taskId;
+    }
+    
     public final StringProperty getTitleProperty() {
         return title;
     }
@@ -60,17 +72,16 @@ public class Task {
     public final void setDueDate(StringProperty dueDate) {
         this.dueDate = dueDate;
     }
-    public final StringProperty getPriorityProperty() {
+    public final IntegerProperty getPriorityProperty() {
         return priority;
     }
 
-    public final void setPriority(StringProperty priority) {
+    public final void setPriority(IntegerProperty priority) {
         this.priority = priority;
     }
     
-    
-
-
-
-    
+    public final String getString(StringProperty value) {
+        return value.getValue();
+    }
+        
 }

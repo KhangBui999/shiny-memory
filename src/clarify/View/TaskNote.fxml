@@ -7,26 +7,26 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="75.0" prefWidth="210.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.TaskNoteController">
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="72.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Text boundsType="VISUAL" layoutX="2.8949999809265137" layoutY="13.100000381469727" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="171.18075561523438" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="4.0">
+      <Text fx:id="taskInfo" boundsType="VISUAL" layoutX="6.766000002622604" layoutY="15.100000381469727" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="158.31402587890625" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="6.0">
          <font>
             <Font name="PT Sans" size="13.0" />
          </font>
       </Text>
-      <Button layoutX="175.0" layoutY="2.0" mnemonicParsing="false" text="Edit">
+      <Button fx:id="edit" layoutX="166.0" layoutY="4.0" mnemonicParsing="false" text="Edit">
          <font>
-            <Font size="10.0" />
+            <Font size="9.0" />
          </font>
       </Button>
-      <Button layoutX="4.0" layoutY="51.0" mnemonicParsing="false" text="24 Sep">
+      <Button fx:id="dateBtn" layoutX="6.0" layoutY="51.0" mnemonicParsing="false" text="Date" textAlignment="CENTER">
          <font>
-            <Font size="10.0" />
+            <Font size="9.0" />
          </font>
       </Button>
-      <Button layoutX="55.0" layoutY="51.0" mnemonicParsing="false" text="          " textAlignment="JUSTIFY">
+      <Button fx:id="colour" layoutX="52.0" layoutY="51.0" mnemonicParsing="false" text="          " textAlignment="JUSTIFY">
          <font>
-            <Font size="10.0" />
+            <Font size="9.0" />
          </font>
       </Button>
    </children>
