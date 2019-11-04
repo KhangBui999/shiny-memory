@@ -56,7 +56,7 @@
                         <Insets top="7.5" />
                      </HBox.margin>
                   </Slider>
-                  <TextField fx:id="priorityField" maxWidth="75.0" minWidth="75.0" prefWidth="75.0">
+                  <TextField fx:id="priorityField" maxWidth="100.0" minWidth="75.0" prefWidth="100.0">
                      <HBox.margin>
                         <Insets left="5.0" top="2.5" />
                      </HBox.margin>
@@ -70,7 +70,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <DatePicker fx:id="doField" editable="false" promptText="Select date">
+                  <DatePicker fx:id="doField" editable="false" promptText="Select date here">
                      <HBox.margin>
                         <Insets top="7.5" />
                      </HBox.margin>
@@ -84,7 +84,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <DatePicker fx:id="dueField" editable="false" promptText="Select date">
+                  <DatePicker fx:id="dueField" editable="false" promptText="Select date here">
                      <HBox.margin>
                         <Insets top="6.5" />
                      </HBox.margin>
@@ -98,11 +98,11 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <ComboBox fx:id="titleField" editable="true" prefWidth="250.0" promptText="Enter or select title">
+                  <TextField fx:id="titleField" prefWidth="250.0" promptText="Type title here">
                      <HBox.margin>
-                        <Insets top="3.5" />
+                        <Insets top="2.5" />
                      </HBox.margin>
-                  </ComboBox>
+                  </TextField>
                   <Label fx:id="titleError" text="Error: Please select title" textFill="RED" visible="false">
                      <HBox.margin>
                         <Insets left="20.0" top="8.5" />
@@ -117,13 +117,13 @@
             <Font name="PT Sans Bold" size="42.0" />
          </font>
       </Label>
-      <Button layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleCreateButton" text="Create Task">
+      <Button layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleCreateButton" text="+ Create Task">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Button layoutX="52.0" layoutY="632.5" mnemonicParsing="false" text="&lt; Back" AnchorPane.leftAnchor="175.0">
+      <Button layoutX="175.0" layoutY="615.0" mnemonicParsing="false" onAction="#handleBackButtonK" text="&lt; Back to Kanban" AnchorPane.leftAnchor="175.0">
          <font>
-            <Font size="18.0" />
+            <Font size="14.0" />
          </font>
       </Button>
       <Text layoutX="273.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the following fields below. This will create a new task.">
@@ -131,5 +131,11 @@
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
+      <Label fx:id="status" alignment="CENTER" layoutX="386.0" layoutY="680.0" text="Label" visible="false" />
+      <Button layoutX="175.0" layoutY="652.0" mnemonicParsing="false" onAction="#handleBackButtonD" text="&lt; Back to Deep Focus">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

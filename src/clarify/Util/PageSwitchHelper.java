@@ -81,4 +81,28 @@ public class PageSwitchHelper {
             e.printStackTrace();
         }
     }
+
+    public void changeToAddTask(ActionEvent event, String page, String prev) throws IOException {
+        System.out.println("Switching center of BorderPane");
+        BorderPane root = null;
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/clarify/View/RootLayout.fxml"));
+            root = (BorderPane) loader.load();
+            
+            RootLayoutController cont = loader.getController();
+            
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+
+            cont.setPage(page);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
 }

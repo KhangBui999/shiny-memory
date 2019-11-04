@@ -5,17 +5,23 @@
  */
 package clarify.View;
 
+import clarify.Util.Database;
+import clarify.Util.PageSwitchHelper;
+import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
+import static java.time.LocalDate.now;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.paint.Color;
 
 /**
  * FXML Controller class
@@ -24,8 +30,12 @@ import javafx.scene.control.TextField;
  */
 public class AddTaskController implements Initializable {
 
+    private PageSwitchHelper p = new PageSwitchHelper();
+    private Database d = new Database();
+    private String prevPage = null;
+    
     @FXML
-    private ComboBox titleField;
+    private TextField titleField;
     @FXML
     private Label titleError;
     
@@ -46,18 +56,60 @@ public class AddTaskController implements Initializable {
     private Slider prioritySlider;
     @FXML
     private TextField priorityField;
+    
+    @FXML
+    private Label status;
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         priorityField.textProperty().bind(prioritySlider.valueProperty().asString());
+        System.out.println(this.prevPage);
+    }
+    
+    public void setPrevPage(String page){
+        this.prevPage = page;
     }
     
     public void handleCreateButton() {
         if(checkError() == true){
-            //todo sql statement
+            String title = titleField.getText();
+            String desc = descArea.getText();
+            String doDate = doField.getValue().toString();
+            String dueDate = dueField.getValue().toString();
+            int priority = (int)prioritySlider.getValue();
+            int status = 0;
+            try {
+                String insert = "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
+                        + "VALUES('" + title
+                        + "','" + desc
+                        + "','" + doDate
+                        + "','" + dueDate
+                        + "','" + priority
+                        + "','" + status + "');";
+                d.insertStatement(insert);
+                System.out.println("SQL statement was inserted successfully");
+                this.status.setText("Task was created successfully. Click 'BACK' to go to previous page.");
+                this.status.setTextFill(Color.web("#00e500"));
+                this.status.setVisible(true);
+            }
+            catch (SQLException e) {
+                this.status.setText("Task failed to create due to a system SQL error. Please try again.");
+                this.status.setTextFill(Color.web("#ff0000"));
+                this.status.setVisible(true);
+                System.out.println("SQL statement could not be inserted successfully");
+            }
         }
+    }
+    
+    public void handleBackButtonK(ActionEvent event) throws IOException {
+        p.changeCenter(event, "/clarify/View/KanbanBoard.fxml");
+    }
+    
+    public void handleBackButtonD(ActionEvent event) throws IOException {
+        p.changeCenter(event, "/clarify/View/DeepFocus.fxml");
     }
     
     //Catches any inappropriate input and warns user
@@ -67,7 +119,7 @@ public class AddTaskController implements Initializable {
         doError.setText("Error: Please select a date");
         dueError.setText("Error: Please select a date");
         
-        if(titleField.getValue() == null || titleField.getValue().equals("")){
+        if(titleField.getText() == null || titleField.getText().equals("")){
             titleError.setVisible(true);
             errorStatus = false;
         } else {
@@ -92,7 +144,15 @@ public class AddTaskController implements Initializable {
             errorStatus = dateCheck();
         }
         
-        return errorStatus;
+        if(errorStatus == false) {
+            status.setText("Task failed to create because of above errors");
+            status.setTextFill(Color.web("#ff0000"));
+            status.setVisible(true);
+            return false;
+        }
+        else{
+            return true;
+        }
     }
     
     //Date checker to ensure do-date is before due-date
@@ -106,7 +166,18 @@ public class AddTaskController implements Initializable {
             doError.setVisible(true);
             dueError.setVisible(true);
             return false;
-        } else {
+        } else if(doDate.isBefore(now()) || dueDate.isBefore(now())){
+            if(doDate.isBefore(now())){
+                doError.setText("Error: Do-date must be before current date");
+                doError.setVisible(true);
+            }
+            if(dueDate.isBefore(now())){
+                dueError.setText("Error: Due-date must be before current date");
+                dueError.setVisible(true);
+            }
+            return false;
+        }
+        else {
             return true;
         }
     }

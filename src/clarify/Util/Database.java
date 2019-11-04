@@ -37,12 +37,14 @@ public class Database {
         java.sql.Statement stmt = null;
         openConnection();
         try {
+            conn.setAutoCommit(false);
             System.out.println("Database opened successfully");
             stmt = conn.createStatement();
             System.out.println("The query was: " + insert_query);
             stmt.executeUpdate(insert_query);
             stmt.close();
             conn.commit();
+            conn.setAutoCommit(true);
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
