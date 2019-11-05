@@ -11,11 +11,14 @@ package clarify.View;
 */
 
 import clarify.Model.Task;
+import clarify.Util.Database;
+import clarify.Util.PageSwitchHelper;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -33,6 +36,8 @@ import javafx.scene.text.Text;
 public class TaskNoteController extends ListCell<Task> {
 
     private FXMLLoader loader;
+    private PageSwitchHelper p = new PageSwitchHelper();
+    private Database d = new Database();
     
     @FXML
     private AnchorPane anchorPane;
@@ -74,6 +79,10 @@ public class TaskNoteController extends ListCell<Task> {
             setGraphic(this.anchorPane);
             }
         }
+    }
+    
+    public void handleEditButton(ActionEvent event) throws IOException {
+        p.changeCenter(event, "/clarify/View/UpdateTask.fxml");
     }
     
     private void priorityStatus(int input, Task task) {
