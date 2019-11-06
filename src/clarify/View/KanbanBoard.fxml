@@ -64,7 +64,7 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
+                  <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="PT Sans Bold" size="14.0" />
                      </font>
@@ -92,7 +92,7 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
+                  <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="PT Sans Bold" size="14.0" />
                      </font>
@@ -120,7 +120,7 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
+                  <Button disable="true" mnemonicParsing="false" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="PT Sans Bold" size="14.0" />
                      </font>

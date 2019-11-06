@@ -83,7 +83,7 @@ public class KanbanBoardController implements Initializable {
         try {
             ResultSet rs = d.getResultSet("SELECT * FROM TASKS"
                     + " WHERE DATE(due_date) = DATE('now', 'localtime')"
-                    + " AND status = 0;");
+                    + " AND status < 2;");
             while (rs.next()){
                 task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));
             }
@@ -100,7 +100,7 @@ public class KanbanBoardController implements Initializable {
         try {
             ResultSet rs = d.getResultSet("SELECT * FROM TASKS"
                     + " WHERE DATE(due_date) = DATE('now', '+1 day', 'localtime')"
-                    + " AND status = 0;");
+                    + " AND status < 2;");
             while (rs.next()){
                 task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));  
             }
@@ -118,7 +118,7 @@ public class KanbanBoardController implements Initializable {
             ResultSet rs = d.getResultSet("SELECT * FROM TASKS"
                     + " WHERE DATE(due_date) > DATE('now', '+1 day', 'localtime')"
                     + " AND DATE(due_date) < DATE('now', '+7 day', 'localtime')"
-                    + " AND status = 0;");
+                    + " AND status < 2;");
             while (rs.next()){
                 task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));  
             }
@@ -135,7 +135,7 @@ public class KanbanBoardController implements Initializable {
         try {
             ResultSet rs = d.getResultSet("SELECT * FROM TASKS"
                     + " WHERE DATE(due_date) = DATE('now', 'localtime')"
-                    + " AND status = 1;");
+                    + " AND status = 2;");
             while (rs.next()){
                 task.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));
             }

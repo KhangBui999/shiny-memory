@@ -32,7 +32,6 @@ public class AddTaskController implements Initializable {
 
     private PageSwitchHelper p = new PageSwitchHelper();
     private Database d = new Database();
-    private String prevPage = null;
     
     @FXML
     private TextField titleField;
@@ -66,11 +65,6 @@ public class AddTaskController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         priorityField.textProperty().bind(prioritySlider.valueProperty().asString());
-        System.out.println(this.prevPage);
-    }
-    
-    public void setPrevPage(String page){
-        this.prevPage = page;
     }
     
     public void handleCreateButton() {

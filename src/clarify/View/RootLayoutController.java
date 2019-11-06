@@ -5,8 +5,10 @@
  */
 package clarify.View;
 
+import clarify.Model.Task;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -70,6 +72,22 @@ public class RootLayoutController{
             root.setCenter(page);
         }
         catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    //This method passes on value from Task in a controller to UpdateTask
+    public void loadTaskUpdate(int id) throws SQLException {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("UpdateTask.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            UpdateTaskController u = loader.getController();
+            u.setId(id);
+            u.retrieveTaskFromDb();
+            root.setCenter(page);
+        }
+        catch(IOException e) {
             e.printStackTrace();
         }
     }

@@ -8,9 +8,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.AddTaskController">
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.UpdateTaskController">
    <children>
-      <GridPane layoutX="103.0" layoutY="258.0" prefHeight="403.0" prefWidth="800.0" vgap="20.0" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="175.0">
+      <GridPane layoutX="175.0" layoutY="175.0" prefHeight="403.0" prefWidth="800.0" vgap="20.0" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="175.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title*">
                <font>
@@ -119,28 +119,28 @@
             <RowConstraints maxHeight="74.6962890625" minHeight="10.0" prefHeight="31.7862548828125" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Label layoutX="315.0" layoutY="40.0" text="Update Existing Task" AnchorPane.topAnchor="40.0">
+      <Label layoutX="325.0" layoutY="40.0" text="Update Existing Task" AnchorPane.topAnchor="40.0">
          <font>
             <Font name="PT Sans Bold" size="42.0" />
          </font>
       </Label>
-      <Button layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleCreateButton" text="Update Task">
+      <Button layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleUpdateButton" text="Update Task">
          <font>
             <Font size="24.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButtonK" text="&lt; Back to Kanban" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButtonK" text="&lt; Back to Kanban" AnchorPane.leftAnchor="14.0">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Text layoutX="267.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please update the following fields. This will update the existing task.">
+      <Text layoutX="277.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please update the following fields. This will update the existing task.">
          <font>
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
       <Label fx:id="status" alignment="CENTER" layoutX="386.0" layoutY="680.0" text="Label" visible="false" />
-      <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleBackButtonD" text="&lt; Back to Deep Focus">
+      <Button layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleBackButtonD" text="&lt; Back to Deep Focus">
          <font>
             <Font size="14.0" />
          </font>

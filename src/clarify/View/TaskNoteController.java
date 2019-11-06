@@ -39,6 +39,8 @@ public class TaskNoteController extends ListCell<Task> {
     private PageSwitchHelper p = new PageSwitchHelper();
     private Database d = new Database();
     
+    private int taskId;
+    
     @FXML
     private AnchorPane anchorPane;
     
@@ -54,7 +56,6 @@ public class TaskNoteController extends ListCell<Task> {
     @Override
     protected void updateItem(Task task, boolean empty){
         super.updateItem(task, empty);
-        
         if (empty || task == null) {
             setText(null);
             setGraphic(null);
@@ -72,6 +73,7 @@ public class TaskNoteController extends ListCell<Task> {
                 }
             
             setText(null);
+            this.taskId = task.getInt(task.getTaskId());
             this.taskInfo.setText(task.getString(task.getTitleProperty()));
             String date = convertDate(task.getString(task.getDueDateProperty()));
             this.dateBtn.setText(date);
@@ -82,7 +84,7 @@ public class TaskNoteController extends ListCell<Task> {
     }
     
     public void handleEditButton(ActionEvent event) throws IOException {
-        p.changeCenter(event, "/clarify/View/UpdateTask.fxml");
+        p.changeToUpdateTask(event, this.taskId);
     }
     
     private void priorityStatus(int input, Task task) {
