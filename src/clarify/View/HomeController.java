@@ -36,7 +36,7 @@ public class HomeController implements Initializable {
     private PieChart lifePieChart;
 
     @FXML
-    private BarChart<?, ?> dailyBarChart;
+    private BarChart<String, Integer> dailyBarChart; 
 
     @FXML
     private CategoryAxis x;
@@ -52,6 +52,7 @@ public class HomeController implements Initializable {
         try {
             loadPieChart();
             loadDailyBarChart();
+            loadWeeklyBarChart();
         } catch (SQLException ex) {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -83,7 +84,6 @@ public class HomeController implements Initializable {
             durations.add(rs2.getString(1));
         }
 
-        //System.out.println(durations);
         ArrayList<Integer> durationsInt = new ArrayList<Integer>(durations.size());
         for (String myInt : durations) {
             durationsInt.add(Integer.valueOf(myInt));
@@ -111,7 +111,7 @@ public class HomeController implements Initializable {
         Connection conn = DriverManager.getConnection("jdbc:sqlite:INFS2605.db");
         Statement st = conn.createStatement();
 
-        //TOP 5 ENTRIES BY TOTAL HOURS
+        //TOP 5 ENTRY NAMES BY TOTAL HOURS
         ArrayList<String> top5entriesList = new ArrayList<>();
 
         String selectQuery = "SELECT entryDescription FROM ENTRIES ORDER BY ((strftime('%s',endTime) - strftime('%s',startTime))/60) DESC LIMIT 5;";
@@ -120,7 +120,7 @@ public class HomeController implements Initializable {
         while (rs3.next()) {
             top5entriesList.add(rs3.getString(1));
         }
-        //DAYS ELAPSED
+        //DAYS ELAPSED TOTAL
         ArrayList<Integer> daysElapsed = new ArrayList<>();
 
         String selectQuery3 = "SELECT round(MAX(julianday(endtime)-julianday(startTime))+0.5)FROM ENTRIES;";
@@ -140,7 +140,7 @@ public class HomeController implements Initializable {
             top5hours.add(rs5.getInt(1));
         }
 
-        //TOP 5 HOURS PER DAY
+        //AVERAGE HOURS PER DAY FOR TOP 5 ENTRIES
         ArrayList<Integer> top5perDay = new ArrayList<>();
 
         for (int f = 0; f < top5hours.size(); f++) {
@@ -148,17 +148,21 @@ public class HomeController implements Initializable {
         }
         System.out.println(top5perDay);
 
+        //ADD TO BAR CHART
         XYChart.Series set1 = new XYChart.Series<>();
-        set1.getData().add(new XYChart.Data(top5entriesList.get(0), top5perDay.get(0)));
-        set1.getData().add(new XYChart.Data(top5entriesList.get(1), top5perDay.get(1)));
-        set1.getData().add(new XYChart.Data(top5entriesList.get(2), top5perDay.get(2)));
-        set1.getData().add(new XYChart.Data(top5entriesList.get(3), top5perDay.get(3)));
-        set1.getData().add(new XYChart.Data(top5entriesList.get(4), top5perDay.get(4)));
+
+        for (int l = 0; l < 5; l++) {
+            set1.getData().add(new XYChart.Data(top5entriesList.get(l), top5perDay.get(l)));
+        }
 
         dailyBarChart.getData().addAll(set1);
 
         st.close();
         conn.close();
+
+    }
+
+    public void loadWeeklyBarChart() {
 
     }
 

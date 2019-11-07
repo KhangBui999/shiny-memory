@@ -37,12 +37,14 @@ public class Database {
         java.sql.Statement stmt = null;
         openConnection();
         try {
+            conn.setAutoCommit(false);
             System.out.println("Database opened successfully");
             stmt = conn.createStatement();
             System.out.println("The query was: " + insert_query);
             stmt.executeUpdate(insert_query);
             stmt.close();
             conn.commit();
+            conn.setAutoCommit(true);
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
@@ -115,6 +117,29 @@ public class Database {
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
                         + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Another entry', '2');");
+                
+                 statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-29 12:00:00', '2019-10-29 13:00:00', 'Study for exam', '1');");
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Work out', '2');");
+
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Watch Lectures', '2');");
+
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-30 10:00:00', '2019-10-30 14:00:00', 'Do homework', '2');");
+
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-30 10:00:00', '2019-10-30 10:50:00', 'Eat', '2');");
+
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 10:01:00', 'Lowest', '2');");
 
                 for (String thisStatement : statementString) {
                     try {
@@ -149,15 +174,16 @@ public class Database {
                         + ",do_date TEXT"
                         + ",due_date TEXT"
                         + ",priority INTEGER NOT NULL"
+                        + ",status INTEGER NOT NULL"
                         + ");");
                 System.out.println("Tasks table created");
                 
                 statementString.add(
-                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority) "
-                        + "VALUES ('Complete Wireframes', 'Draw up wireframes for 2605', '2019-11-29 12:00:00', '2019-11-30 12:00:00', '70');");
+                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
+                        + "VALUES ('Complete Wireframes', 'Draw up wireframes for 2605', '2019-11-04 12:00:00', '2019-11-04 12:00:00', '70', '0');");
                 statementString.add(
-                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority) "
-                        + "VALUES ('Write code for database', 'Create tables for Data Capture', '2019-11-04 12:00:00','2019-11-07 12:00:00','100');");
+                        "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
+                        + "VALUES ('Write code for database', 'Create tables for Data Capture', '2019-11-04 12:00:00','2019-11-04 12:00:00','100', '0');");
 
                 for (String thisStatement : statementString) {
                     try {
