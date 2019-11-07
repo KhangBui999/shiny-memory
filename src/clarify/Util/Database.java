@@ -117,6 +117,29 @@ public class Database {
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
                         + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Another entry', '2');");
+                
+                 statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-29 12:00:00', '2019-10-29 13:00:00', 'Study for exam', '1');");
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Work out', '2');");
+
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Watch Lectures', '2');");
+
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-30 10:00:00', '2019-10-30 14:00:00', 'Do homework', '2');");
+
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-30 10:00:00', '2019-10-30 10:50:00', 'Eat', '2');");
+
+                statementString.add(
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
+                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 10:01:00', 'Lowest', '2');");
 
                 for (String thisStatement : statementString) {
                     try {
