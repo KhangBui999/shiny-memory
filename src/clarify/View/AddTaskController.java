@@ -16,11 +16,13 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
 /**
@@ -59,6 +61,12 @@ public class AddTaskController implements Initializable {
     @FXML
     private Label status;
     
+    @FXML
+    private GridPane gridPane;
+    
+    @FXML
+    private Button btn;
+    
     /**
      * Initializes the controller class.
      */
@@ -86,6 +94,8 @@ public class AddTaskController implements Initializable {
                 d.insertStatement(insert);
                 System.out.println("SQL statement was inserted successfully");
                 this.status.setText("Task was created successfully. Click 'BACK' to go to previous page.");
+                this.gridPane.setVisible(false);
+                this.btn.setVisible(false);
                 this.status.setTextFill(Color.web("#00e500"));
                 this.status.setVisible(true);
             }

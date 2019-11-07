@@ -87,6 +87,10 @@ public class TaskNoteController extends ListCell<Task> {
         p.changeToUpdateTask(event, this.taskId);
     }
     
+    public void handleDeleteButton(ActionEvent event) throws IOException {
+        p.changeToDeleteTask(event, this.taskId);
+    }
+    
     private void priorityStatus(int input, Task task) {
         this.status.setText("Priority (" +input+")");
         completeStatus(task);

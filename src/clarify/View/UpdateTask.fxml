@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.UpdateTaskController">
    <children>
-      <GridPane layoutX="175.0" layoutY="175.0" prefHeight="403.0" prefWidth="800.0" vgap="20.0" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="175.0">
+      <GridPane fx:id="gridPane" layoutX="175.0" layoutY="175.0" prefHeight="403.0" prefWidth="800.0" vgap="20.0" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="175.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title*">
                <font>
@@ -124,7 +124,7 @@
             <Font name="PT Sans Bold" size="42.0" />
          </font>
       </Label>
-      <Button layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleUpdateButton" text="Update Task">
+      <Button fx:id="btn" layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleUpdateButton" text="Update Task">
          <font>
             <Font size="24.0" />
          </font>

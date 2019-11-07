@@ -17,12 +17,14 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 
 /**
@@ -65,6 +67,12 @@ public class UpdateTaskController implements Initializable {
     
     @FXML
     private Label status;
+    
+    @FXML
+    private GridPane gridPane;
+    
+    @FXML
+    private Button btn;
 
     public int getId() {
         return this.id;
@@ -89,7 +97,7 @@ public class UpdateTaskController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         priorityField.textProperty().bind(prioritySlider.valueProperty().asString());
-        compStatus.getItems().addAll("Incomplete", "Started", "Completed");
+        compStatus.getItems().addAll("Not Started", "Doing", "Done");
         //Don't touch this lmao
     }    
     
@@ -132,6 +140,8 @@ public class UpdateTaskController implements Initializable {
                         + "WHERE task_id = "+getId()+";";
                 d.insertStatement(insert);
                 System.out.println("SQL statement was updated successfully");
+                this.gridPane.setVisible(false);
+                this.btn.setVisible(false);
                 this.status.setText("Task was updated successfully. Click 'BACK' to go to previous page.");
                 this.status.setTextFill(Color.web("#00e500"));
                 this.status.setVisible(true);
@@ -147,11 +157,11 @@ public class UpdateTaskController implements Initializable {
     
     public int convertValue(String value) {
         switch (value) {
-            case "Incomplete":
+            case "Not Started":
                 return 0;
-            case "Started":
+            case "Doing":
                 return 1;
-            case "Completed":
+            case "Done":
                 return 2;
             default:
                 return 0;

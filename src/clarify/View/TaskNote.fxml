@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -14,7 +15,7 @@
             <Font name="PT Sans" size="13.0" />
          </font>
       </Text>
-      <Button fx:id="edit" layoutX="166.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleEditButton" text="Edit">
+      <Button layoutX="166.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleEditButton" text="Edit">
          <font>
             <Font size="9.0" />
          </font>
@@ -24,7 +25,17 @@
             <Font size="9.0" />
          </font>
       </Button>
-      <Button fx:id="status" layoutX="52.0" layoutY="51.0" mnemonicParsing="false" text="Priority (0)" textAlignment="CENTER">
+      <Button fx:id="status" layoutX="52.0" layoutY="51.0" mnemonicParsing="false" text="Priority (100)" textAlignment="CENTER">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+      <Button layoutX="169.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Del">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+      <Button fx:id="compStatus" layoutX="135.0" layoutY="51.0" mnemonicParsing="false" text="Status" textAlignment="RIGHT" AnchorPane.rightAnchor="4.0">
          <font>
             <Font size="9.0" />
          </font>

@@ -23,46 +23,46 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 /**
- * Please do not touch this file in any way, shape or form
- * If you need rootLayout to do something, please message me on Messenger.
- * (Insert smiley face here)
+ * Please do not touch this file in any way, shape or form If you need
+ * rootLayout to do something, please message me on Messenger. (Insert smiley
+ * face here)
+ *
  * @author khang
  */
-
-public class RootLayoutController{
+public class RootLayoutController {
 
     @FXML
     private BorderPane root;
-    
+
     @FXML
     private AnchorPane content;
-    
+
     private String page;
-    
+
     //Initializes the page to load Home.fxml in BorderPane center
     public void initialize() {
         loadPage("Home.fxml");
     }
-    
-    public void setPage(String current){
+
+    public void setPage(String current) {
         this.page = current;
-    }  
+    }
 
     @FXML
     private void homeMenuPressed(ActionEvent event) {
         loadPage("Home.fxml");
     }
-    
+
     @FXML
     private void kanbanMenuPressed(ActionEvent event) {
         loadPage("KanbanBoard.fxml");
     }
-    
+
     @FXML
     private void deepMenuPressed(ActionEvent event) {
         loadPage("DeepFocus.fxml");
     }
-    
+
     //This method changes the BorderPane center to specified page location
     public void loadPage(String pageLocation) {
         try {
@@ -70,12 +70,11 @@ public class RootLayoutController{
             loader.setLocation(getClass().getResource(pageLocation));
             AnchorPane page = (AnchorPane) loader.load();
             root.setCenter(page);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
+
     //This method passes on value from Task in a controller to UpdateTask
     public void loadTaskUpdate(int id) throws SQLException {
         try {
@@ -86,11 +85,22 @@ public class RootLayoutController{
             u.setId(id);
             u.retrieveTaskFromDb();
             root.setCenter(page);
-        }
-        catch(IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
-    
+
+    public void loadTaskDelete(int id) throws SQLException {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("DeleteTask.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            DeleteTaskController d = loader.getController();
+            d.setId(id);
+            root.setCenter(page);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

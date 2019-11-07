@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.AddTaskController">
    <children>
-      <GridPane layoutX="103.0" layoutY="258.0" prefHeight="368.0" prefWidth="800.0" vgap="20.0" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="175.0">
+      <GridPane fx:id="gridPane" layoutX="103.0" layoutY="258.0" prefHeight="368.0" prefWidth="800.0" vgap="20.0" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="175.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.44561767578125" minWidth="10.0" prefWidth="220.7991943359375" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="579.2008056640625" minWidth="10.0" prefWidth="579.2008056640625" />
@@ -117,7 +117,7 @@
             <Font name="PT Sans Bold" size="42.0" />
          </font>
       </Label>
-      <Button layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleCreateButton" text="+ Create Task">
+      <Button fx:id="btn" layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleCreateButton" text="+ Create Task">
          <font>
             <Font size="24.0" />
          </font></Button>
