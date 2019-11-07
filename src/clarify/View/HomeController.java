@@ -100,6 +100,8 @@ public class HomeController implements Initializable {
                         new PieChart.Data(entriesList.get(1), durationsInt.get(1)),
                         new PieChart.Data(entriesList.get(2), durationsInt.get(2)),
                         new PieChart.Data(entriesList.get(3), durationsInt.get(3)),
+                        new PieChart.Data(entriesList.get(3), durationsInt.get(3)),
+                        new PieChart.Data(entriesList.get(3), durationsInt.get(3)),
                         new PieChart.Data(entriesList.get(4), durationsInt.get(4)));
 
         lifePieChart.setData(pieChartData);
