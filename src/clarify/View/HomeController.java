@@ -1,6 +1,8 @@
 package clarify.View;
 
 import clarify.Util.Database;
+import clarify.Util.PageSwitchHelper;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,6 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Side;
@@ -36,7 +39,7 @@ public class HomeController implements Initializable {
     private PieChart lifePieChart;
 
     @FXML
-    private BarChart<String, Integer> dailyBarChart; 
+    private BarChart<String, Integer> dailyBarChart;
 
     @FXML
     private CategoryAxis x;
@@ -45,6 +48,7 @@ public class HomeController implements Initializable {
     private NumberAxis y;
 
     Database d = new Database();
+    PageSwitchHelper p = new PageSwitchHelper();
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -164,6 +168,10 @@ public class HomeController implements Initializable {
 
     public void loadWeeklyBarChart() {
 
+    }
+
+    public void handleAddEntryBtn(ActionEvent event) throws IOException {
+        p.changeCenter(event, "/clarify/View/AddEntry.fxml");
     }
 
 }
