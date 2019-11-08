@@ -39,6 +39,12 @@ public class HomeController implements Initializable {
     private PieChart lifePieChart;
 
     @FXML
+    private ArrayList<String> category;
+
+    @FXML
+    private ArrayList<Integer> duration;
+
+    @FXML
     private BarChart<String, Integer> dailyBarChart;
 
     @FXML
@@ -71,44 +77,35 @@ public class HomeController implements Initializable {
         Connection conn = DriverManager.getConnection("jdbc:sqlite:INFS2605.db");
         Statement st = conn.createStatement();
 
-        String selectQuery = "SELECT entryDescription FROM ENTRIES WHERE ent_id IS NOT NULL;";
-        ResultSet rs1 = st.executeQuery(selectQuery);
+//        String selectQuery = "SELECT entryDescription FROM ENTRIES WHERE ent_id IS NOT NULL;";
+//        ResultSet rs1 = st.executeQuery(selectQuery);
+//
+//        while (rs1.next()) {
+//            entriesList.add(rs1.getString(1));
+//        }
+//        System.out.println("Activities entered: " + entriesList);
+//        ArrayList<String> durations = new ArrayList<>();
+        String selectQuery = "SELECT entryDescription, ((strftime('%s',endTime) - strftime('%s',startTime))/60)FROM ENTRIES WHERE ent_id IS NOT NULL;";
+        ResultSet rs = st.executeQuery(selectQuery);
 
-        while (rs1.next()) {
-            entriesList.add(rs1.getString(1));
+        ObservableList<PieChart.Data> lifePieChartData
+                = FXCollections.observableArrayList();
+
+        while (rs.next()) {
+            PieChart.Data pieChartData = new PieChart.Data(rs.getString(1), rs.getInt(2));
+
+            lifePieChartData.add(pieChartData);
+
+            lifePieChart.setData(lifePieChartData);
+
         }
+//
+//        ArrayList<Integer> durationsInt = new ArrayList<Integer>(durations.size());
+//        for (String myInt : durations) {
+//            durationsInt.add(Integer.valueOf(myInt));
+//        }
+//        System.out.println("Time spent on each activity (minutes): " + durationsInt);
 
-        System.out.println("Activities entered: " + entriesList);
-
-        ArrayList<String> durations = new ArrayList<>();
-
-        String selectQuerys = "SELECT ((strftime('%s',endTime) - strftime('%s',startTime))/60)FROM ENTRIES WHERE ent_id IS NOT NULL;";
-        ResultSet rs2 = st.executeQuery(selectQuerys);
-        while (rs2.next()) {
-            durations.add(rs2.getString(1));
-        }
-
-        ArrayList<Integer> durationsInt = new ArrayList<Integer>(durations.size());
-        for (String myInt : durations) {
-            durationsInt.add(Integer.valueOf(myInt));
-        }
-        System.out.println("Time spent on each activity (minutes): " + durationsInt);
-
-        ObservableList<PieChart.Data> pieChartData
-                = FXCollections.observableArrayList(
-                        new PieChart.Data(entriesList.get(0), durationsInt.get(0)),
-                        new PieChart.Data(entriesList.get(1), durationsInt.get(1)),
-                        new PieChart.Data(entriesList.get(2), durationsInt.get(2)),
-                        new PieChart.Data(entriesList.get(3), durationsInt.get(3)),
-                        new PieChart.Data(entriesList.get(3), durationsInt.get(3)),
-                        new PieChart.Data(entriesList.get(3), durationsInt.get(3)),
-                        new PieChart.Data(entriesList.get(4), durationsInt.get(4)));
-
-        lifePieChart.setData(pieChartData);
-        lifePieChart.setStartAngle(90);
-
-        st.close();
-        conn.close();
     }
 
     public void loadDailyBarChart() throws SQLException {
