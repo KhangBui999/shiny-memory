@@ -42,6 +42,9 @@ public class AddEntryController implements Initializable {
 
     @FXML
     private Label entryError;
+    
+    @FXML
+    private TextField timeField;
 
     @FXML
     private DatePicker startField;
@@ -76,7 +79,7 @@ public class AddEntryController implements Initializable {
         if (checkError() == true) {
             String entDesc = entryField.getText();
             String startTime = startField.getValue().toString();
-            String endTime = endField.getValue().toString();
+            String endTime = endField.getValue().toString(); 
             int category = (int) categorySlider.getValue();
 
             try {

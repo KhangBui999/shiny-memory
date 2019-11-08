@@ -162,7 +162,6 @@ public class HomeController implements Initializable {
 
         st.close();
         conn.close();
-
     }
 
     public void loadWeeklyBarChart() {
