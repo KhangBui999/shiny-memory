@@ -20,12 +20,20 @@
       </BarChart>
       <LineChart fx:id="trendsLineChart" layoutX="117.0" layoutY="372.0" prefHeight="304.0" prefWidth="404.0" title="Weekly Trends">
         <xAxis>
-          <CategoryAxis label="Activity" side="BOTTOM" fx:id="xTrends" />
+          <CategoryAxis label="Weeks" side="BOTTOM" fx:id="xTrends" />
         </xAxis>
         <yAxis>
-          <NumberAxis fx:id="yTrends" label="Hours per week" side="LEFT" />
+          <NumberAxis fx:id="yTrends" label="\% Hours per week on activity " side="LEFT" />
         </yAxis>
       </LineChart>
-      <Button layoutX="718.0" layoutY="497.0" mnemonicParsing="false" onAction="#handleAddEntryBtn" text="Add Entry" />
+      <Button layoutX="904.0" layoutY="282.0" mnemonicParsing="false" onAction="#handleAddEntryBtn" text="Add Entry" />
+      <BarChart fx:id="weeklyBarChart" layoutX="534.0" layoutY="372.0" prefHeight="304.0" prefWidth="355.0" title="Weekly Breakdown">
+        <xAxis>
+          <CategoryAxis label="Top 5 activities" side="BOTTOM" fx:id="xWeekly" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="yWeekly" label="Hours per week" side="LEFT" />
+        </yAxis>
+      </BarChart>
    </children>
 </AnchorPane>
