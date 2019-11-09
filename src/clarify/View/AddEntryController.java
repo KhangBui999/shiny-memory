@@ -168,11 +168,11 @@ public class AddEntryController implements Initializable {
             return false;
         } else if (startDate.isBefore(now()) || endDate.isBefore(now())) {
             if (startDate.isBefore(now())) {
-                startError.setText("Error: Start date must be before current date");
+                startError.setText("Error: Start date must be AFTER current date");
                 startError.setVisible(true);
             }
             if (endDate.isBefore(now())) {
-                endError.setText("Error: End date must be before current date");
+                endError.setText("Error: End date must be AFTER current date");
                 endError.setVisible(true);
             }
             return false;

@@ -18,12 +18,12 @@
           <NumberAxis fx:id="y" label="Hours per day" side="LEFT" />
         </yAxis>
       </BarChart>
-      <LineChart layoutX="117.0" layoutY="372.0" prefHeight="304.0" prefWidth="404.0">
+      <LineChart fx:id="trendsLineChart" layoutX="117.0" layoutY="372.0" prefHeight="304.0" prefWidth="404.0" title="Weekly Trends">
         <xAxis>
-          <CategoryAxis side="BOTTOM" />
+          <CategoryAxis label="Activity" side="BOTTOM" fx:id="xTrends" />
         </xAxis>
         <yAxis>
-          <NumberAxis side="LEFT" />
+          <NumberAxis fx:id="yTrends" label="Hours per week" side="LEFT" />
         </yAxis>
       </LineChart>
       <Button layoutX="718.0" layoutY="497.0" mnemonicParsing="false" onAction="#handleAddEntryBtn" text="Add Entry" />

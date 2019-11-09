@@ -22,6 +22,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Side;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
@@ -53,6 +54,15 @@ public class HomeController implements Initializable {
     @FXML
     private NumberAxis y;
 
+    @FXML
+    private CategoryAxis xTrends;
+
+    @FXML
+    private NumberAxis yTrends;
+
+    @FXML
+    private LineChart<?, ?> trendsLineChart;
+
     Database d = new Database();
     PageSwitchHelper p = new PageSwitchHelper();
 
@@ -63,6 +73,7 @@ public class HomeController implements Initializable {
             loadPieChart();
             loadDailyBarChart();
             loadWeeklyBarChart();
+            loadLineChart();
         } catch (SQLException ex) {
             Logger.getLogger(HomeController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -165,6 +176,18 @@ public class HomeController implements Initializable {
     }
 
     public void loadWeeklyBarChart() {
+
+    }
+
+    public void loadLineChart() {
+
+        XYChart.Series series1 = new XYChart.Series(); //Make a new XYChart object
+//Add Data
+        series1.getData().add(new XYChart.Data("1", 23));
+        series1.getData().add(new XYChart.Data("2", 14));
+        series1.getData().add(new XYChart.Data("3", 15));
+
+        trendsLineChart.getData().addAll(series1);
 
     }
 
