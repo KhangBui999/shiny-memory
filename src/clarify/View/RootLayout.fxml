@@ -12,7 +12,7 @@
 
 <BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.RootLayoutController">
    <top>
-      <AnchorPane prefHeight="45.0" prefWidth="1070.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="45.0" prefWidth="1070.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets left="270.0" />
          </BorderPane.margin>
@@ -43,7 +43,7 @@
             </ImageView>
             <VBox layoutY="130.0" onMousePressed="#homeMenuPressed" prefHeight="670.0" prefWidth="270.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#homeMenuPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+                  <Button mnemonicParsing="false" onAction="#homeMenuPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Dashboard" textFill="WHITE">
                      <font>
                         <Font name="PT Sans Bold" size="24.0" />
                      </font>
@@ -51,7 +51,12 @@
                         <Insets bottom="1.0" top="1.0" />
                      </VBox.margin>
                   </Button>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#kanbanMenuPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Kanban" textFill="WHITE">
+                  <Button layoutX="10.0" layoutY="11.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Entry Logging" textFill="WHITE">
+                     <font>
+                        <Font name="PT Sans Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#kanbanMenuPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Kanban Board" textFill="WHITE">
                      <font>
                         <Font name="PT Sans Bold" size="24.0" />
                      </font>
