@@ -62,7 +62,7 @@ public class KanbanBoardController implements Initializable {
         getTodayTask();
         todayList.setItems(this.obsToday);
         todayList.setCellFactory(taskListView -> new TaskNoteController());
-        
+               
         getTomorrowTask();
         tmrList.setItems(this.obsTmr);
         tmrList.setCellFactory(taskListView -> new TaskNoteController());
