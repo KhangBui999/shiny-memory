@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="72.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text fx:id="taskInfo" boundsType="VISUAL" layoutX="6.766000002622604" layoutY="15.100000381469727" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="158.31402587890625" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="6.0">
+         <font>
+            <Font name="PT Sans" size="13.0" />
+         </font>
+      </Text>
+      <Button layoutX="166.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleEditButton" text="Edit">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+      <Button fx:id="dateBtn" layoutX="6.0" layoutY="51.0" mnemonicParsing="false" text="31 Mar" textAlignment="CENTER">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+      <Button fx:id="status" layoutX="52.0" layoutY="51.0" mnemonicParsing="false" text="Priority (100)" textAlignment="CENTER">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+      <Button layoutX="169.0" layoutY="23.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="Del">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+      <Button fx:id="compStatus" layoutX="135.0" layoutY="51.0" mnemonicParsing="false" text="Status" textAlignment="RIGHT" AnchorPane.rightAnchor="4.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
