@@ -19,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.geometry.Side;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.CategoryAxis;
+import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
@@ -45,6 +46,9 @@ public class HomeController implements Initializable {
     private NumberAxis y;
 
     Database d = new Database();
+    
+    @FXML
+    private LineChart<Integer, String> weeklyTrend;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -59,6 +63,7 @@ public class HomeController implements Initializable {
 
     }
 
+    //Loads Pie Chart
     public void loadPieChart() throws SQLException {
         System.out.println("Loading Pie Chart of My Life");
 
@@ -105,6 +110,7 @@ public class HomeController implements Initializable {
         conn.close();
     }
 
+    //Loads Daily Breakdown
     public void loadDailyBarChart() throws SQLException {
         System.out.println("Loading Daily Breakdown Bar Chart");
 
@@ -156,14 +162,17 @@ public class HomeController implements Initializable {
         }
 
         dailyBarChart.getData().addAll(set1);
-
+        dailyBarChart.setLegendVisible(false);
         st.close();
         conn.close();
-
     }
 
     public void loadWeeklyBarChart() {
-
+        //TODO: Just mimic the daily bar chart to match this
+    }
+    
+    public void loadWeeklyTrends() {
+        //TODO
     }
 
 }
