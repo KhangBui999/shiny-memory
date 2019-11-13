@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.HomeController">
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.HomeController">
    <children>
       <PieChart fx:id="lifePieChart" layoutX="75.0" layoutY="120.0" prefHeight="303.0" prefWidth="402.0" style="-fx-border-color: black; -fx-border-radius: 10;" title="Pie Chart of My Life" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="100.0" />
       <BarChart fx:id="dailyBarChart" layoutX="495.0" layoutY="120.0" prefHeight="303.0" prefWidth="402.0" style="-fx-border-color: black; -fx-border-radius: 10;" title="Daily Breakdown" AnchorPane.leftAnchor="495.0" AnchorPane.topAnchor="100.0">
