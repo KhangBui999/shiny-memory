@@ -53,9 +53,8 @@ public class Database {
     }
 
     //This method creates the Categories table
-    public static void createCategoriesTable() {
+    public void createCategoriesTable() {
         PreparedStatement createLoginTable = null;
-        PreparedStatement insertDemoData = null;
         ResultSet rs = null;
         openConnection();
         try {
@@ -67,21 +66,19 @@ public class Database {
                 String ps1 = "CREATE TABLE Categories "
                         + "(cat_id INTEGER PRIMARY KEY AUTOINCREMENT, "
                         + "category_name TEXT NOT NULL, "
-                        + "colour TEXT);";
-                createLoginTable = conn.prepareStatement(ps1);
-                createLoginTable.execute();
+                        + "colour TEXT NOT NULL);";
                 System.out.println("Categories table created");
                 
                 /* Inserts demo data - NOTE: We use rgb code as the data for colour
                 #ffffff = White, #2196F3 = Light Blue */
                 ArrayList<String> stList = new ArrayList<String>();
-                stList.add("INSERT INTO Categories(cat_id, category_name) "
-                    + "VALUES ('1', 'Home')");
+                stList.add(ps1);
+                stList.add("INSERT INTO Categories(cat_id, category_name, colour) "
+                    + "VALUES ('1', 'Home', '#000000');");
                 stList.add("INSERT INTO Categories(cat_id, category_name, colour) "
                     + "VALUES ('2', 'Work', '#2196F3');");
                 for (String st: stList){
-                    insertDemoData = conn.prepareStatement(st);
-                    insertDemoData.execute();
+                    insertStatement(st);
                 }
             } else {
                 System.out.println("Categories table exists");
@@ -91,8 +88,7 @@ public class Database {
         }
     }
 
-    public static void createEntriesTable() {
-        PreparedStatement tableImplement = null;
+    public void createEntriesTable() {
         ResultSet rs = null;
         openConnection();
         try {
@@ -143,8 +139,7 @@ public class Database {
 
                 for (String thisStatement : statementString) {
                     try {
-                        tableImplement = conn.prepareStatement(thisStatement);
-                        tableImplement.execute();
+                        insertStatement(thisStatement);
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
@@ -157,8 +152,7 @@ public class Database {
         }
     }
 
-    public static void createTaskTable() {
-        PreparedStatement tableImplement = null;
+    public void createTaskTable() {
         ResultSet rs = null;
         openConnection();
         try {
@@ -187,8 +181,7 @@ public class Database {
 
                 for (String thisStatement : statementString) {
                     try {
-                        tableImplement = conn.prepareStatement(thisStatement);
-                        tableImplement.execute();
+                        insertStatement(thisStatement);
                     } catch (SQLException e) {
 
                     }

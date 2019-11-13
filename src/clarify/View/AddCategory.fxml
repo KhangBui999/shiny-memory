@@ -24,7 +24,7 @@
             </Text>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ColorPicker>
+                  <ColorPicker fx:id="colourField">
                      <HBox.margin>
                         <Insets top="15.0" />
                      </HBox.margin>
@@ -38,14 +38,14 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <TextField fx:id="titleField" prefWidth="250.0" promptText="Type category name">
+                  <TextField fx:id="nameField" prefWidth="250.0" promptText="Type category name">
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
                   </TextField>
-                  <Label fx:id="titleError" text="Error: Please select title" textFill="RED" visible="false">
+                  <Label fx:id="nameError" text="Error: Please select title" textFill="RED" visible="false">
                      <HBox.margin>
-                        <Insets left="20.0" top="8.5" />
+                        <Insets left="20.0" top="25.0" />
                      </HBox.margin>
                   </Label>
                </children>
@@ -65,7 +65,7 @@
             <Font name="PT Sans Bold" size="42.0" />
          </font>
       </Label>
-      <Button fx:id="btn" layoutX="387.0" layoutY="499.0" mnemonicParsing="false" text="+ Create Category">
+      <Button fx:id="btn" layoutX="387.0" layoutY="499.0" mnemonicParsing="false" onAction="#handleCreateButton" text="+ Create Category">
          <font>
             <Font size="24.0" />
          </font>
@@ -80,6 +80,11 @@
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
-      <Label fx:id="status" alignment="CENTER" layoutX="386.0" layoutY="680.0" text="Label" visible="false" />
+      <Label fx:id="success" layoutX="267.0" layoutY="440.0" text="New Category Has Been Created!" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.topAnchor="330.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" layoutX="395.0" layoutY="554.0" text="Please check following errors above!" textFill="RED" visible="false" AnchorPane.bottomAnchor="172.0" AnchorPane.topAnchor="554.0" />
    </children>
 </AnchorPane>

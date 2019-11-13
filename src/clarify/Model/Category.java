@@ -6,6 +6,8 @@
 package clarify.Model;
 
 import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 /**
@@ -21,10 +23,10 @@ public class Category {
     public Category() {
     }
     
-    public Category(IntegerProperty id, StringProperty name, StringProperty colourRGB) {
-        this.id = id;
-        this.name = name;
-        this.colourRGB = colourRGB;
+    public Category(int id, String name, String colourRGB) {
+        this.id = new SimpleIntegerProperty(id);
+        this.name = new SimpleStringProperty(name);
+        this.colourRGB = new SimpleStringProperty(colourRGB);
     }
     
     public IntegerProperty getId() {

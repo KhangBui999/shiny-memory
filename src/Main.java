@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    Database d = new Database();
+    
     @Override
     public void start(Stage stage) throws Exception {
         loadDatabase();
@@ -28,9 +30,9 @@ public class Main extends Application {
     }
 
     public void loadDatabase() throws SQLException {
-        Database.createCategoriesTable();
-        Database.createEntriesTable();
-        Database.createTaskTable();
+        d.createCategoriesTable();
+        d.createEntriesTable();
+        d.createTaskTable();
     }
 
     /**
