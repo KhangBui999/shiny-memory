@@ -20,7 +20,7 @@
             <Font name="Avenir Black" size="32.0" />
          </font>
       </Label>
-      <Text layoutX="56.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Free creative commons music by www.bensound.com">
+      <Text layoutX="56.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attribution Creative Commons music by www.bensound.com">
          <font>
             <Font name="Avenir Roman" size="14.0" />
          </font>
