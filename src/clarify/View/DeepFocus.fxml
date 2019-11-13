@@ -44,6 +44,6 @@
             <Font name="PT Sans" size="28.0" />
          </font>
       </Label>
-      <ComboBox layoutX="90.0" layoutY="596.0" prefHeight="32.0" prefWidth="235.0" />
+      <ComboBox fx:id="moodBox" layoutX="90.0" layoutY="596.0" onAction="#userSelectedMood" prefHeight="32.0" prefWidth="235.0" />
    </children>
 </AnchorPane>
