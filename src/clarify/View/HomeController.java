@@ -47,17 +47,17 @@ public class HomeController implements Initializable {
 
     @FXML
     private BarChart<String, Integer> dailyBarChart;
-    
+
     @FXML
     private CategoryAxis x;
 
     @FXML
     private NumberAxis y;
 
-     @FXML
+    @FXML
     private BarChart<String, Integer> weeklyBarChart;
-    
-     @FXML
+
+    @FXML
     private CategoryAxis xWeekly;
 
     @FXML
@@ -70,7 +70,7 @@ public class HomeController implements Initializable {
     private NumberAxis yTrends;
 
     @FXML
-    private LineChart<?, ?> trendsLineChart;
+    private LineChart<String, Integer> trendsLineChart;
 
     Database d = new Database();
     PageSwitchHelper p = new PageSwitchHelper();
@@ -157,7 +157,7 @@ public class HomeController implements Initializable {
         ArrayList<Integer> top5hours = new ArrayList<>();
 
         String selectQuery4 = "SELECT ((strftime('%s',endTime) - strftime('%s',startTime))/3600) entryDescription FROM ENTRIES ORDER BY ((strftime('%s',endTime) - strftime('%s',startTime))/60) DESC LIMIT 5;";
-        ResultSet rs5 = st.executeQuery(selectQuery4); 
+        ResultSet rs5 = st.executeQuery(selectQuery4);
 
         while (rs5.next()) {
             top5hours.add(rs5.getInt(1));
@@ -185,9 +185,8 @@ public class HomeController implements Initializable {
     }
 
     public void loadWeeklyBarChart() throws SQLException {
-        
-        
-    System.out.println("Loading Daily Breakdown Bar Chart");
+
+        System.out.println("Loading Daily Breakdown Bar Chart");
 
         Connection conn = DriverManager.getConnection("jdbc:sqlite:INFS2605.db");
         Statement st = conn.createStatement();
@@ -216,7 +215,7 @@ public class HomeController implements Initializable {
         ArrayList<Integer> top5hours = new ArrayList<>();
 
         String selectQuery4 = "SELECT ((strftime('%s',endTime) - strftime('%s',startTime))/(3600*7)) entryDescription FROM ENTRIES ORDER BY ((strftime('%s',endTime) - strftime('%s',startTime))/60) DESC LIMIT 5;";
-        ResultSet rs5 = st.executeQuery(selectQuery4); 
+        ResultSet rs5 = st.executeQuery(selectQuery4);
 
         while (rs5.next()) {
             top5hours.add(rs5.getInt(1));

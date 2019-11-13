@@ -18,12 +18,12 @@
             <Insets left="270.0" />
          </BorderPane.margin>
          <children>
-            <Button layoutX="935.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Help" textAlignment="RIGHT">
+            <Button layoutX="935.0" layoutY="8.0" mnemonicParsing="false" onAction="#helpPressed" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: transparent;" text="Help" textAlignment="RIGHT">
                <font>
-                  <Font name="PT Sans" size="13.0" />
+                  <Font name="Avenir Roman" size="13.0" />
                </font>
             </Button>
-            <Button layoutX="849.0" layoutY="8.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: transparent;" text="Settings" textAlignment="RIGHT">
+            <Button layoutX="849.0" layoutY="8.0" mnemonicParsing="false" onAction="#aboutPressed" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: transparent;" text="About" textAlignment="RIGHT">
                <font>
                   <Font name="Avenir Roman" size="13.0" />
                </font>
@@ -80,6 +80,6 @@
       </AnchorPane>
    </left>
    <center>
-      <AnchorPane fx:id="content" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>
