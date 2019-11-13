@@ -7,6 +7,7 @@ package clarify.View;
 
 import clarify.Model.Task;
 import clarify.Util.Database;
+import java.io.File;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -26,8 +27,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.Media;
+
 import javafx.util.Duration;
 
 public class DeepFocusController implements Initializable {
@@ -40,7 +46,10 @@ public class DeepFocusController implements Initializable {
     private Label taskTitle;
     @FXML
     private Label taskDesc;
-    
+
+    @FXML
+    private ComboBox moodBox;
+
     @FXML
     private ListView<Task> allList;
 
@@ -55,13 +64,14 @@ public class DeepFocusController implements Initializable {
         try {
             getTaskFromDb();
             initClock();
+            moodBox.getItems().addAll("Upbeat", "Rock", "Calm Piano");
+
         } catch (SQLException ex) {
             Logger.getLogger(DeepFocusController.class.getName()).log(Level.SEVERE, null, ex);
         }
         allList.setItems(this.items);
     }
 
-   
     //create method to pull tasks from DB
     public void getTaskFromDb() throws SQLException {
         System.out.println("Task Title and Description");
@@ -76,24 +86,21 @@ public class DeepFocusController implements Initializable {
         String selectQuery = "SELECT * FROM TASKS";
         ResultSet rs = st.executeQuery(selectQuery);
 
-        while (rs.next()){
-            System.out.println("Task Title Selected: " + rs.getString(1));    
-            items.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3),rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));  
-            }
+        while (rs.next()) {
+            System.out.println("Task Title Selected: " + rs.getString(1));
+            items.add(new Task(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getInt(6), rs.getInt(7)));
+        }
     }
 
     //method to let user select tasks and view title and desc
     @FXML
     public void userClickedTask() {
-       Task xyz = allList.getSelectionModel().getSelectedItem();
-       
-        
-        taskTitle.setText("Focus on: "+xyz.getTitle());
-         taskDesc.setText("Description: "+xyz.getDesc());
+        Task xyz = allList.getSelectionModel().getSelectedItem();
 
-    
+        taskTitle.setText("Focus on: " + xyz.getTitle());
+        taskDesc.setText("Description: " + xyz.getDesc());
+
     }
-    
 
     public void initClock() {
 
@@ -104,6 +111,19 @@ public class DeepFocusController implements Initializable {
         }), new KeyFrame(Duration.seconds(1)));
         clock.setCycleCount(Animation.INDEFINITE);
         clock.play();
+
+    }
+
+    public void userSelectedMood() {
+
+        String output = moodBox.getSelectionModel().getSelectedItem().toString();
+        if (output.equals("Upbeat")) {
+            MusicPlaybackHelper1.playMusic("Upbeat.mp3");
+        } else if (output.equals("Rock")) {
+            MusicPlaybackHelper1.playMusic("Rock.mp3");
+        } else if (output.equals("Calm Piano")) {
+            MusicPlaybackHelper1.playMusic("Calm.mp3");
+        }
 
     }
 }
