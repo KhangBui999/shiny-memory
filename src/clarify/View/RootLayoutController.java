@@ -62,6 +62,10 @@ public class RootLayoutController {
     private void deepMenuPressed(ActionEvent event) {
         loadPage("DeepFocus.fxml");
     }
+    @FXML
+    private void dailyLearningsPressed(ActionEvent event) {
+        loadPage("DailyLearnings.fxml");
+    }
 
     //This method changes the BorderPane center to specified page location
     public void loadPage(String pageLocation) {

@@ -30,6 +30,7 @@ public class Main extends Application {
         Database.createCategoriesTable();
         Database.createEntriesTable();
         Database.createTaskTable();
+        Database.createReflectionTable();
     }
     
     /**

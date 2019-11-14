@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="betterMessage" prefHeight="755.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DailyLearningsController">
+   <children>
+      <Label fx:id="date" layoutX="206.0" layoutY="23.0" prefHeight="54.0" prefWidth="536.0" text="Date">
+         <font>
+            <Font size="44.0" />
+         </font></Label>
+      <Label fx:id="well" layoutX="62.0" layoutY="132.0" prefHeight="21.0" prefWidth="405.0" text="What did you do well today?">
+         <font>
+            <Font size="22.0" />
+         </font></Label>
+      <TextArea fx:id="wellness" layoutX="62.0" layoutY="178.0" prefHeight="200.0" prefWidth="751.0" />
+      <Button fx:id="submit" layoutX="474.0" layoutY="669.0" mnemonicParsing="false" text="Submit" />
+      <TextArea fx:id="betterness" layoutX="62.0" layoutY="443.0" prefHeight="200.0" prefWidth="751.0" />
+      <Label fx:id="better" layoutX="62.0" layoutY="397.0" prefHeight="21.0" prefWidth="405.0" text="What could you have done better?">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="wellMessage" layoutX="821.0" layoutY="227.0" prefHeight="65.0" prefWidth="224.0" text="Please enter what you did well today!" textFill="RED" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="betterMessage" layoutX="821.0" layoutY="499.0" prefHeight="65.0" prefWidth="224.0" text="Please enter what you can do better!" textFill="RED" visible="false">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

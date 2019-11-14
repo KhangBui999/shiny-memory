@@ -38,7 +38,7 @@ public class Task {
         return taskId;
     }
     
-    public final void setTasId(IntegerProperty taskId) {
+    public final void setTaskId(IntegerProperty taskId) {
         this.taskId = taskId;
     }
     

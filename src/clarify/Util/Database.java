@@ -199,6 +199,47 @@ public class Database {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
     }
+    public static void createReflectionTable() throws SQLException { 
+        PreparedStatement tableImplement = null;
+        ResultSet rs = null;
+        openConnection();
+        try {
+            System.out.println("Checking REFLECTION Table");
+            DatabaseMetaData dbmd = conn.getMetaData();
+            rs = dbmd.getTables(null, null, "REFLECTION", null);
+            if(!rs.next()){
+            ArrayList<String> statementString = new ArrayList<String>();
+             String createStatement = "CREATE TABLE REFLECTION"
+                    +"(reflection_id INTEGER PRIMARY KEY, "
+                    +"well TEXT NOT NULL, "
+                    +"better TEXT NOT NULL, "
+                    +"currentDay TEXT NOT NULL"
+                    +");";
+            System.out.println("Reflection table created");
+
+            
+             for (String thisStatement : statementString) {
+                    try {
+                        tableImplement = conn.prepareStatement(thisStatement);
+                        tableImplement.execute();
+                    } catch (SQLException e) {
+
+                    }
+                }
+            } else {
+                System.out.println("Reflection TABLE already Exists.");
+            }
+           
+           
+            
+            
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+        
+            
+        }
 
 }
