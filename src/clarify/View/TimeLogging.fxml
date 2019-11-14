@@ -23,8 +23,8 @@
                      <children>
                         <VBox layoutX="61.0" layoutY="146.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <TreeView fx:id="treeItem" prefHeight="570.0" prefWidth="200.0" />
-                              <Button mnemonicParsing="false" text="+Add Entry">
+                              <TreeView fx:id="treeItem" onMouseClicked="#userClickedTree" prefHeight="570.0" prefWidth="200.0" showRoot="false" />
+                              <Button mnemonicParsing="false" onAction="#handleCreateEntry" text="+Add Entry">
                                  <VBox.margin>
                                     <Insets left="65.0" top="10.0" />
                                  </VBox.margin>
@@ -38,7 +38,105 @@
                         </VBox>
                      </children>
                   </AnchorPane>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
+                     <children>
+                        <GridPane fx:id="gridPane" layoutX="68.0" layoutY="100.0" prefHeight="436.0" prefWidth="944.0" vgap="20.0">
+                           <children>
+                              <Text layoutX="10.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description*" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="PT Sans" size="18.0" />
+                                 </font>
+                              </Text>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time*">
+                                       <font>
+                                          <Font name="PT Sans" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="12.5" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Label text="(24-hour format)">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="End Time*">
+                                       <font>
+                                          <Font name="PT Sans" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets top="12.5" />
+                                       </HBox.margin>
+                                    </Text>
+                                    <Label text="(24-hour format)">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="15.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Task*" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="PT Sans" size="18.0" />
+                                 </font>
+                              </Text>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Please select an entry!">
+                                       <HBox.margin>
+                                          <Insets top="20.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextArea>
+                                 </children>
+                              </HBox>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category*">
+                                 <font>
+                                    <Font name="PT Sans" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="catName" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry!" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="PT Sans" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="taskName" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry!" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="PT Sans" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="startField" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry!" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="PT Sans" size="14.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="endField" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry!" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="PT Sans" size="14.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.44561767578125" minWidth="10.0" prefWidth="217.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="708.0" minWidth="10.0" prefWidth="708.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="150.26449584960938" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="150.26449584960938" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="191.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="159.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children></AnchorPane>
               </items>
             </SplitPane>
          </children>

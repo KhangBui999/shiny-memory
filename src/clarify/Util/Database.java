@@ -103,39 +103,41 @@ public class Database {
                         + ",endTime TEXT NOT NULL"
                         + ",entryDescription TEXT NOT NULL"
                         + ",category INTEGER NOT NULL"
+                        + ",task INTEGER NOT NULL"
                         + ",FOREIGN KEY(category) REFERENCES Categories(cat_id)"
+                        + ",FOREIGN KEY(task) REFERENCES TASKS(task_id)"
                         + ");");
                 System.out.println("Entries table created");
 
                 statementString.add(
-                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('2019-10-29 12:00:00', '2019-10-29 13:00:00', 'First entry', '1');");
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
+                        + " VALUES ('2019-10-29 12:00:00', '2019-10-29 13:00:00', 'First entry', '1', '1');");
                 statementString.add(
-                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Another entry', '2');");
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
+                        + " VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Another entry', '2', '1');");
                 
                  statementString.add(
-                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('2019-10-29 12:00:00', '2019-10-29 13:00:00', 'Study for exam', '1');");
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
+                        + " VALUES ('2019-10-29 12:00:00', '2019-10-29 13:00:00', 'Study for exam', '1', '1');");
                 statementString.add(
-                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Work out', '2');");
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
+                        + " VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Work out', '2', '2');");
 
                 statementString.add(
-                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Watch Lectures', '2');");
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
+                        + " VALUES ('2019-10-31 10:00:00', '2019-10-31 14:00:00', 'Watch Lectures', '2', '2');");
 
                 statementString.add(
-                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('2019-10-30 10:00:00', '2019-10-30 14:00:00', 'Do homework', '2');");
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
+                        + " VALUES ('2019-10-30 10:00:00', '2019-10-30 14:00:00', 'Do homework', '2', '2');");
 
                 statementString.add(
-                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('2019-10-30 10:00:00', '2019-10-30 10:50:00', 'Eat', '2');");
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
+                        + "VALUES ('2019-10-30 10:00:00', '2019-10-30 10:50:00', 'Eat', '2', '1');");
 
                 statementString.add(
-                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category)"
-                        + "VALUES ('2019-10-31 10:00:00', '2019-10-31 10:01:00', 'Lowest', '2');");
+                        "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
+                        + " VALUES ('2019-10-31 10:00:00', '2019-10-31 10:01:00', 'Lowest', '2', '1');");
 
                 for (String thisStatement : statementString) {
                     try {

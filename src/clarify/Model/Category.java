@@ -63,4 +63,9 @@ public class Category {
         return value.getValue();
     }
     
+    @Override
+    public String toString(){
+        return getString(getName());
+    }
+    
 }

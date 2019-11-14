@@ -21,9 +21,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -37,6 +39,21 @@ public class TimeLoggingController implements Initializable {
     
     @FXML
     private TreeView treeItem;
+    
+    @FXML
+    private Text catName;
+    
+    @FXML
+    private Text taskName;
+    
+    @FXML
+    private Text startField;
+    
+    @FXML
+    private Text endField;
+    
+    @FXML
+    private TextArea descArea;
     /**
      * Initializes the controller class.
      */
@@ -60,12 +77,32 @@ public class TimeLoggingController implements Initializable {
     }
     
     @FXML
+    public void userClickedTree() {
+        String object = treeItem.getSelectionModel().getSelectedItem().toString();
+        boolean entryType = checkType(object);
+        if(entryType == true){
+            //TODO: Set to entry update/delete page
+        } else {
+            //TODO
+        }
+    }
+    
+    @FXML
+    public boolean checkType(String object){
+        if(object.contains("[ value: EntID:")){
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    @FXML
     public void loadTreeView() throws IOException {
         TreeItem dummyRoot = new TreeItem();
         ArrayList<Category> categoryList = getCategory();
         for(Category cat: categoryList) {
             //Creates Categories
-            TreeItem newCategory = new TreeItem(cat.getString(cat.getName()));
+            TreeItem newCategory = new TreeItem(cat);
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(getClass().getResource("ColourIcon.fxml"));
             AnchorPane icon = (AnchorPane) loader.load();
@@ -106,8 +143,8 @@ public class TimeLoggingController implements Initializable {
         try {
             ResultSet rs = d.getResultSet(statement);
             while(rs.next()){
-                String entryPrompt = "Entry ID: "+rs.getInt(1)+" | "+rs.getString(4);
-                TreeItem entry = new TreeItem(entryPrompt);
+                Entry newEntry = new Entry(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getInt(5), rs.getInt(6));
+                TreeItem entry = new TreeItem(newEntry);
                 item.getChildren().add(entry);
             }
         }

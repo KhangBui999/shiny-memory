@@ -15,6 +15,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -46,6 +47,11 @@ public class AddCategoryController implements Initializable {
     private Label error;
     @FXML
     private Label success;
+    @FXML
+    private Label success1;
+    
+    @FXML
+    private Button btn;
     /**
      * Initializes the controller class.
      */
@@ -70,6 +76,8 @@ public class AddCategoryController implements Initializable {
                 d.insertStatement(insert);
                 gridPane.setVisible(false);
                 success.setVisible(true);
+                success1.setVisible(true);
+                btn.setVisible(false);
                 System.out.println("New category created!");
             }
             catch(SQLException e){

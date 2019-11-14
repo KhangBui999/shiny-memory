@@ -80,11 +80,16 @@
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
-      <Label fx:id="success" layoutX="267.0" layoutY="440.0" text="New Category Has Been Created!" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.topAnchor="330.0">
+      <Label fx:id="success" layoutX="267.0" layoutY="440.0" text="New Category Has Been Created!" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="330.0">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
       <Label fx:id="error" layoutX="395.0" layoutY="554.0" text="Please check following errors above!" textFill="RED" visible="false" AnchorPane.bottomAnchor="172.0" AnchorPane.topAnchor="554.0" />
+      <Label fx:id="success1" layoutX="252.0" layoutY="430.0" text="Please click on 'Back'" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="360.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

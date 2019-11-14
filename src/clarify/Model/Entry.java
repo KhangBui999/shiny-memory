@@ -20,13 +20,15 @@ public class Entry {
     private StringProperty endTime;
     private StringProperty entryDesc;
     private IntegerProperty catId;
+    private IntegerProperty taskId;
     
-    public Entry(int id, String startTime, String endTime, String entryDesc, int catId) {
+    public Entry(int id, String startTime, String endTime, String entryDesc, int catId, int taskId) {
         this.id = new SimpleIntegerProperty(id);
         this.startTime = new SimpleStringProperty(startTime);
         this.endTime = new SimpleStringProperty(endTime);
         this.entryDesc = new SimpleStringProperty(entryDesc);
         this.catId = new SimpleIntegerProperty(catId);
+        this.taskId = new SimpleIntegerProperty(taskId);
     }
     
     public IntegerProperty getId() {
@@ -67,6 +69,19 @@ public class Entry {
 
     public void setCatId(IntegerProperty catId) {
         this.catId = catId;
+    }
+    
+    public IntegerProperty getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(IntegerProperty taskId) {
+        this.taskId = taskId;
+    }
+    
+    @Override
+    public String toString(){
+        return "EntID: "+getId().getValue()+" | "+getEntryDesc().getValue();
     }
     
 }
