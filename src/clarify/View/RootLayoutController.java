@@ -121,5 +121,19 @@ public class RootLayoutController {
             e.printStackTrace();
         }
     }
+    
+    public void loadEntryUpdate(int id) throws SQLException {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("UpdateEntry.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            UpdateEntryController u = loader.getController();
+            u.setId(id);
+            u.retrieveEntryFromDb();
+            root.setCenter(page);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

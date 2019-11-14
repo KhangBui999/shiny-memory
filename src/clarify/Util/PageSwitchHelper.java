@@ -58,55 +58,8 @@ public class PageSwitchHelper {
             e.printStackTrace();
         }
     }
-    
-    public void changeCenter(MouseEvent event, String page) throws IOException {
-        System.out.println("Switching center of BorderPane");
-        BorderPane root = null;
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/clarify/View/RootLayout.fxml"));
-            root = (BorderPane) loader.load();
-            
-            RootLayoutController cont = loader.getController();
-            
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
-
-            cont.setPage(page);
-            cont.loadPage(page);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     public void changeToUpdateTask(ActionEvent event, int id) throws IOException {
-        System.out.println("Switching center of BorderPane to AddTask");
-        BorderPane root = null;
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/clarify/View/RootLayout.fxml"));
-            root = (BorderPane) loader.load();
-            
-            RootLayoutController cont = loader.getController();
-            
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
-
-            cont.loadTaskUpdate(id);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    
-    public void changeToUpdateTask(MouseEvent event, int id) throws IOException {
         System.out.println("Switching center of BorderPane to AddTask");
         BorderPane root = null;
         try {
@@ -151,29 +104,6 @@ public class PageSwitchHelper {
             e.printStackTrace();
         }
     }
-    
-    public void changeToDeleteTask(MouseEvent event, int id) throws IOException {
-        System.out.println("Switching center of BorderPane to AddTask");
-        BorderPane root = null;
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/clarify/View/RootLayout.fxml"));
-            root = (BorderPane) loader.load();
-            
-            RootLayoutController cont = loader.getController();
-            
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.show();
-
-            cont.loadTaskUpdate(id);
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
    public void changeToUpdateCategory(ActionEvent event, int id) throws IOException {
         System.out.println("Switching center of BorderPane to AddTask");
@@ -198,7 +128,7 @@ public class PageSwitchHelper {
         }
     }
    
-    public void changeToUpdateCategory(MouseEvent event, int id) throws IOException {
+    public void changeToUpdateEntry(ActionEvent event, int id) throws IOException {
         System.out.println("Switching center of BorderPane to AddTask");
         BorderPane root = null;
         try {
@@ -214,7 +144,7 @@ public class PageSwitchHelper {
             stage.setResizable(false);
             stage.show();
 
-            cont.loadCategoryUpdate(id);
+            cont.loadEntryUpdate(id);
         }
         catch (Exception e) {
             e.printStackTrace();

@@ -100,12 +100,18 @@ public class TimeLoggingController implements Initializable {
     }
     
     @FXML
+    public void pressedUpdateEntry (ActionEvent event) throws IOException {
+        p.changeToUpdateEntry(event, catId);
+    }
+    
+    @FXML
     public void userSelectTree() {
         try{
             String object = treeItem.getSelectionModel().getSelectedItem().toString();
             boolean entryType = checkType(object);
             if(entryType == true){
                 String entryNo = object.substring(25, object.indexOf('|')-1);
+                taskId = Integer.parseInt(entryNo);
                 ResultSet rs = d.getResultSet("SELECT * FROM ENTRIES e, Categories c, TASKS t "
                         + "WHERE e.category = c.cat_id "
                         + "AND e.task = t.task_id "
@@ -113,7 +119,7 @@ public class TimeLoggingController implements Initializable {
                 
                 catId = rs.getInt(5);
                 catName.setText(rs.getString(8));
-                taskId = rs.getInt(10);
+                taskId = Integer.parseInt(entryNo);
                 taskName.setText(rs.getString(11));
                 String startDate = rs.getString(2).substring(8, 10)+"-"+rs.getString(2).substring(5,7)+"-"+rs.getString(2).substring(0,4)+" "+rs.getString(2).substring(11);        
                 startField.setText(startDate);
@@ -148,7 +154,7 @@ public class TimeLoggingController implements Initializable {
                 dE.setVisible(false);
             }
         } catch(Exception e) {
-            e.printStackTrace();
+            //DO NOTHING
         }
     }
     //YYYY-MM-DD

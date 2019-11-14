@@ -78,6 +78,7 @@ public class AddEntryController implements Initializable {
     private Label fail;
     @FXML
     private Button btn;
+    
     /**
      * Initializes the controller class.
      */
