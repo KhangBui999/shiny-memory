@@ -107,5 +107,19 @@ public class RootLayoutController {
             e.printStackTrace();
         }
     }
+    
+    public void loadCategoryUpdate(int id) throws SQLException {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("UpdateCategory.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            UpdateCategoryController u = loader.getController();
+            u.setId(id);
+            u.retrieveCategoryFromDb();
+            root.setCenter(page);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
 }

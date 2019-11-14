@@ -21,6 +21,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
@@ -36,6 +37,8 @@ public class TimeLoggingController implements Initializable {
 
     PageSwitchHelper p = new PageSwitchHelper();
     Database d = new Database();
+    private int taskId;
+    private int catId;
     
     @FXML
     private TreeView treeItem;
@@ -54,6 +57,16 @@ public class TimeLoggingController implements Initializable {
     
     @FXML
     private TextArea descArea;
+    
+    @FXML
+    private Button uE;
+    @FXML
+    private Button uC;
+    @FXML
+    private Button dE;
+    @FXML
+    private Button dC;
+    
     /**
      * Initializes the controller class.
      */
@@ -78,22 +91,67 @@ public class TimeLoggingController implements Initializable {
     
     @FXML
     public void userClickedTree() {
+        userSelectTree();
+    }
+    
+    @FXML
+    public void pressedUpdateCategory(ActionEvent event) throws IOException{
+        p.changeToUpdateCategory(event, catId);
+    }
+    
+    @FXML
+    public void userSelectTree() {
         try{
             String object = treeItem.getSelectionModel().getSelectedItem().toString();
-            System.out.println(object);
             boolean entryType = checkType(object);
             if(entryType == true){
                 String entryNo = object.substring(25, object.indexOf('|')-1);
-                System.out.println(entryNo);
-            } else {
-                String categoryName = object.substring(18, object.indexOf('|'-1));
-                System.out.println(categoryName);
+                ResultSet rs = d.getResultSet("SELECT * FROM ENTRIES e, Categories c, TASKS t "
+                        + "WHERE e.category = c.cat_id "
+                        + "AND e.task = t.task_id "
+                        + "AND e.ent_id = '"+entryNo+"';");
+                
+                catId = rs.getInt(5);
+                catName.setText(rs.getString(8));
+                taskId = rs.getInt(10);
+                taskName.setText(rs.getString(11));
+                String startDate = rs.getString(2).substring(8, 10)+"-"+rs.getString(2).substring(5,7)+"-"+rs.getString(2).substring(0,4)+" "+rs.getString(2).substring(11);        
+                startField.setText(startDate);
+                String endDate = rs.getString(3).substring(8, 10)+"-"+rs.getString(3).substring(5,7)+"-"+rs.getString(3).substring(0,4)+" "+rs.getString(3).substring(11);
+                endField.setText(endDate);
+                descArea.setText(rs.getString(4));
+                
+                uC.setVisible(true);
+                dC.setVisible(true);
+                uE.setVisible(true);
+                dE.setVisible(true);
+            } 
+            
+            else if(entryType == false){
+                String categoryName = object.substring(18, object.indexOf(']')-1);
+                ResultSet rs = d.getResultSet("SELECT * FROM Categories WHERE category_name = '"+categoryName+"';");
+                
+                catId = rs.getInt(1);
+                
+                String newCatName = rs.getString(2);
+                catName.setText(newCatName);
+                String youCan = "You can select a task!";
+                
+                taskName.setText(youCan);
+                startField.setText(youCan);
+                endField.setText(youCan);
+                descArea.setPromptText(youCan);
+                
+                uC.setVisible(true);
+                dC.setVisible(true);
+                uE.setVisible(false);
+                dE.setVisible(false);
             }
         } catch(Exception e) {
-            //TODO
+            e.printStackTrace();
         }
     }
-
+    //YYYY-MM-DD
     //TreeItem [ value: Work ] 18, k-1
     
     

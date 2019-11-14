@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.TimeLoggingController">
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.TimeLoggingController">
    <children>
       <Label layoutX="40.0" layoutY="30.0" text="Time Logging">
          <font>
@@ -23,7 +23,7 @@
                      <children>
                         <VBox layoutX="61.0" layoutY="146.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <TreeView fx:id="treeItem" onMouseClicked="#userClickedTree" prefHeight="570.0" prefWidth="200.0" showRoot="false" />
+                              <TreeView fx:id="treeItem" onKeyReleased="#userClickedTree" onMouseClicked="#userClickedTree" prefHeight="570.0" prefWidth="200.0" showRoot="false" />
                               <Button mnemonicParsing="false" onAction="#handleCreateEntry" text="+Add Entry">
                                  <VBox.margin>
                                     <Insets left="65.0" top="10.0" />
@@ -136,6 +136,10 @@
                               <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="159.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                         </GridPane>
+                        <Button fx:id="uC" layoutX="640.0" layoutY="606.0" mnemonicParsing="false" onAction="#pressedUpdateCategory" text="Update Category" visible="false" />
+                        <Button fx:id="uE" layoutX="530.0" layoutY="606.0" mnemonicParsing="false" text="Update Entry" visible="false" />
+                        <Button fx:id="dC" layoutX="645.0" layoutY="14.0" mnemonicParsing="false" text="Delete Category" visible="false" />
+                        <Button fx:id="dE" layoutX="540.0" layoutY="14.0" mnemonicParsing="false" text="Delete Entry" visible="false" />
                      </children></AnchorPane>
               </items>
             </SplitPane>
