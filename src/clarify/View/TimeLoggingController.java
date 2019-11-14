@@ -78,14 +78,24 @@ public class TimeLoggingController implements Initializable {
     
     @FXML
     public void userClickedTree() {
-        String object = treeItem.getSelectionModel().getSelectedItem().toString();
-        boolean entryType = checkType(object);
-        if(entryType == true){
-            //TODO: Set to entry update/delete page
-        } else {
+        try{
+            String object = treeItem.getSelectionModel().getSelectedItem().toString();
+            System.out.println(object);
+            boolean entryType = checkType(object);
+            if(entryType == true){
+                String entryNo = object.substring(25, object.indexOf('|')-1);
+                System.out.println(entryNo);
+            } else {
+                String categoryName = object.substring(18, object.indexOf('|'-1));
+                System.out.println(categoryName);
+            }
+        } catch(Exception e) {
             //TODO
         }
     }
+
+    //TreeItem [ value: Work ] 18, k-1
+    
     
     @FXML
     public boolean checkType(String object){
