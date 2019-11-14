@@ -54,6 +54,11 @@ public class RootLayoutController {
     }
 
     @FXML
+    private void trendsPressed(ActionEvent event) {
+        loadPage("Trends.fxml");
+    }
+    
+    @FXML
     private void kanbanMenuPressed(ActionEvent event) {
         loadPage("KanbanBoard.fxml");
     }

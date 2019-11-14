@@ -51,7 +51,12 @@
                         <Insets bottom="1.0" top="1.0" />
                      </VBox.margin>
                   </Button>
-                  <Button layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#timeLoggingPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Entry Logging" textFill="WHITE">
+                  <Button layoutX="10.0" layoutY="59.0" mnemonicParsing="false" onAction="#trendsPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Trends" textFill="WHITE">
+                     <font>
+                        <Font name="PT Sans Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="10.0" layoutY="11.0" mnemonicParsing="false" onAction="#timeLoggingPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Time Logging" textFill="WHITE">
                      <font>
                         <Font name="PT Sans Bold" size="24.0" />
                      </font>
