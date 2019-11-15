@@ -34,66 +34,66 @@ public class Task {
         this.complete = new SimpleIntegerProperty(complete);
     }
     
-    public final IntegerProperty getTaskId() {
+    public IntegerProperty getTaskId() {
         return taskId;
     }
     
-    public final void setTasId(IntegerProperty taskId) {
+    public void setTasId(IntegerProperty taskId) {
         this.taskId = taskId;
     }
     
-    public final StringProperty getTitleProperty() {
+    public StringProperty getTitleProperty() {
         return title;
     }
 
-    public final void setTitle(StringProperty title) {
+    public void setTitle(StringProperty title) {
         this.title = title;
     }
 
-    public final StringProperty getDescriptionProperty() {
+    public StringProperty getDescriptionProperty() {
         return desc;
     }
 
-    public final void setDescription(StringProperty desc) {
+    public void setDescription(StringProperty desc) {
         this.desc = desc;
     }
 
-    public final StringProperty getDoDateProperty() {
+    public StringProperty getDoDateProperty() {
         return doDate;
     }
 
-    public final void setDoDate(StringProperty doDate) {
+    public void setDoDate(StringProperty doDate) {
         this.doDate = doDate;
     }
 
-    public final StringProperty getDueDateProperty() {
+    public StringProperty getDueDateProperty() {
         return dueDate;
     }
 
-    public final void setDueDate(StringProperty dueDate) {
+    public void setDueDate(StringProperty dueDate) {
         this.dueDate = dueDate;
     }
-    public final IntegerProperty getPriorityProperty() {
+    public IntegerProperty getPriorityProperty() {
         return priority;
     }
 
-    public final void setPriority(IntegerProperty priority) {
+    public void setPriority(IntegerProperty priority) {
         this.priority = priority;
     }
     
-    public final IntegerProperty getCompleteProperty() {
+    public IntegerProperty getCompleteProperty() {
         return complete;
     }
     
-    public final void setComplete(IntegerProperty complete) {
+    public void setComplete(IntegerProperty complete) {
         this.complete = complete;
     }
     
-    public final String getString(StringProperty value) {
+    public String getString(StringProperty value) {
         return value.getValue();
     }
     
-    public final int getInt(IntegerProperty value) {
+    public int getInt(IntegerProperty value) {
         return value.getValue();
     }
     

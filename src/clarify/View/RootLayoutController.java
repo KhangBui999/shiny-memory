@@ -22,13 +22,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
-/**
- * Please do not touch this file in any way, shape or form If you need
- * rootLayout to do something, please message me on Messenger. (Insert smiley
- * face here)
- *
- * @author khang
- */
 public class RootLayoutController {
 
     @FXML
@@ -71,7 +64,12 @@ public class RootLayoutController {
     @FXML
     private void timeLoggingPressed(ActionEvent event) {
         loadPage("TimeLogging.fxml");
-    } 
+    }
+    
+    @FXML
+    private void learningsPressed(ActionEvent event) {
+        loadPage("DailyLearnings.fxml");
+    }
     
     @FXML
     private void aboutPressed(ActionEvent event) {
