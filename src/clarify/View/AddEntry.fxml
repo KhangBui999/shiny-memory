@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.AddEntryController">
    <children>
-      <GridPane fx:id="gridPane" layoutX="50.0" layoutY="107.0" prefHeight="436.0" prefWidth="925.0" vgap="20.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="150.0">
+      <GridPane fx:id="gridPane" layoutX="67.0" layoutY="158.0" prefHeight="392.0" prefWidth="900.0" vgap="20.0" AnchorPane.leftAnchor="67.0" AnchorPane.topAnchor="158.0">
          <children>
             <Text layoutX="10.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description*" GridPane.rowIndex="3">
                <font>
@@ -24,7 +24,7 @@
             </Text>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ComboBox fx:id="startHr" prefWidth="70.0" promptText="HH">
+                  <ComboBox fx:id="startHr" prefWidth="70.0" promptText="HH" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
@@ -37,12 +37,12 @@
                         <Insets left="2.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox fx:id="startMin" prefWidth="70.0" promptText="MM">
+                  <ComboBox fx:id="startMin" prefWidth="70.0" promptText="MM" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets left="2.0" top="10.0" />
                      </HBox.margin>
                   </ComboBox>
-                  <DatePicker fx:id="startField" editable="false" promptText="DD/MM/YYYY">
+                  <DatePicker fx:id="startField" editable="false" promptText="DD/MM/YYYY" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets left="10.0" top="10.0" />
                      </HBox.margin>
@@ -56,7 +56,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <ComboBox fx:id="endHour" prefWidth="70.0" promptText="HH">
+                  <ComboBox fx:id="endHour" prefWidth="70.0" promptText="HH" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="7.5" />
                      </HBox.margin>
@@ -69,12 +69,12 @@
                         <Insets left="2.5" top="7.5" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox fx:id="endMin" layoutX="206.0" layoutY="10.0" prefWidth="70.0" promptText="MM">
+                  <ComboBox fx:id="endMin" layoutX="206.0" layoutY="10.0" prefWidth="70.0" promptText="MM" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets left="2.0" top="7.5" />
                      </HBox.margin>
                   </ComboBox>
-                  <DatePicker fx:id="endField" editable="false" promptText="DD/MM/YYYY">
+                  <DatePicker fx:id="endField" editable="false" promptText="DD/MM/YYYY" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets left="10.0" top="7.5" />
                      </HBox.margin>
@@ -90,7 +90,7 @@
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time*">
                      <font>
-                        <Font name="PT Sans" size="18.0" />
+                        <Font name="Avenir Roman" size="18.0" />
                      </font>
                      <HBox.margin>
                         <Insets top="12.5" />
@@ -107,7 +107,7 @@
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="End Time*">
                      <font>
-                        <Font name="PT Sans" size="18.0" />
+                        <Font name="Avenir Roman" size="18.0" />
                      </font>
                      <HBox.margin>
                         <Insets top="12.5" />
@@ -122,12 +122,12 @@
             </HBox>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Task*">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <ComboBox fx:id="taskBox" prefWidth="300.0" promptText="Select task here">
+                  <ComboBox fx:id="taskBox" prefWidth="300.0" promptText="Select task here" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
@@ -141,7 +141,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Type description here">
+                  <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Type description here" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
@@ -155,7 +155,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <ComboBox fx:id="categoryBox" prefWidth="200.0" promptText="Select category here">
+                  <ComboBox fx:id="categoryBox" prefWidth="200.0" promptText="Select category here" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
@@ -180,22 +180,17 @@
             <RowConstraints maxHeight="74.6962890625" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Label layoutX="344.0" layoutY="50.0" text="Create New Entry" AnchorPane.topAnchor="40.0">
+      <Button fx:id="btn" layoutX="276.0" layoutY="562.0" mnemonicParsing="false" onAction="#handleCreateButton" style="-fx-background-color: cornflowerblue;" text="+ Create Entry" textFill="WHITE">
          <font>
-            <Font name="PT Sans Bold" size="42.0" />
-         </font>
-      </Label>
-      <Button fx:id="btn" layoutX="322.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleCreateButton" text="+ Create Entry">
-         <font>
-            <Font size="24.0" />
+            <Font name="Avenir Black" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" text="&lt; Back to Time Logging" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Time Logging" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
-      <Text layoutX="273.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the following fields below. This will create a new entry.">
+      <Text layoutX="273.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the following fields below to create a new entry">
          <font>
             <Font name="PT Sans" size="16.0" />
          </font>
@@ -211,5 +206,10 @@
          </font>
       </Label>
       <Label fx:id="fail" layoutX="286.0" layoutY="680.0" text="ERROR: Please check above error messages!" textFill="RED" visible="false" />
+      <Label layoutX="273.0" layoutY="50.0" text="Add New Entry" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

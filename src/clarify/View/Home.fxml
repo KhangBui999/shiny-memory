@@ -10,8 +10,8 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.HomeController">
    <children>
-      <PieChart fx:id="lifePieChart" layoutX="75.0" layoutY="120.0" prefHeight="303.0" prefWidth="402.0" style="-fx-border-color: black; -fx-border-radius: 10;" title="Pie Chart of My Life" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="100.0" />
-      <BarChart fx:id="dailyBarChart" layoutX="74.0" layoutY="422.0" prefHeight="303.0" prefWidth="402.0" style="-fx-border-color: black; -fx-border-radius: 10;" title="Daily Breakdown" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="422.0">
+      <PieChart fx:id="lifePieChart" layoutX="62.0" layoutY="69.0" prefHeight="275.0" prefWidth="405.0" title="Pie Chart of My Life" AnchorPane.leftAnchor="62.0" AnchorPane.topAnchor="69.0" />
+      <BarChart fx:id="dailyBarChart" layoutX="75.0" layoutY="369.0" prefHeight="275.0" prefWidth="405.0" title="Daily Breakdown" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="369.0">
         <xAxis>
           <CategoryAxis label="Top 5 Activities" side="BOTTOM" fx:id="x" />
         </xAxis>
@@ -19,19 +19,28 @@
           <NumberAxis fx:id="y" label="Hours per day" side="LEFT" />
         </yAxis>
       </BarChart>
-      <Label layoutX="40.0" layoutY="30.0" text="Your Dashboard">
-         <font>
-            <Font name="PT Sans Bold" size="42.0" />
-         </font>
-      </Label>
-      <BarChart layoutX="495.0" layoutY="422.0" prefHeight="303.0" prefWidth="402.0" style="-fx-border-color: black; -fx-border-radius: 10;" title="Weekly Breakdown">
+      <BarChart fx:id="weeklyBarChart" layoutX="506.0" layoutY="364.0" prefHeight="275.0" prefWidth="405.0" title="Weekly Breakdown">
          <xAxis>
-            <CategoryAxis label="Top 5 Activities" side="BOTTOM" />
+            <CategoryAxis label="Top 5 Activities" side="BOTTOM" fx:id="xWeekly" />
          </xAxis>
          <yAxis>
-            <NumberAxis label="Hours per day" side="LEFT" />
+            <NumberAxis fx:id="yWeekly" label="Hours per day" side="LEFT" />
          </yAxis>
       </BarChart>
-      <AnchorPane layoutX="496.0" layoutY="101.0" prefHeight="300.0" prefWidth="400.0" style="-fx-border-color: black; -fx-border-radius: 10;" />
+      <Button fx:id="logTime" layoutX="596.0" layoutY="103.0" mnemonicParsing="false" onAction="#addLogPressed" style="-fx-background-color: cornflowerblue;" text="+ Log Time" textFill="WHITE">
+         <font>
+            <Font name="Avenir Black" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="40.0" layoutY="14.0" prefHeight="33.0" prefWidth="407.0" text="Your Dashboard" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="601.0" layoutY="72.0" text="Log or view your time">
+         <font>
+            <Font name="Avenir Oblique" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

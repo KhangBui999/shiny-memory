@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.UpdateCategoryController">
    <children>
-      <GridPane fx:id="gridPane" layoutX="120.0" layoutY="278.0" prefHeight="152.0" prefWidth="800.0" vgap="10.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="278.0">
+      <GridPane fx:id="gridPane" layoutX="209.0" layoutY="165.0" prefHeight="160.0" prefWidth="721.0" vgap="10.0" AnchorPane.leftAnchor="209.0" AnchorPane.topAnchor="165.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category Name*">
                <font>
@@ -60,14 +60,9 @@
             <RowConstraints maxHeight="58.952911376953125" minHeight="0.0" prefHeight="42.05072021484375" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Label layoutX="273.0" layoutY="42.0" text="Update Existing Category">
+      <Button fx:id="btn" layoutX="400.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleUpdateButton" style="-fx-background-color: cornflowerblue;" text="Update Category" textFill="WHITE">
          <font>
-            <Font name="PT Sans Bold" size="42.0" />
-         </font>
-      </Label>
-      <Button fx:id="btn" layoutX="387.0" layoutY="499.0" mnemonicParsing="false" onAction="#handleUpdateButton" text="Update Category">
-         <font>
-            <Font size="24.0" />
+            <Font name="Avenir Black" size="16.0" />
          </font>
       </Button>
       <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" text="&lt; Back to Time Logging" AnchorPane.leftAnchor="14.0">
@@ -75,7 +70,7 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Text layoutX="265.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the following fields below. This will update the category.">
+      <Text layoutX="346.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the fields below to update a category">
          <font>
             <Font name="PT Sans" size="16.0" />
          </font>
@@ -89,6 +84,11 @@
       <Label fx:id="success1" layoutX="252.0" layoutY="430.0" text="Please click on 'Back'" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="360.0">
          <font>
             <Font size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="379.0" layoutY="51.0" text="Updating Existing Category" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="22.0" />
          </font>
       </Label>
    </children>

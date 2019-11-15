@@ -10,16 +10,16 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.AddCategoryController">
    <children>
-      <GridPane fx:id="gridPane" layoutX="120.0" layoutY="278.0" prefHeight="152.0" prefWidth="800.0" vgap="10.0" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="278.0">
+      <GridPane fx:id="gridPane" layoutX="200.0" layoutY="150.0" prefHeight="280.0" prefWidth="720.0" vgap="10.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="150.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category Name*">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <Text layoutX="10.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colour*" GridPane.rowIndex="1">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -50,6 +50,11 @@
                   </Label>
                </children>
             </HBox>
+            <Button fx:id="btn" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="31.0" prefWidth="180.0" style="-fx-background-color: cornflowerblue;" text="+ Create Category" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Avenir Black" size="16.0" />
+               </font>
+            </Button>
          </children>
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.44561767578125" minWidth="10.0" prefWidth="220.7991943359375" />
@@ -58,24 +63,15 @@
          <rowConstraints>
             <RowConstraints maxHeight="64.10903930664062" minHeight="0.0" prefHeight="34.68841552734375" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="58.952911376953125" minHeight="0.0" prefHeight="42.05072021484375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="58.952911376953125" minHeight="0.0" prefHeight="42.05072021484375" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Label layoutX="330.0" layoutY="46.0" text="Create New Category">
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Time Logging" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
-            <Font name="PT Sans Bold" size="42.0" />
-         </font>
-      </Label>
-      <Button fx:id="btn" layoutX="387.0" layoutY="499.0" mnemonicParsing="false" onAction="#handleCreateButton" text="+ Create Category">
-         <font>
-            <Font size="24.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" text="&lt; Back to Time Logging" AnchorPane.leftAnchor="14.0">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Button>
-      <Text layoutX="273.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the following fields below. This will create a new category.">
+      <Text layoutX="273.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the following to create a new category.">
          <font>
             <Font name="PT Sans" size="16.0" />
          </font>
@@ -85,10 +81,18 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <Label fx:id="error" layoutX="395.0" layoutY="554.0" text="Please check following errors above!" textFill="RED" visible="false" AnchorPane.bottomAnchor="172.0" AnchorPane.topAnchor="554.0" />
+      <Label fx:id="error" layoutX="395.0" layoutY="554.0" text="Please check following errors above!" textFill="RED" visible="false" AnchorPane.bottomAnchor="172.0" AnchorPane.topAnchor="554.0">
+         <font>
+            <Font name="Avenir Roman" size="13.0" />
+         </font></Label>
       <Label fx:id="success1" layoutX="252.0" layoutY="430.0" text="Please click on 'Back'" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="360.0">
          <font>
-            <Font size="32.0" />
+            <Font name="Avenir Roman" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="339.0" layoutY="66.0" text="Create New Category" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="22.0" />
          </font>
       </Label>
    </children>

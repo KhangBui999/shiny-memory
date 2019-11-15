@@ -71,11 +71,16 @@ public class RootLayoutController {
     @FXML
     private void timeLoggingPressed(ActionEvent event) {
         loadPage("TimeLogging.fxml");
+    } 
+    
+    @FXML
+    private void aboutPressed(ActionEvent event) {
+        loadPage("About.fxml");
     }
     
     @FXML
-    private void dailyLearningsPressed(ActionEvent event) {
-        loadPage("DailyLearnings.fxml");
+    private void helpPressed(ActionEvent event) {
+        loadPage("Help.fxml");
     }
 
     //This method changes the BorderPane center to specified page location

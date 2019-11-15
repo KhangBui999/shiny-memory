@@ -10,11 +10,6 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.TimeLoggingController">
    <children>
-      <Label layoutX="40.0" layoutY="30.0" text="Time Logging">
-         <font>
-            <Font name="PT Sans Bold" size="42.0" />
-         </font>
-      </Label>
       <AnchorPane layoutY="138.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
          <children>
             <SplitPane dividerPositions="0.225" layoutX="75.0" layoutY="116.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -23,16 +18,22 @@
                      <children>
                         <VBox layoutX="61.0" layoutY="146.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <TreeView fx:id="treeItem" onKeyReleased="#userClickedTree" onMouseClicked="#userClickedTree" prefHeight="570.0" prefWidth="200.0" showRoot="false" />
-                              <Button mnemonicParsing="false" onAction="#handleCreateEntry" text="+Add Entry">
+                              <TreeView fx:id="treeItem" onKeyReleased="#userClickedTree" onMouseClicked="#userClickedTree" prefHeight="422.0" prefWidth="200.0" showRoot="false" style="-fx-background-color: transparent;" />
+                              <Button mnemonicParsing="false" onAction="#handleCreateEntry" style="-fx-background-color: cornflowerblue;" text="+Add Entry" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets left="65.0" top="10.0" />
                                  </VBox.margin>
+                                 <font>
+                                    <Font name="Avenir Black" size="13.0" />
+                                 </font>
                               </Button>
-                              <Button mnemonicParsing="false" onAction="#handleCreateCategory" text="+Add Category">
+                              <Button mnemonicParsing="false" onAction="#handleCreateCategory" style="-fx-background-color: cornflowerblue;" text="+Add Category" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets left="55.0" top="10.0" />
                                  </VBox.margin>
+                                 <font>
+                                    <Font name="Avenir Black" size="13.0" />
+                                 </font>
                               </Button>
                            </children>
                         </VBox>
@@ -40,18 +41,18 @@
                   </AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
                      <children>
-                        <GridPane fx:id="gridPane" layoutX="68.0" layoutY="100.0" prefHeight="436.0" prefWidth="944.0" vgap="20.0">
+                        <GridPane fx:id="gridPane" layoutX="40.0" layoutY="34.0" prefHeight="309.0" prefWidth="972.0" vgap="20.0">
                            <children>
-                              <Text layoutX="10.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description*" GridPane.rowIndex="4">
+                              <Text fontSmoothingType="LCD" layoutX="10.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description*" GridPane.rowIndex="4">
                                  <font>
-                                    <Font name="PT Sans" size="18.0" />
+                                    <Font name="Avenir Roman" size="16.0" />
                                  </font>
                               </Text>
                               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="2">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time*">
+                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time*">
                                        <font>
-                                          <Font name="PT Sans" size="18.0" />
+                                          <Font name="Avenir Roman" size="16.0" />
                                        </font>
                                        <HBox.margin>
                                           <Insets top="12.5" />
@@ -66,9 +67,9 @@
                               </HBox>
                               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="3">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="End Time*">
+                                    <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time*">
                                        <font>
-                                          <Font name="PT Sans" size="18.0" />
+                                          <Font name="Avenir Roman" size="16.0" />
                                        </font>
                                        <HBox.margin>
                                           <Insets top="12.5" />
@@ -81,14 +82,14 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Task*" GridPane.rowIndex="1">
+                              <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Task*" GridPane.rowIndex="1">
                                  <font>
-                                    <Font name="PT Sans" size="18.0" />
+                                    <Font name="Avenir Roman" size="16.0" />
                                  </font>
                               </Text>
                               <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                  <children>
-                                    <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Please select an entry!">
+                                    <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Add a description here" style="-fx-background-color: transparent;">
                                        <HBox.margin>
                                           <Insets top="20.0" />
                                        </HBox.margin>
@@ -98,52 +99,74 @@
                                     </TextArea>
                                  </children>
                               </HBox>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Category*">
+                              <Text fontSmoothingType="LCD" strokeType="OUTSIDE" strokeWidth="0.0" text="Category*">
                                  <font>
-                                    <Font name="PT Sans" size="18.0" />
+                                    <Font name="Avenir Roman" size="16.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="catName" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry!" GridPane.columnIndex="1">
+                              <Text fx:id="catName" fill="#3c3939" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry on the left" GridPane.columnIndex="1">
                                  <font>
-                                    <Font name="PT Sans" size="14.0" />
+                                    <Font name="Avenir Roman" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="taskName" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry!" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <Text fx:id="taskName" fill="#3c3939" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry on the left" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <font>
-                                    <Font name="PT Sans" size="14.0" />
+                                    <Font name="Avenir Roman" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="startField" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry!" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <Text fx:id="startField" fill="#3c3939" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry on the left" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <font>
-                                    <Font name="PT Sans" size="14.0" />
+                                    <Font name="Avenir Roman" size="14.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="endField" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry!" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                              <Text fx:id="endField" fill="#3c3939" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select a category or entry on the left" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                  <font>
-                                    <Font name="PT Sans" size="14.0" />
+                                    <Font name="Avenir Roman" size="14.0" />
                                  </font>
                               </Text>
                            </children>
                            <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.44561767578125" minWidth="10.0" prefWidth="217.0" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="708.0" minWidth="10.0" prefWidth="708.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.44561767578125" minWidth="10.0" prefWidth="226.73138427734375" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="748.2686157226562" minWidth="10.0" prefWidth="748.2686157226562" />
                            </columnConstraints>
                            <rowConstraints>
-                              <RowConstraints maxHeight="150.26449584960938" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="150.26449584960938" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="191.0" minHeight="0.0" prefHeight="42.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="159.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="150.26449584960938" minHeight="10.0" prefHeight="34.809967041015625" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="150.26449584960938" minHeight="10.0" prefHeight="38.53642272949219" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="191.0" minHeight="0.0" prefHeight="26.5965576171875" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="26.28326416015625" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="194.0" minHeight="10.0" prefHeight="159.71673583984375" vgrow="SOMETIMES" />
                            </rowConstraints>
                         </GridPane>
-                        <Button fx:id="uC" layoutX="640.0" layoutY="606.0" mnemonicParsing="false" onAction="#pressedUpdateCategory" text="Update Category" visible="false" />
-                        <Button fx:id="uE" layoutX="530.0" layoutY="606.0" mnemonicParsing="false" onAction="#pressedUpdateEntry" text="Update Entry" visible="false" />
-                        <Button fx:id="dC" layoutX="645.0" layoutY="14.0" mnemonicParsing="false" onAction="#pressedDeleteCategory" text="Delete Category" visible="false" />
-                        <Button fx:id="dE" layoutX="540.0" layoutY="14.0" mnemonicParsing="false" onAction="#pressedDeleteEntry" text="Delete Entry" visible="false" />
+                        <Button fx:id="uC" layoutX="640.0" layoutY="606.0" mnemonicParsing="false" onAction="#pressedUpdateCategory" style="-fx-background-color: cornflowerblue;" text="Update Category" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Avenir Black" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="uE" layoutX="530.0" layoutY="606.0" mnemonicParsing="false" onAction="#pressedUpdateEntry" style="-fx-background-color: cornflowerblue;" text="Update Entry" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Avenir Black" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="dC" layoutX="645.0" layoutY="14.0" mnemonicParsing="false" onAction="#pressedDeleteCategory" style="-fx-background-color: cornflowerblue;" text="Delete Category" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Avenir Black" size="13.0" />
+                           </font></Button>
+                        <Button fx:id="dE" layoutX="540.0" layoutY="14.0" mnemonicParsing="false" onAction="#pressedDeleteEntry" style="-fx-background-color: cornflowerblue;" text="Delete Entry" textFill="WHITE" visible="false">
+                           <font>
+                              <Font name="Avenir Black" size="13.0" />
+                           </font></Button>
                      </children></AnchorPane>
               </items>
             </SplitPane>
          </children>
       </AnchorPane>
+      <Label layoutX="43.0" layoutY="14.0" text="Log Time Here" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="43.0" layoutY="66.0" text="How have you spent your time?">
+         <font>
+            <Font name="Avenir Oblique" size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

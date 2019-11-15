@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.AddTaskController">
    <children>
-      <GridPane fx:id="gridPane" layoutX="103.0" layoutY="258.0" prefHeight="368.0" prefWidth="800.0" vgap="20.0" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="175.0">
+      <GridPane fx:id="gridPane" layoutX="103.0" layoutY="258.0" prefHeight="299.0" prefWidth="781.0" vgap="20.0" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="175.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.44561767578125" minWidth="10.0" prefWidth="220.7991943359375" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="579.2008056640625" minWidth="10.0" prefWidth="579.2008056640625" />
@@ -25,33 +25,33 @@
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title*">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <Text layoutX="10.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" GridPane.rowIndex="1">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <Text layoutX="10.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do Date*" GridPane.rowIndex="2">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Due Date*" GridPane.rowIndex="3">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Priority*" GridPane.rowIndex="4">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
-            <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Type description here" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Type description here" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <Slider fx:id="prioritySlider" maxWidth="250.0" minWidth="250.0" prefWidth="250.0">
+                  <Slider fx:id="prioritySlider" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" showTickLabels="true">
                      <HBox.margin>
                         <Insets top="7.5" />
                      </HBox.margin>
@@ -70,7 +70,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <DatePicker fx:id="doField" editable="false" promptText="Select date here">
+                  <DatePicker fx:id="doField" editable="false" promptText="Select date here" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="7.5" />
                      </HBox.margin>
@@ -84,7 +84,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <DatePicker fx:id="dueField" editable="false" promptText="Select date here">
+                  <DatePicker fx:id="dueField" editable="false" promptText="Select date here" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="6.5" />
                      </HBox.margin>
@@ -98,7 +98,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <TextField fx:id="titleField" prefWidth="250.0" promptText="Type title here">
+                  <TextField fx:id="titleField" prefWidth="250.0" promptText="Type title here" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="2.5" />
                      </HBox.margin>
@@ -112,30 +112,30 @@
             </HBox>
          </children>
       </GridPane>
-      <Label layoutX="344.0" layoutY="50.0" text="Create New Task" AnchorPane.topAnchor="40.0">
+      <Button fx:id="btn" layoutX="443.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="35.0" prefWidth="149.0" style="-fx-background-color: cornflowerblue;" text="+ Create Task" textFill="WHITE">
          <font>
-            <Font name="PT Sans Bold" size="42.0" />
-         </font>
-      </Label>
-      <Button fx:id="btn" layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleCreateButton" text="+ Create Task">
-         <font>
-            <Font size="24.0" />
+            <Font name="Avenir Black" size="16.0" />
          </font></Button>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButtonK" text="&lt; Back to Kanban" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButtonK" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Kanban" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
-      <Text layoutX="273.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the following fields below. This will create a new task.">
+      <Text layoutX="309.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the fields below to create a new task">
          <font>
-            <Font name="PT Sans" size="16.0" />
+            <Font name="Avenir Oblique" size="16.0" />
          </font>
       </Text>
       <Label fx:id="status" alignment="CENTER" layoutX="386.0" layoutY="680.0" text="Label" visible="false" />
-      <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleBackButtonD" text="&lt; Back to Deep Focus">
+      <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleBackButtonD" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Deep Focus" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
+      <Label layoutX="386.0" layoutY="49.0" text="Create a New Task" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
