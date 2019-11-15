@@ -7,6 +7,7 @@ package clarify.View;
 
 import clarify.Util.Database;
 import clarify.Util.PageSwitchHelper;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -34,6 +35,7 @@ import javafx.scene.layout.AnchorPane;
 public class DailyLearningsController implements Initializable{
     
     private Database d = new Database();
+    private PageSwitchHelper p = new PageSwitchHelper();
     
     @FXML
     private ListView datesList;
@@ -97,6 +99,11 @@ public class DailyLearningsController implements Initializable{
 
             }
         }
+    }
+    
+    @FXML
+    public void handleGenerateReport(ActionEvent event) throws IOException{
+        p.changeCenter(event, "DailyLearningsReport.fxml");
     }
     
     @FXML

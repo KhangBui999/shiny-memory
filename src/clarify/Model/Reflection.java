@@ -10,53 +10,33 @@ import javafx.beans.property.StringProperty;
  * @author BRIAN
  */
 public class Reflection {
-    private IntegerProperty id; 
-    private StringProperty well; 
-    private StringProperty better; 
-    private StringProperty currentDay;
-    
-    
+    private StringProperty answer; 
+    private StringProperty frequency; 
+
     public Reflection() {
     }
+    
+    public Reflection(String answer, String frequency) {
+        this.answer = new SimpleStringProperty(answer);
+        this.frequency = new SimpleStringProperty(frequency);
+    }
 
-    public Reflection(int id, String well, String better, String currentDay) {
-        this.id = new SimpleIntegerProperty(id);
-        this.well = new SimpleStringProperty(well);
-        this.better= new SimpleStringProperty(better);
-        this.currentDay= new SimpleStringProperty(currentDay);   
+    public StringProperty getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(StringProperty answer) {
+        this.answer = answer;
+    }
+
+    public StringProperty getFrequency() {
+        return frequency;
+    }
+
+    public void setFrequency(StringProperty frequency) {
+        this.frequency = frequency;
     }
     
-    public final IntegerProperty getId() {
-        return id;
-    }
-    
-    public final void setId(IntegerProperty id) {
-        this.id = id;
-    }
-    
-    public final StringProperty getWellProperty() {
-        return well;
-    }
-
-    public final void setWell(StringProperty well) {
-        this.well = well;
-    }
-
-    public final StringProperty getBetter() {
-        return better;
-    }
-
-    public final void setBetter(StringProperty better) {
-        this.better = better;
-    }
-
-    public final StringProperty getCurrentDay() {
-        return currentDay;
-    }
-
-    public final void setCurrentDay(StringProperty currentDay) {
-        this.currentDay = currentDay;
-    }
     public final String getString(StringProperty value) {
         return value.getValue();
     }
