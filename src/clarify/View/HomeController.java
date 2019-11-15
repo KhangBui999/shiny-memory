@@ -54,6 +54,8 @@ public class HomeController implements Initializable {
     
     @FXML
     private LineChart<Integer, String> weeklyTrend;
+    
+    
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

@@ -10,22 +10,22 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.KanbanBoardController">
    <children>
-      <Label layoutX="30.0" layoutY="20.0" text="Your Kanban Board">
+      <Label layoutX="30.0" layoutY="20.0" text="Your Kanban Board" textFill="CORNFLOWERBLUE">
          <font>
-            <Font name="PT Sans Bold" size="42.0" />
+            <Font name="Avenir Black" size="22.0" />
          </font></Label>
-      <Label layoutX="40.0" layoutY="90.0" text="Task(s) to complete...">
+      <Label layoutX="40.0" layoutY="90.0" text="Your Tasks to Complete">
          <font>
-            <Font name="PT Sans Bold" size="22.0" />
+            <Font name="Avenir Oblique" size="15.0" />
          </font>
       </Label>
-      <HBox layoutX="30.0" layoutY="130.0" prefHeight="600.0" prefWidth="960.0">
+      <HBox layoutX="35.0" layoutY="130.0" prefHeight="382.0" prefWidth="955.0">
          <children>
             <VBox maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: #EFEDED; -fx-background-radius: 10;">
                <children>
                   <Label text="By Today" textAlignment="CENTER">
                      <font>
-                        <Font name="PT Sans Bold" size="20.0" />
+                        <Font name="Avenir Roman" size="16.0" />
                      </font>
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" top="5.0" />
@@ -36,9 +36,9 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
+                  <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" prefHeight="11.0" prefWidth="144.0" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task" textFill="CORNFLOWERBLUE">
                      <font>
-                        <Font name="PT Sans Bold" size="14.0" />
+                        <Font name="Avenir Roman" size="14.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="72.0" right="72.0" top="6.0" />
@@ -53,7 +53,7 @@
                <children>
                   <Label text="By Tomorrow">
                      <font>
-                        <Font name="PT Sans Bold" size="20.0" />
+                        <Font name="Avenir Roman" size="16.0" />
                      </font>
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" top="5.0" />
@@ -66,7 +66,7 @@
                   </ListView>
                   <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
                      <font>
-                        <Font name="PT Sans Bold" size="14.0" />
+                        <Font name="Avenir Roman" size="14.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="72.0" right="72.0" top="6.0" />
@@ -81,7 +81,7 @@
                <children>
                   <Label text="Within 7 Days" textAlignment="CENTER">
                      <font>
-                        <Font name="PT Sans Bold" size="20.0" />
+                        <Font name="Avenir Roman" size="16.0" />
                      </font>
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" top="5.0" />
@@ -94,7 +94,7 @@
                   </ListView>
                   <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
                      <font>
-                        <Font name="PT Sans Bold" size="14.0" />
+                        <Font name="Avenir Roman" size="14.0" />
                      </font>
                      <VBox.margin>
                         <Insets left="72.0" right="72.0" top="6.0" />
@@ -107,9 +107,9 @@
             </VBox>
             <VBox layoutX="470.0" layoutY="10.0" maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: #EFEDED; -fx-background-radius: 10;">
                <children>
-                  <Label text="Task(s) Completed Today" textAlignment="CENTER">
+                  <Label text="Completed Today!" textAlignment="CENTER">
                      <font>
-                        <Font name="PT Sans Bold" size="20.0" />
+                        <Font name="Avenir Roman" size="16.0" />
                      </font>
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" top="5.0" />
