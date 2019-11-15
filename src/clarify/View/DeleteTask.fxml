@@ -10,44 +10,44 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DeleteTaskController">
    <children>
-      <Label layoutX="325.0" layoutY="40.0" text="Delete Existing Task" AnchorPane.topAnchor="40.0">
+      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButtonK" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Kanban" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
-            <Font name="PT Sans Bold" size="42.0" />
-         </font>
-      </Label>
-      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButtonK" text="&lt; Back to Kanban" AnchorPane.leftAnchor="14.0">
-         <font>
-            <Font size="14.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
-      <Text fx:id="prompt" layoutX="362.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure you want to delete this task?">
+      <Text fx:id="prompt" layoutX="365.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure you want to delete this task?">
          <font>
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
-      <Button layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleBackButtonD" text="&lt; Back to Deep Focus">
+      <Button layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleBackButtonD" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Deep Focus" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
-      <Text fx:id="warning" fill="RED" layoutX="351.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This task cannot be recovered if it is deleted!">
+      <Text fx:id="warning" fill="RED" layoutX="350.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This task cannot be recovered if it is deleted!">
          <font>
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
-      <Button fx:id="yesBtn" layoutX="401.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleYesButton" text="Yes">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Button>
-      <Button fx:id="noBtn" layoutX="522.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="54.0" prefWidth="80.0" text="No" textAlignment="CENTER">
-         <font>
-            <Font size="28.0" />
-         </font>
-      </Button>
       <Label fx:id="result" layoutX="321.0" layoutY="329.0" text="Label" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="200.0">
          <font>
             <Font size="32.0" />
          </font></Label>
+      <Button fx:id="yesBtn" layoutX="425.0" layoutY="211.0" mnemonicParsing="false" onAction="#handleYesButton" style="-fx-background-color: cornflowerblue;" text="Yes, I'm sure" textFill="WHITE">
+         <font>
+            <Font name="Avenir Black" size="17.0" />
+         </font>
+      </Button>
+      <Button fx:id="noBtn" layoutX="580.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: cornflowerblue;" text="No" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Avenir Black" size="17.0" />
+         </font>
+      </Button>
+      <Label layoutX="384.0" layoutY="69.0" text="Delete Existing Task" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

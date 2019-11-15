@@ -8,7 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.AboutController">
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.AboutController">
    <children>
       <Text layoutX="56.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright © 2019. We, the developers of this software application, declare that it is our work towards an assessment item submitted to fulfil the requirements of INFS2605(UNSW Sydney). We declare that it is our own work, except where acknowledged,and has not been submitted for academic credit elsewhere. We acknowledge that theassessor of this item may, for the purpose of assessing this item: Reproduce thisassessment item and provide a copy to another member of the University; and/or,Communicate a copy of this assessment item to a plagiarism checking service (whichmay then retain a copy of the assessment item on its database for the purpose of future plagiarism checking). We certify that we have read and understood the UNSW University Rules in respect of Student Academic Misconduct." wrappingWidth="920.8008728027344">
          <font>

@@ -12,17 +12,17 @@
 
 <BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.RootLayoutController">
    <top>
-      <AnchorPane prefHeight="45.0" prefWidth="1070.0" style="-fx-background-color: cornflowerblue;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="45.0" prefWidth="1070.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
          <children>
-            <Button layoutX="915.0" layoutY="3.0" mnemonicParsing="false" onAction="#aboutPressed" prefHeight="0.0" prefWidth="184.0" style="-fx-background-color: transparent;" text="About" textAlignment="RIGHT" textFill="WHITE">
+            <Button layoutX="915.0" layoutY="3.0" mnemonicParsing="false" onAction="#aboutPressed" prefHeight="0.0" prefWidth="184.0" style="-fx-background-color: transparent;" text="About" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
                <font>
                   <Font name="Avenir Black" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="1070.0" layoutY="3.0" mnemonicParsing="false" onAction="#helpPressed" prefHeight="0.0" prefWidth="184.0" style="-fx-background-color: transparent;" text="Help" textAlignment="RIGHT" textFill="WHITE">
+            <Button layoutX="1070.0" layoutY="3.0" mnemonicParsing="false" onAction="#helpPressed" prefHeight="0.0" prefWidth="184.0" style="-fx-background-color: transparent;" text="Help" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
                <font>
                   <Font name="Avenir Black" size="18.0" />
                </font>
@@ -54,7 +54,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#homeMenuPressed" prefWidth="273.0" style="-fx-background-color: transparent;" text=" Home" textFill="WHITE" GridPane.columnIndex="1">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#homeMenuPressed" prefWidth="273.0" style="-fx-background-color: transparent;" text="Dashboard" textFill="WHITE" GridPane.columnIndex="1">
                      <font>
                         <Font name="Avenir Black" size="22.0" />
                      </font>
