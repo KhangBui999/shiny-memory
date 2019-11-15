@@ -71,7 +71,6 @@ public class KanbanBoardController{
         weekList.setCellFactory(task -> new TaskNoteController());
         
         this.obsComp = FXCollections.observableArrayList(getCompTask());
-        tmrList.getItems().clear();
         compList.setItems(this.obsComp);
         compList.setCellFactory(task -> new TaskNoteController());
     }
@@ -105,70 +104,72 @@ public class KanbanBoardController{
     }
     
     @FXML
-    public void compToToday() {
+    public void compToToday(ActionEvent event) {
         try{
-            Task task = compList.getSelectionModel().getSelectedItem();
+            Task task = compList.getSelectionModel().getSelectedItem();            
             String st = "UPDATE TASKS SET status = '0' WHERE task_id = '"+task.getInt(task.getTaskId())+"';";
             d.insertStatement(st);
+            p.changeCenter(event, "KanbanBoard.fxml"); 
         } catch(Exception e){
             //TODO
         }
     }
     
     @FXML
-    public void todayToComp() {
+    public void todayToComp(ActionEvent event) {
         try{
             Task task = todayList.getSelectionModel().getSelectedItem();
             String st = "UPDATE TASKS SET status = '2' WHERE task_id = '"+task.getInt(task.getTaskId())+"';";
             d.insertStatement(st);
+            p.changeCenter(event, "KanbanBoard.fxml");
         } catch(Exception e){
             //TODO
         }
     }
     
     @FXML
-    public void todayToTmr() {
+    public void todayToTmr(ActionEvent event) {
         try{
             Task task = todayList.getSelectionModel().getSelectedItem();
             String st = "UPDATE TASKS SET due_date = DATE('now', '+1 day', 'localtime') WHERE task_id = '"+task.getInt(task.getTaskId())+"';";
             d.insertStatement(st);
-            loadTask();
+            p.changeCenter(event, "KanbanBoard.fxml");
         } catch(Exception e){
             e.printStackTrace();
         }
     }
     
     @FXML
-    public void tmrToToday() {
+    public void tmrToToday(ActionEvent event) {
         try{
             Task task = tmrList.getSelectionModel().getSelectedItem();
             String st = "UPDATE TASKS SET due_date = DATE('now', 'localtime') WHERE task_id = '"+task.getInt(task.getTaskId())+"';";
             d.insertStatement(st);
-            loadTask();
+            p.changeCenter(event, "KanbanBoard.fxml");
         } catch(Exception e){
             e.printStackTrace();
         }
     }
     
     @FXML
-    public void tmrToWeek() {
+    public void tmrToWeek(ActionEvent event) {
         try{
             Task task = tmrList.getSelectionModel().getSelectedItem();
             String st = "UPDATE TASKS SET due_date = DATE('now', '+2 day', 'localtime') WHERE task_id = '"+task.getInt(task.getTaskId())+"';";
             d.insertStatement(st);
-            loadTask();
+            p.changeCenter(event, "KanbanBoard.fxml");
         } catch(Exception e){
             e.printStackTrace();
         }
     }
     
     @FXML
-    public void weekToTmr() {
+    public void weekToTmr(ActionEvent event) {
         try{
             Task task = weekList.getSelectionModel().getSelectedItem();
             String st = "UPDATE TASKS SET due_date = DATE('now', '+1 day', 'localtime') WHERE task_id = '"+task.getInt(task.getTaskId())+"';";
             d.insertStatement(st);
-            loadTask();
+            p.changeCenter(event, "KanbanBoard.fxml");
         } catch(Exception e){
             e.printStackTrace();
         }
