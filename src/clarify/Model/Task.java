@@ -96,5 +96,10 @@ public class Task {
     public final int getInt(IntegerProperty value) {
         return value.getValue();
     }
+    
+    @Override
+    public String toString() {
+        return this.getString(getTitleProperty());
+    }
         
 }
