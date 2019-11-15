@@ -1,7 +1,9 @@
 package clarify.View;
 
 import clarify.Util.Database;
+import clarify.Util.PageSwitchHelper;
 import com.sun.javafx.charts.Legend;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -15,6 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Side;
@@ -25,6 +28,7 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.PieChart;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -42,6 +46,9 @@ public class HomeController implements Initializable {
     private BarChart<String, Integer> dailyBarChart;
 
     @FXML
+    private Button logTime;
+
+    @FXML
     private CategoryAxis x;
 
     @FXML
@@ -50,8 +57,6 @@ public class HomeController implements Initializable {
     @FXML
     private BarChart<String, Integer> weeklyBarChart;
 
-
-
     @FXML
     private CategoryAxis xWeekly;
 
@@ -59,8 +64,13 @@ public class HomeController implements Initializable {
     private NumberAxis yWeekly;
 
     Database d = new Database();
+    private final PageSwitchHelper p = new PageSwitchHelper();
+    
+    @FXML
+    public void addLogPressed(ActionEvent event) throws IOException{
+        p.changeCenter(event, "TimeLogging.fxml");
+    }
 
-   
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 

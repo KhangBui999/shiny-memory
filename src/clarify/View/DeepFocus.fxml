@@ -36,7 +36,7 @@
                </font>
             </Label>
          </children></AnchorPane>
-      <ListView fx:id="allList" layoutX="33.0" layoutY="110.0" onMouseClicked="#userClickedTask" prefHeight="233.0" prefWidth="355.0" />
+      <ListView fx:id="allList" layoutX="33.0" layoutY="110.0" onMouseClicked="#userClickedTask" prefHeight="233.0" prefWidth="355.0" style="-fx-background-color: transparent;" />
       <Label fx:id="taskTitle1" layoutX="40.0" layoutY="67.0" prefHeight="45.0" prefWidth="336.0" text="Select a task to focus on">
          <font>
             <Font name="Avenir Black" size="16.0" />
@@ -47,7 +47,7 @@
             <Font name="Avenir Roman" size="16.0" />
          </font>
       </Label>
-      <ComboBox fx:id="moodBox" layoutX="36.0" layoutY="416.0" onAction="#userSelectedMood" prefHeight="32.0" prefWidth="235.0" promptText="Select music" />
+      <ComboBox fx:id="moodBox" layoutX="36.0" layoutY="416.0" onAction="#userSelectedMood" prefHeight="32.0" prefWidth="235.0" promptText="Select music" style="-fx-background-color: transparent;" />
       <Label layoutX="38.0" layoutY="14.0" text="Deep Focus" textFill="CORNFLOWERBLUE">
          <font>
             <Font name="Avenir Black" size="22.0" />
