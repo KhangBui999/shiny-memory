@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 public class PageSwitchHelper {
     
+    //From: Blair's PageSwitchHelper.java (Week 4-5 Tutorial)
     public void switcher(ActionEvent event, String page) throws IOException {
         System.out.println("Switching pages");
         Parent parent = FXMLLoader.load(getClass().getResource(page));
@@ -25,6 +26,7 @@ public class PageSwitchHelper {
         stage.show();
     }
     
+    //From: Blair's PageSwitchHelper.java (Week 4-5 Tutorial)
     public void switcher(MouseEvent event, String page) throws IOException {
         System.out.println("Switching pages");
         Parent parent = FXMLLoader.load(getClass().getResource(page));
@@ -35,6 +37,9 @@ public class PageSwitchHelper {
         stage.show();
     }
     
+    //This method changes the center of the RootLayout
+    //Adapted from: https://stackoverflow.com/questions/40108443/how-to-change-centerpane-from-leftpane-in-javafx-borderpane
+    //AND Blair's PageSwitchHelper.java file from Week 4-5 Tutorial
     public void changeCenter(ActionEvent event, String page) throws IOException {
         System.out.println("Switching center of BorderPane");
         BorderPane root = null;
@@ -51,7 +56,6 @@ public class PageSwitchHelper {
             stage.setResizable(false);
             stage.show();
 
-            cont.setPage(page);
             cont.loadPage(page);
         }
         catch (Exception e) {
