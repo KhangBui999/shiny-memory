@@ -16,6 +16,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -28,6 +29,9 @@ public class RootLayoutController{
 
     @FXML
     private BorderPane root;
+    
+    @FXML
+    private ImageView homeIcon;
     
     @FXML
     private AnchorPane content;
