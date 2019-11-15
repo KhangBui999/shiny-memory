@@ -33,6 +33,7 @@ public class Main extends Application {
         d.createCategoriesTable();
         d.createEntriesTable();
         d.createTaskTable();
+        d.createReflectionTable();
     }
 
     /**
