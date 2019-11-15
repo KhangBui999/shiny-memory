@@ -1,11 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DeleteCategoryController">
-    
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DeleteCategoryController">
+   <children>
+      <Label layoutX="325.0" layoutY="40.0" text="Delete Existing Category" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="PT Sans Bold" size="42.0" />
+         </font>
+      </Label>
+      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButton" text="&lt; Back to Time Logging" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Text fx:id="prompt" layoutX="362.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure you want to delete this category?">
+         <font>
+            <Font name="PT Sans" size="16.0" />
+         </font>
+      </Text>
+      <Text fx:id="warning" fill="RED" layoutX="351.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This category cannot be recovered if it is deleted!">
+         <font>
+            <Font name="PT Sans" size="16.0" />
+         </font>
+      </Text>
+      <Button fx:id="yesBtn" layoutX="401.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleYesButton" text="Yes">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button fx:id="noBtn" layoutX="522.0" layoutY="321.0" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="54.0" prefWidth="80.0" text="No" textAlignment="CENTER">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Label fx:id="result" layoutX="321.0" layoutY="329.0" text="Label" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="200.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+   </children>
 </AnchorPane>

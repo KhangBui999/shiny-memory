@@ -11,7 +11,7 @@
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.HomeController">
    <children>
       <PieChart fx:id="lifePieChart" layoutX="75.0" layoutY="120.0" prefHeight="303.0" prefWidth="402.0" style="-fx-border-color: black; -fx-border-radius: 10;" title="Pie Chart of My Life" AnchorPane.leftAnchor="75.0" AnchorPane.topAnchor="100.0" />
-      <BarChart fx:id="dailyBarChart" layoutX="495.0" layoutY="120.0" prefHeight="303.0" prefWidth="402.0" style="-fx-border-color: black; -fx-border-radius: 10;" title="Daily Breakdown" AnchorPane.leftAnchor="495.0" AnchorPane.topAnchor="100.0">
+      <BarChart fx:id="dailyBarChart" layoutX="74.0" layoutY="422.0" prefHeight="303.0" prefWidth="402.0" style="-fx-border-color: black; -fx-border-radius: 10;" title="Daily Breakdown" AnchorPane.leftAnchor="74.0" AnchorPane.topAnchor="422.0">
         <xAxis>
           <CategoryAxis label="Top 5 Activities" side="BOTTOM" fx:id="x" />
         </xAxis>
@@ -19,14 +19,6 @@
           <NumberAxis fx:id="y" label="Hours per day" side="LEFT" />
         </yAxis>
       </BarChart>
-      <LineChart layoutX="61.0" layoutY="379.0" prefHeight="304.0" prefWidth="404.0" style="-fx-border-color: black; -fx-border-radius: 10;" title="Weekly Trends" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="75.0">
-        <xAxis>
-          <CategoryAxis side="BOTTOM" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis side="LEFT" />
-        </yAxis>
-      </LineChart>
       <Label layoutX="40.0" layoutY="30.0" text="Your Dashboard">
          <font>
             <Font name="PT Sans Bold" size="42.0" />
@@ -40,5 +32,6 @@
             <NumberAxis label="Hours per day" side="LEFT" />
          </yAxis>
       </BarChart>
+      <AnchorPane layoutX="496.0" layoutY="101.0" prefHeight="300.0" prefWidth="400.0" style="-fx-border-color: black; -fx-border-radius: 10;" />
    </children>
 </AnchorPane>

@@ -138,8 +138,8 @@
                         </GridPane>
                         <Button fx:id="uC" layoutX="640.0" layoutY="606.0" mnemonicParsing="false" onAction="#pressedUpdateCategory" text="Update Category" visible="false" />
                         <Button fx:id="uE" layoutX="530.0" layoutY="606.0" mnemonicParsing="false" onAction="#pressedUpdateEntry" text="Update Entry" visible="false" />
-                        <Button fx:id="dC" layoutX="645.0" layoutY="14.0" mnemonicParsing="false" text="Delete Category" visible="false" />
-                        <Button fx:id="dE" layoutX="540.0" layoutY="14.0" mnemonicParsing="false" text="Delete Entry" visible="false" />
+                        <Button fx:id="dC" layoutX="645.0" layoutY="14.0" mnemonicParsing="false" onAction="#pressedDeleteCategory" text="Delete Category" visible="false" />
+                        <Button fx:id="dE" layoutX="540.0" layoutY="14.0" mnemonicParsing="false" onAction="#pressedDeleteEntry" text="Delete Entry" visible="false" />
                      </children></AnchorPane>
               </items>
             </SplitPane>

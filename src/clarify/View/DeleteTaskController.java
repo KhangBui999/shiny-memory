@@ -85,16 +85,39 @@ public class DeleteTaskController implements Initializable {
     public void handleYesButton() {
         String st = "DELETE FROM TASKS "
                 + "WHERE task_id = '"+getId()+"';";
+        if(containsEntries() == false){
+            try{
+                d.insertStatement(st);
+                System.out.println("Task was deleted successfully");
+                this.result.setText("Task deleted. Please click on BACK.");
+                result.setVisible(true);
+            }
+            catch (SQLException e){
+                System.out.println("Task was unable to be deleted due to an SQL error.");
+                this.result.setText("An error occured. Please click on BACK.");
+                result.setVisible(true);
+            }
+            disappearButtons();
+        } else {
+            System.out.println("Delete entries before deleting task.");
+            this.result.setText("Please delete linked entries before deleting task.");
+            result.setVisible(true);
+            disappearButtons();
+        }
+    }
+    
+    public boolean containsEntries() {
+        boolean exists = false;
         try{
-            d.insertStatement(st);
-            System.out.println("Task was deleted successfully");
-            this.result.setText("Task successfully deleted. Please click on BACK.");
+            String st = "SELECT * FROM ENTRIES WHERE task = '"+getId()+"';";
+            ResultSet rs = d.getResultSet(st);
+            while(rs.next()){
+                exists = true;
+            }
+        } catch(SQLException e){
+            exists = true;
         }
-        catch (SQLException e){
-            System.out.println("Task was unable to be deleted due to an SQL error.");
-            this.result.setText("An error occured and task wasn't deleted. Please click on BACK.");
-        }
-        disappearButtons();
+        return exists;
     }
     
     public void disappearButtons() {

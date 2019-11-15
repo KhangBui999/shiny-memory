@@ -127,6 +127,29 @@ public class PageSwitchHelper {
             e.printStackTrace();
         }
     }
+ 
+    public void changeToDeleteCategory(ActionEvent event, int id) throws IOException {
+        System.out.println("Switching center of BorderPane to AddTask");
+        BorderPane root = null;
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/clarify/View/RootLayout.fxml"));
+            root = (BorderPane) loader.load();
+            
+            RootLayoutController cont = loader.getController();
+            
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+
+            cont.loadCategoryDelete(id);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
    
     public void changeToUpdateEntry(ActionEvent event, int id) throws IOException {
         System.out.println("Switching center of BorderPane to AddTask");
@@ -145,6 +168,29 @@ public class PageSwitchHelper {
             stage.show();
 
             cont.loadEntryUpdate(id);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void changeToDeleteEntry(ActionEvent event, int id) throws IOException {
+        System.out.println("Switching center of BorderPane to AddTask");
+        BorderPane root = null;
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("/clarify/View/RootLayout.fxml"));
+            root = (BorderPane) loader.load();
+            
+            RootLayoutController cont = loader.getController();
+            
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setResizable(false);
+            stage.show();
+
+            cont.loadEntryDelete(id);
         }
         catch (Exception e) {
             e.printStackTrace();

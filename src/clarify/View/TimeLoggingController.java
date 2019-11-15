@@ -39,6 +39,7 @@ public class TimeLoggingController implements Initializable {
     Database d = new Database();
     private int taskId;
     private int catId;
+    private int entryId;
     
     @FXML
     private TreeView treeItem;
@@ -100,8 +101,18 @@ public class TimeLoggingController implements Initializable {
     }
     
     @FXML
+    public void pressedDeleteCategory (ActionEvent event) throws IOException {
+        p.changeToDeleteCategory(event, catId);
+    }
+    
+    @FXML
     public void pressedUpdateEntry (ActionEvent event) throws IOException {
-        p.changeToUpdateEntry(event, catId);
+        p.changeToUpdateEntry(event, entryId);
+    }
+    
+    @FXML
+    public void pressedDeleteEntry (ActionEvent event) throws IOException {
+        p.changeToDeleteEntry(event, entryId);
     }
     
     @FXML
@@ -111,6 +122,7 @@ public class TimeLoggingController implements Initializable {
             boolean entryType = checkType(object);
             if(entryType == true){
                 String entryNo = object.substring(25, object.indexOf('|')-1);
+                entryId = Integer.parseInt(entryNo);
                 taskId = Integer.parseInt(entryNo);
                 ResultSet rs = d.getResultSet("SELECT * FROM ENTRIES e, Categories c, TASKS t "
                         + "WHERE e.category = c.cat_id "

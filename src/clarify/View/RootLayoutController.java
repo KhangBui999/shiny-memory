@@ -126,6 +126,32 @@ public class RootLayoutController {
             e.printStackTrace();
         }
     }
+
+    public void loadCategoryDelete(int id) throws SQLException {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("DeleteCategory.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            DeleteCategoryController d = loader.getController();
+            d.setId(id);
+            root.setCenter(page);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void loadEntryDelete(int id) throws SQLException {
+        try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("DeleteEntry.fxml"));
+            AnchorPane page = (AnchorPane) loader.load();
+            DeleteEntryController d = loader.getController();
+            d.setId(id);
+            root.setCenter(page);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     
     public void loadEntryUpdate(int id) throws SQLException {
         try {
