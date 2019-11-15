@@ -43,8 +43,8 @@
             </ImageView>
             <GridPane layoutX="8.0" layoutY="118.0" prefHeight="294.0" prefWidth="227.0">
               <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="0.0" prefWidth="22.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="205.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="0.0" prefWidth="11.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.0" minWidth="10.0" prefWidth="216.0" />
               </columnConstraints>
               <rowConstraints>
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -54,7 +54,7 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#homeMenuPressed" prefWidth="273.0" style="-fx-background-color: transparent;" text="Dashboard" textFill="WHITE" GridPane.columnIndex="1">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#homeMenuPressed" prefHeight="50.0" prefWidth="191.0" style="-fx-background-color: transparent;" text=" Dashboard" textFill="WHITE" GridPane.columnIndex="1">
                      <font>
                         <Font name="Avenir Black" size="22.0" />
                      </font>
@@ -66,7 +66,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#kanbanMenuPressed" prefHeight="58.0" prefWidth="273.0" style="-fx-background-color: transparent;" text=" Kanban" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#kanbanMenuPressed" prefHeight="58.0" prefWidth="157.0" style="-fx-background-color: transparent;" text=" Kanban" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font name="Avenir Black" size="22.0" />
                      </font>
@@ -78,19 +78,19 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#trendsPressed" prefHeight="63.0" prefWidth="273.0" style="-fx-background-color: transparent;" text="  Trends" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#trendsPressed" prefHeight="59.0" prefWidth="163.0" style="-fx-background-color: transparent;" text=" Trends" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font name="Avenir Black" size="22.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="38.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="34.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../Resources/arrow.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#deepMenuPressed" prefHeight="48.0" prefWidth="273.0" style="-fx-background-color: transparent;" text="Deep Focus" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#deepMenuPressed" prefHeight="57.0" prefWidth="203.0" style="-fx-background-color: transparent;" text="Deep Focus" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
                         <Font name="Avenir Black" size="22.0" />
                      </font>
@@ -102,14 +102,14 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#timeLoggingPressed" prefHeight="9.0" prefWidth="273.0" style="-fx-background-color: transparent;" text=" Log Time" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <Button alignment="CENTER" mnemonicParsing="false" prefHeight="56.0" prefWidth="178.0" style="-fx-background-color: transparent;" text="Learnings" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <font>
                         <Font name="Avenir Black" size="22.0" />
                      </font>
                      <graphic>
-                        <ImageView fitHeight="37.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="44.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Resources/add.png" />
+                              <Image url="@../Resources/light-bulb.png" />
                            </image>
                         </ImageView>
                      </graphic>

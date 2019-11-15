@@ -27,7 +27,7 @@
             <NumberAxis fx:id="yWeekly" label="Hours per day" side="LEFT" />
          </yAxis>
       </BarChart>
-      <Button fx:id="logTime" layoutX="603.0" layoutY="135.0" mnemonicParsing="false" onAction="#addLogPressed" style="-fx-background-color: cornflowerblue;" text="+ Log Time" textFill="WHITE">
+      <Button fx:id="logTime" layoutX="596.0" layoutY="103.0" mnemonicParsing="false" onAction="#addLogPressed" style="-fx-background-color: cornflowerblue;" text="+ Log Time" textFill="WHITE">
          <font>
             <Font name="Avenir Black" size="15.0" />
          </font>
@@ -35,6 +35,11 @@
       <Label layoutX="40.0" layoutY="14.0" prefHeight="33.0" prefWidth="407.0" text="Your Dashboard" textFill="CORNFLOWERBLUE">
          <font>
             <Font name="Avenir Black" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="601.0" layoutY="72.0" text="Log or view your time">
+         <font>
+            <Font name="Avenir Oblique" size="15.0" />
          </font>
       </Label>
    </children>

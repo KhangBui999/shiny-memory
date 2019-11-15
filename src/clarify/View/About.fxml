@@ -30,7 +30,7 @@
             <Font name="Avenir Roman" size="13.0" />
          </font>
       </Text>
-      <Text layoutX="56.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MusicPlayBackHelper.java adapted from Blair Wang at https://github.com/blairw/emona/  ">
+      <Text layoutX="56.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MusicPlayBackHelper.java &amp; chart colours adapted from Blair Wang at https://github.com/blairw/emona/  ">
          <font>
             <Font name="Avenir Roman" size="14.0" />
          </font>
