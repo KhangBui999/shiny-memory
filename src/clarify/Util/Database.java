@@ -195,5 +195,39 @@ public class Database {
             e.printStackTrace();
         }
     }
-
+    
+    public void createReflectionTable() throws SQLException { 
+        PreparedStatement tableImplement = null;
+        ResultSet rs = null;
+        openConnection();
+        try {
+            System.out.println("Checking REFLECTION Table");
+            DatabaseMetaData dbmd = conn.getMetaData();
+            rs = dbmd.getTables(null, null, "Reflection", null);
+            if(!rs.next()){
+                ArrayList<String> statementString = new ArrayList<String>();
+                String createStatement = "CREATE TABLE Reflection "
+                        + "(ref_id INTEGER PRIMARY KEY AUTOINCREMENT,"
+                        + "wellAnswer TEXT NOT NULL,"
+                        + "betterAnswer TEXT NOT NULL,"
+                        + "currentDate TEXT NOT NULL);";
+                statementString.add(createStatement);
+                for (String thisStatement : statementString) {
+                    try {
+                        insertStatement(thisStatement);
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+                
+                System.out.println("Reflection table created");
+            } else {
+                System.out.println("REFLECTION TABLE already Exists.");
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    
+    
 }

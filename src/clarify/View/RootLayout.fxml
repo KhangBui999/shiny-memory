@@ -77,6 +77,11 @@
                         <Insets bottom="1.0" top="1.0" />
                      </VBox.margin>
                   </Button>
+                  <Button layoutX="10.0" layoutY="203.0" mnemonicParsing="false" onAction="#dailyLearningsPressed" prefHeight="45.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="Daily Learnings" textFill="WHITE">
+                     <font>
+                        <Font name="PT Sans Bold" size="24.0" />
+                     </font>
+                  </Button>
                </children></VBox>
          </children>
       </AnchorPane>
