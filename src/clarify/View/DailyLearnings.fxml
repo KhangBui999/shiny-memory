@@ -8,99 +8,123 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DailyLearningsController">
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DailyLearningsController">
    <children>
-      <Button fx:id="submit" layoutX="472.0" layoutY="151.0" mnemonicParsing="false" text="Submit" />
-      <Label layoutX="60.0" layoutY="50.0" text="Daily Learnings">
+      <Button fx:id="submit" layoutX="472.0" layoutY="151.0" mnemonicParsing="false" style="-fx-background-color: cornflowerblue;" text="Submit" textFill="WHITE">
          <font>
-            <Font name="PT Sans Bold" size="42.0" />
-         </font>
-      </Label>
+            <Font name="Avenir Black" size="13.0" />
+         </font></Button>
       <AnchorPane layoutX="86.0" layoutY="464.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="125.0">
          <children>
-            <SplitPane dividerPositions="0.225" layoutX="287.0" layoutY="235.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <SplitPane dividerPositions="0.225" layoutX="287.0" layoutY="-40.0" prefHeight="670.0" prefWidth="1010.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-40.0">
               <items>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                      <children>
                         <VBox layoutX="36.0" layoutY="53.0" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <Label text="Dates">
-                                 <VBox.margin>
-                                    <Insets bottom="10.0" left="10.0" top="10.0" />
-                                 </VBox.margin>
+                              <Label text="                       Dates">
                                  <font>
-                                    <Font name="PT Sans Bold" size="32.0" />
+                                    <Font name="Avenir Oblique" size="14.0" />
                                  </font>
                               </Label>
-                              <ListView fx:id="datesList" onKeyReleased="#userSelectTask" onMouseClicked="#userSelectTask" prefHeight="500.0" prefWidth="200.0">
+                              <ListView fx:id="datesList" onKeyReleased="#userSelectTask" onMouseClicked="#userSelectTask" prefHeight="375.0" prefWidth="216.0" style="-fx-background-color: transparent;">
                                  <VBox.margin>
                                     <Insets bottom="10.0" left="10.0" right="10.0" />
                                  </VBox.margin>
                               </ListView>
-                              <Button mnemonicParsing="false" onAction="#handleGenerateReport" text="Generate Report">
+                              <Button mnemonicParsing="false" onAction="#handleGenerateReport" style="-fx-background-color: cornflowerblue;" text="Generate Report" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets left="50.0" />
                                  </VBox.margin>
+                                 <font>
+                                    <Font name="Avenir Black" size="16.0" />
+                                 </font>
                               </Button>
                            </children>
                         </VBox>
                      </children></AnchorPane>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: white;">
                      <children>
-                        <AnchorPane fx:id="anchorPane" layoutX="35.0" layoutY="28.0" prefHeight="600.0" prefWidth="697.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="30.0">
+                        <AnchorPane fx:id="anchorPane" layoutX="37.0" layoutY="26.0" prefHeight="642.0" prefWidth="705.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="35.0" AnchorPane.topAnchor="26.0">
                            <children>
-                              <TextArea fx:id="betterField" layoutX="-80.0" layoutY="362.0" prefHeight="100.0" prefWidth="600.0" promptText="Enter what you could have done better." AnchorPane.leftAnchor="0.0" />
-                              <Label fx:id="better" layoutX="-80.0" layoutY="292.0" prefHeight="21.0" prefWidth="405.0" text="What could you have done better?" AnchorPane.leftAnchor="0.0">
+                              <TextArea fx:id="betterField" layoutX="-80.0" layoutY="350.0" prefHeight="86.0" prefWidth="600.0" promptText="Enter what you could have done better." AnchorPane.leftAnchor="0.0" />
+                              <Label fx:id="better" layoutX="-80.0" layoutY="257.0" prefHeight="25.0" prefWidth="405.0" text="What could you have done better?" AnchorPane.leftAnchor="0.0">
                                  <font>
-                                    <Font name="PT Sans Bold" size="22.0" />
+                                    <Font name="Avenir Black" size="14.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="well" layoutX="-80.0" layoutY="77.0" prefHeight="21.0" prefWidth="405.0" text="What did you do well today?" AnchorPane.leftAnchor="0.0">
+                              <Label fx:id="well" layoutX="-80.0" layoutY="59.0" prefHeight="36.0" prefWidth="405.0" text="What did you do well today?" AnchorPane.leftAnchor="0.0">
                                  <font>
-                                    <Font name="PT Sans Bold" size="22.0" />
+                                    <Font name="Avenir Black" size="14.0" />
                                  </font>
                               </Label>
-                              <TextArea fx:id="wellField" layoutX="-80.0" layoutY="145.0" prefHeight="100.0" prefWidth="600.0" promptText="Enter what you did well today." AnchorPane.leftAnchor="0.0" />
-                              <Label layoutX="-80.0" layoutY="-3.0" prefHeight="54.0" prefWidth="228.0" text="Selected Date:" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="-3.0">
+                              <TextArea fx:id="wellField" layoutX="-80.0" layoutY="131.0" prefHeight="86.0" prefWidth="600.0" promptText="Enter what you did well today." AnchorPane.leftAnchor="0.0">
                                  <font>
-                                    <Font name="PT Sans Bold" size="36.0" />
+                                    <Font name="Avenir Roman" size="13.0" />
+                                 </font></TextArea>
+                              <Label layoutX="-1.0" layoutY="7.0" prefHeight="44.0" prefWidth="178.0" text="Selected Date:" textFill="CORNFLOWERBLUE" AnchorPane.leftAnchor="-1.0" AnchorPane.topAnchor="7.0">
+                                 <font>
+                                    <Font name="Avenir Black" size="16.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="-17.0" layoutY="111.0" text="Use Previous Answer:" AnchorPane.leftAnchor="0.0">
+                              <Label layoutX="-17.0" layoutY="86.0" prefHeight="29.0" prefWidth="155.0" text="Use Previous Answer:" AnchorPane.leftAnchor="0.0">
                                  <font>
-                                    <Font name="PT Sans Italic" size="16.0" />
+                                    <Font name="Avenir Roman" size="14.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="-17.0" layoutY="327.0" text="Use Previous Answer:" AnchorPane.leftAnchor="0.0">
+                              <Label layoutX="-17.0" layoutY="296.0" prefHeight="25.0" prefWidth="136.0" text="Use Previous Answer:" AnchorPane.leftAnchor="0.0">
                                  <font>
-                                    <Font name="PT Sans Italic" size="16.0" />
+                                    <Font name="Avenir Roman" size="14.0" />
                                  </font>
                               </Label>
-                              <ComboBox fx:id="prevWell" layoutX="172.0" layoutY="108.0" prefHeight="27.0" prefWidth="360.0" promptText="You can select a previous answer" AnchorPane.leftAnchor="172.0" />
-                              <Button layoutX="542.0" layoutY="108.0" mnemonicParsing="false" onAction="#handleSelectWell" text="Select" AnchorPane.leftAnchor="542.0" />
-                              <Button layoutX="542.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleSelectBetter" text="Select" AnchorPane.leftAnchor="542.0" />
-                              <ComboBox fx:id="prevBetter" layoutX="171.0" layoutY="324.0" prefHeight="27.0" prefWidth="360.0" promptText="You can select a previous answer" AnchorPane.leftAnchor="171.0" />
-                              <Label fx:id="date" layoutX="277.0" layoutY="-2.0" prefHeight="54.0" prefWidth="453.0" text="Date" AnchorPane.leftAnchor="277.0" AnchorPane.topAnchor="-2.0">
+                              <ComboBox fx:id="prevWell" layoutX="172.0" layoutY="87.0" prefHeight="23.0" prefWidth="360.0" promptText="You can select a previous answer" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="172.0" />
+                              <Button layoutX="551.0" layoutY="89.0" mnemonicParsing="false" onAction="#handleSelectWell" prefHeight="29.0" prefWidth="76.0" style="-fx-background-color: cornflowerblue;" text="Select" textFill="WHITE" AnchorPane.leftAnchor="551.0">
                                  <font>
-                                    <Font name="PT Sans" size="24.0" />
+                                    <Font name="Avenir Black" size="16.0" />
+                                 </font></Button>
+                              <Button layoutX="551.0" layoutY="324.0" mnemonicParsing="false" onAction="#handleSelectBetter" prefHeight="35.0" prefWidth="76.0" style="-fx-background-color: cornflowerblue;" text="Select" textFill="WHITE" AnchorPane.leftAnchor="551.0">
+                                 <font>
+                                    <Font name="Avenir Black" size="16.0" />
+                                 </font></Button>
+                              <ComboBox fx:id="prevBetter" layoutX="171.0" layoutY="295.0" prefHeight="32.0" prefWidth="360.0" promptText="You can select a previous answer" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="171.0" />
+                              <Label fx:id="date" layoutX="140.0" layoutY="8.0" prefHeight="44.0" prefWidth="590.0" text="Date" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="8.0">
+                                 <font>
+                                    <Font name="Avenir Roman" size="16.0" />
                                  </font>
                               </Label>
-                              <Button layoutX="245.0" layoutY="504.0" mnemonicParsing="false" onAction="#handleUpdateButton" text="Update">
+                              <Button layoutX="245.0" layoutY="504.0" mnemonicParsing="false" onAction="#handleUpdateButton" style="-fx-background-color: cornflowerblue;" text="Update" textFill="WHITE">
                                  <font>
-                                    <Font size="24.0" />
+                                    <Font name="Avenir Black" size="16.0" />
                                  </font>
                               </Button>
-                              <Label fx:id="wellError" layoutX="14.0" layoutY="248.0" text="ERROR: You must type something in the text area!" textFill="RED" visible="false" AnchorPane.leftAnchor="15.0" />
-                              <Label fx:id="betterError" layoutY="465.0" text="ERROR: You must type something in the text area!" textFill="RED" visible="false" AnchorPane.leftAnchor="15.0" />
-                              <Label fx:id="success" layoutX="162.0" layoutY="558.0" text="TASK HAS BEEN SUCCESSFULLY UPDATED!" textFill="#00ff09" visible="false" />
+                              <Label fx:id="wellError" layoutX="14.0" layoutY="248.0" text="ERROR: You must type something in the text area!" textFill="#c22222" visible="false" AnchorPane.leftAnchor="15.0">
+                                 <font>
+                                    <Font name="Avenir Oblique" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="betterError" layoutY="465.0" text="ERROR: You must type something in the text area!" textFill="#c22222" visible="false" AnchorPane.leftAnchor="15.0">
+                                 <font>
+                                    <Font name="Avenir Oblique" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="success" layoutX="162.0" layoutY="558.0" text="TASK HAS BEEN SUCCESSFULLY UPDATED!" textFill="#00ff09" visible="false">
+                                 <font>
+                                    <Font name="Avenir Oblique" size="16.0" />
+                                 </font></Label>
                            </children>
                         </AnchorPane>
-                        <Label fx:id="noSelect" layoutX="300.0" layoutY="306.0" text="Please select a date on the list." />
+                        <Label fx:id="noSelect" layoutX="274.0" layoutY="169.0" text="Please select a date on the list.">
+                           <font>
+                              <Font name="Avenir Oblique" size="17.0" />
+                           </font></Label>
                      </children>
                   </AnchorPane>
               </items>
             </SplitPane>
          </children>
       </AnchorPane>
+      <Label layoutX="35.0" layoutY="14.0" text="Daily Learnings" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="22.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
