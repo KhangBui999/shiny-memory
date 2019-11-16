@@ -7,33 +7,33 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DailyLearningsReportController">
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DailyLearningsReportController">
    <children>
-      <Label layoutX="70.0" layoutY="60.0" text="Report of Daily Learnings">
+      <Label layoutX="45.0" layoutY="23.0" text="Report of Daily Learnings" textFill="CORNFLOWERBLUE">
          <font>
-            <Font name="PT Sans Bold" size="42.0" />
+            <Font name="Avenir Black" size="22.0" />
          </font>
       </Label>
-      <TableView fx:id="wellTable" layoutX="50.0" layoutY="130.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="160.0">
+      <TableView fx:id="wellTable" layoutX="49.0" layoutY="131.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: transparent;" AnchorPane.leftAnchor="49.0" AnchorPane.rightAnchor="51.0" AnchorPane.topAnchor="131.0">
         <columns>
           <TableColumn fx:id="wellAnswerColumn" maxWidth="800.0" minWidth="800.0" prefWidth="800.0" resizable="false" text="My answers" />
           <TableColumn fx:id="wellOccurencesColumn" maxWidth="108.0" minWidth="108.0" prefWidth="108.0" text="Occurences" />
         </columns>
       </TableView>
-      <Label layoutX="50.0" layoutY="128.0" text="What I Have Done Well over the Past 30 Days" AnchorPane.leftAnchor="50.0">
+      <Label layoutX="49.0" layoutY="91.0" text="What I Have Done Well over the Past 30 Days" AnchorPane.leftAnchor="49.0">
          <font>
-            <Font name="PT Sans Bold" size="24.0" />
+            <Font name="Avenir Roman" size="17.0" />
          </font>
       </Label>
-      <TableView fx:id="betterTable" layoutX="49.0" layoutY="398.0" prefHeight="200.0" prefWidth="910.0" AnchorPane.bottomAnchor="130.0">
+      <TableView fx:id="betterTable" layoutX="49.0" layoutY="397.0" prefHeight="200.0" prefWidth="910.0" style="-fx-background-color: transparent;" AnchorPane.bottomAnchor="158.0">
          <columns>
             <TableColumn fx:id="betterAnswerColumn" maxWidth="800.0" minWidth="800.0" prefWidth="800.0" resizable="false" text="My answers" />
             <TableColumn fx:id="betterOccurencesColumn" maxWidth="108.0" minWidth="108.0" prefWidth="108.0" text="Occurences" />
          </columns>
       </TableView>
-      <Label layoutX="50.0" layoutY="394.0" text="What I Could Have Done Better over the Past 30 Days" AnchorPane.leftAnchor="50.0">
+      <Label layoutX="49.0" layoutY="366.0" text="What I Could Have Done Better over the Past 30 Days" AnchorPane.leftAnchor="49.0">
          <font>
-            <Font name="PT Sans Bold" size="24.0" />
+            <Font name="Avenir Roman" size="17.0" />
          </font>
       </Label>
    </children>
