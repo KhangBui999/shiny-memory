@@ -17,12 +17,12 @@
             <Insets />
          </BorderPane.margin>
          <children>
-            <Button layoutX="915.0" layoutY="3.0" mnemonicParsing="false" onAction="#aboutPressed" prefHeight="0.0" prefWidth="184.0" style="-fx-background-color: transparent;" text="About" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
+            <Button layoutX="1044.0" layoutY="3.0" mnemonicParsing="false" onAction="#aboutPressed" prefHeight="0.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="About" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
                <font>
                   <Font name="Avenir Black" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="1070.0" layoutY="3.0" mnemonicParsing="false" onAction="#helpPressed" prefHeight="0.0" prefWidth="184.0" style="-fx-background-color: transparent;" text="Help" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
+            <Button layoutX="1154.0" layoutY="2.0" mnemonicParsing="false" onAction="#helpPressed" prefHeight="0.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Help" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
                <font>
                   <Font name="Avenir Black" size="18.0" />
                </font>
@@ -31,14 +31,14 @@
       </AnchorPane>
    </top>
    <left>
-      <AnchorPane prefHeight="800.0" prefWidth="270.0" style="-fx-background-color: cornflowerblue;" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="800.0" prefWidth="270.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="-45.0" />
          </BorderPane.margin>
          <children>
-            <ImageView fitHeight="121.0" fitWidth="251.0" layoutX="3.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="121.0" fitWidth="251.0" layoutX="14.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../Resources/logo3.png" />
+                  <Image url="@../Resources/Logo2.png" />
                </image>
             </ImageView>
             <GridPane layoutX="8.0" layoutY="118.0" prefHeight="294.0" prefWidth="227.0">
