@@ -115,8 +115,8 @@ public class UpdateTaskController implements Initializable {
     public void changeFields() {
         this.titleField.setText(this.task.getTitleProperty().getValue());
         this.descArea.setText(this.task.getDescriptionProperty().getValue());
-        this.doField.setValue(LocalDate.parse(this.task.getDoDateProperty().getValue()));
-        this.dueField.setValue(LocalDate.parse(this.task.getDueDateProperty().getValue()));
+        this.doField.setValue(LocalDate.parse(task.getString(task.getDoDateProperty())));
+        this.dueField.setValue(LocalDate.parse(task.getString(task.getDueDateProperty())));
         this.prioritySlider.setValue(this.task.getInt(this.task.getPriorityProperty()));
         this.compStatus.setValue(this.compStatus.getItems().get(this.task.getInt(this.task.getCompleteProperty())));
     }

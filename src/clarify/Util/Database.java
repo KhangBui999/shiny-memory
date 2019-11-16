@@ -117,44 +117,44 @@ public class Database {
 
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-16 12:00:00', '2019-11-17 23:00:00', 'First entry', '1', '1');");
+                        + " VALUES ('2019-11-01 12:00:00', '2019-11-01 23:00:00', 'First entry', '1', '1');");
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-16 10:00:00', '2019-11-18 21:00:00', 'Another entry', '2', '3');");
+                        + " VALUES ('2019-11-01 10:00:00', '2019-11-01 21:00:00', 'Another entry', '2', '3');");
                 
                  statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-17 12:00:00', '2019-11-18 22:00:00', 'Study for exam', '3', '5');");
+                        + " VALUES ('2019-11-02 12:00:00', '2019-11-02 22:00:00', 'Study for exam', '3', '5');");
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-17 10:00:00', '2019-11-17 23:00:00', 'Work out', '5', '4');");
+                        + " VALUES ('2019-11-04 10:00:00', '2019-11-04 23:00:00', 'Work out', '5', '4');");
 
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-18 10:00:00', '2019-11-18 23:00:00', 'Watch Lectures', '1', '2');");
+                        + " VALUES ('2019-11-05 10:00:00', '2019-11-05 23:00:00', 'Watch Lectures', '1', '2');");
 
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-18 10:00:00', '2019-11-18 23:00:00', 'Do homework', '2', '2');");
+                        + " VALUES ('2019-11-06 10:00:00', '2019-11-06 23:00:00', 'Do homework', '2', '2');");
 
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + "VALUES ('2019-11-19 10:00:00', '2019-11-19 20:50:00', 'Eat', '3', '2');");
+                        + "VALUES ('2019-11-07 10:00:00', '2019-11-07 20:50:00', 'Eat', '3', '2');");
 
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-20 10:00:00', '2019-11-20 20:01:00', 'Lowest', '5', '1');");
+                        + " VALUES ('2019-11-08 10:00:00', '2019-11-08 20:01:00', 'Lowest', '5', '1');");
                 
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-21 12:00:00', '2019-11-21 23:00:00', 'First entry', '1', '1');");
+                        + " VALUES ('2019-11-12 12:00:00', '2019-11-12 23:00:00', 'First entry', '1', '1');");
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-21 10:00:00', '2019-11-21 21:00:00', 'Another entry', '2', '3');");
+                        + " VALUES ('2019-11-15 10:00:00', '2019-11-15 21:00:00', 'Another entry', '2', '3');");
                 
                  statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-22 12:00:00', '2019-11-23 22:00:00', 'Study for exam', '3', '5');");
+                        + " VALUES ('2019-11-18 12:00:00', '2019-11-18 22:00:00', 'Study for exam', '3', '5');");
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
                         + " VALUES ('2019-11-23 10:00:00', '2019-11-24 23:00:00', 'Work out', '5', '4');");
@@ -165,7 +165,7 @@ public class Database {
 
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
-                        + " VALUES ('2019-11-24 10:00:00', '2019-11-18 23:00:00', 'Do homework', '5', '2');");
+                        + " VALUES ('2019-11-18 10:00:00', '2019-11-18 23:00:00', 'Do homework', '5', '2');");
 
                 statementString.add(
                         "INSERT INTO ENTRIES (startTime, endTime, entryDescription, category, task)"
@@ -212,58 +212,58 @@ public class Database {
                 
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Go to the gym', 'Never skip leg day', '2019-11-17 12:00:00', '2019-11-17 12:00:00', '100', '0');");
+                        + "VALUES ('Go to the gym', 'Never skip leg day', '2019-11-17', '2019-11-17', '100', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Write code for database', 'Create tables for Data Capture', '2019-11-17 12:00:00','2019-11-17 12:00:00','95', '0');");
+                        + "VALUES ('Write code for database', 'Create tables for Data Capture', '2019-11-17','2019-11-17','95', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Complete Wireframes', 'Draw up wireframes for 2605', '2019-11-18 12:00:00', '2019-11-18 12:00:00', '90', '0');");
+                        + "VALUES ('Complete Wireframes', 'Draw up wireframes for 2605', '2019-11-18', '2019-11-18', '90', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Attend meeting', 'Meeting involves agenda on computer', '2019-11-18 12:00:00','2019-11-18 12:00:00','85', '0');");
+                        + "VALUES ('Attend meeting', 'Meeting involves agenda on computer', '2019-11-18','2019-11-18','85', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Never dog the boys', 'YTB', '2019-11-19 12:00:00', '2019-11-19 12:00:00', '43', '0');");
+                        + "VALUES ('Never dog the boys', 'YTB', '2019-11-19', '2019-11-19', '43', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('BITSA', 'Gotta do shit for BITSA', '2019-11-19 12:00:00','2019-11-19 12:00:00','32', '0');");
+                        + "VALUES ('BITSA', 'Gotta do shit for BITSA', '2019-11-19','2019-11-19','32', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Vote for ___', 'Vote [1] for asdsf', '2019-11-20 12:00:00', '2019-11-20 12:00:00', '65', '0');");
+                        + "VALUES ('Vote for ___', 'Vote [1] for asdsf', '2019-11-20', '2019-11-20', '65', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Kill this Love', 'What is love?', '2019-11-20 12:00:00','2019-11-20 12:00:00','34', '0');");
+                        + "VALUES ('Kill this Love', 'What is love?', '2019-11-20','2019-11-20','34', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Dont know what to do without you', 'sfasfs', '2019-11-21 12:00:00', '2019-11-21 12:00:00', '90', '0');");
+                        + "VALUES ('Dont know what to do without you', 'sfasfs', '2019-11-21', '2019-11-21', '90', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('BITSA', 'Gotta do shit for BITSA', '2019-11-21 12:00:00','2019-11-21 12:00:00','43', '0');");
+                        + "VALUES ('BITSA', 'Gotta do things for BITSA', '2019-11-21','2019-11-21','43', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Ddu-ddu ddu-ddu', 'Gonna hit you with the', '2019-11-22 12:00:00', '2019-11-22 12:00:00', '23', '0');");
+                        + "VALUES ('Ddu-ddu ddu-ddu', 'Gonna hit you with the', '2019-11-22', '2019-11-22', '23', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('ENACTUS', 'I like littering', '2019-11-22 12:00:00','2019-11-22 12:00:00','85', '0');");
+                        + "VALUES ('ENACTUS', 'I like littering', '2019-11-22','2019-11-22','85', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('180DC Consulting', 'I like consulting', '2019-11-23 12:00:00', '2019-11-23 12:00:00', '90', '0');");
+                        + "VALUES ('180DC Consulting', 'I like consulting', '2019-11-23', '2019-11-23', '90', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('ENACTUS 2', 'I like littering not', '2019-11-23 12:00:00','2019-11-23 12:00:00','58', '0');");
+                        + "VALUES ('ENACTUS 2', 'I like littering not', '2019-11-23','2019-11-23','58', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('VSA', 'VSA for the boys', '2019-11-24 12:00:00', '2019-11-24 12:00:00', '90', '0');");
+                        + "VALUES ('VSA', 'VSA for the boys', '2019-11-24', '2019-11-24', '90', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('TFT', 'Shout a little legend', '2019-11-24 12:00:00','2019-11-24 12:00:00','58', '0');");
+                        + "VALUES ('TFT', 'Shout a little legend', '2019-11-24','2019-11-24','58', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Yeet', 'Yeet haw', '2019-11-25 12:00:00', '2019-11-25 12:00:00', '90', '0');");
+                        + "VALUES ('Yeet', 'Yeet haw', '2019-11-25', '2019-11-25', '90', '0');");
                 statementString.add(
                         "INSERT INTO TASKS (task_title, task_desc, do_date, due_date, priority, status) "
-                        + "VALUES ('Tegridy Farms', 'Gawd damn it', '2019-11-25 12:00:00','2019-11-25 12:00:00','58', '0');");
+                        + "VALUES ('Tegridy Farms', 'Gawd damn it', '2019-11-25','2019-11-25','58', '0');");
                 
                 for (String thisStatement : statementString) {
                     try {

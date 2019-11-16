@@ -64,7 +64,7 @@ public class PageSwitchHelper {
     }
 
     public void changeToUpdateTask(ActionEvent event, int id) throws IOException {
-        System.out.println("Switching center of BorderPane to AddTask");
+        System.out.println("Switching center of BorderPane to UpdateTask");
         BorderPane root = null;
         try {
             FXMLLoader loader = new FXMLLoader();
