@@ -17,15 +17,22 @@
             <Insets />
          </BorderPane.margin>
          <children>
-            <Button layoutX="1044.0" layoutY="3.0" mnemonicParsing="false" onAction="#aboutPressed" prefHeight="0.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="About" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
+            <Button layoutX="1023.0" layoutY="3.0" mnemonicParsing="false" onAction="#aboutPressed" prefHeight="39.0" prefWidth="121.0" style="-fx-background-color: transparent;" text="About" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
                <font>
                   <Font name="Avenir Black" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="1154.0" layoutY="2.0" mnemonicParsing="false" onAction="#helpPressed" prefHeight="0.0" prefWidth="100.0" style="-fx-background-color: transparent;" text="Help" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
+            <Button layoutX="1124.0" layoutY="2.0" mnemonicParsing="false" onAction="#helpPressed" prefHeight="28.0" prefWidth="130.0" style="-fx-background-color: transparent;" text=" Help" textAlignment="RIGHT" textFill="CORNFLOWERBLUE">
                <font>
                   <Font name="Avenir Black" size="18.0" />
                </font>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Resources/question.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
             </Button>
          </children>
       </AnchorPane>
