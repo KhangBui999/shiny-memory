@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DeleteEntryController">
    <children>
-      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Time Logging" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="&lt; Back to Time Logging" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
             <Font name="Avenir Black" size="14.0" />
          </font>
@@ -24,7 +24,7 @@
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
-      <Label fx:id="result" layoutX="321.0" layoutY="329.0" text="Label" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="200.0">
+      <Label fx:id="result" layoutX="151.0" layoutY="239.0" text="Label" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="151.0">
          <font>
             <Font size="32.0" />
          </font>
@@ -34,12 +34,12 @@
             <Font name="Avenir Black" size="22.0" />
          </font>
       </Label>
-      <Button fx:id="noBtn1" layoutX="570.0" layoutY="200.0" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: cornflowerblue;" text="No" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="noBtn1" layoutX="554.0" layoutY="202.0" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="28.0" prefWidth="80.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6; -fx-background-color: transparent;" text="No" textAlignment="CENTER">
          <font>
             <Font name="Avenir Black" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="yesBtn1" layoutX="415.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleYesButton" style="-fx-background-color: cornflowerblue;" text="Yes, I'm sure" textFill="WHITE">
+      <Button fx:id="yesBtn1" layoutX="399.0" layoutY="203.0" mnemonicParsing="false" onAction="#handleYesButton" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="Yes, I'm sure" textFill="WHITE">
          <font>
             <Font name="Avenir Black" size="17.0" />
          </font>

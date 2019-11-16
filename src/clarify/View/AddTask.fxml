@@ -48,7 +48,7 @@
                   <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
-            <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Type description here" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Type description here" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
                   <Slider fx:id="prioritySlider" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" showTickLabels="true">
@@ -56,7 +56,7 @@
                         <Insets top="7.5" />
                      </HBox.margin>
                   </Slider>
-                  <TextField fx:id="priorityField" maxWidth="100.0" minWidth="75.0" prefWidth="100.0">
+                  <TextField fx:id="priorityField" maxWidth="100.0" minWidth="75.0" prefWidth="100.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6; -fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets left="5.0" top="2.5" />
                      </HBox.margin>
@@ -70,7 +70,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <DatePicker fx:id="doField" editable="false" promptText="Select date here" style="-fx-background-color: transparent;">
+                  <DatePicker fx:id="doField" editable="false" promptText="Select date here" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets top="7.5" />
                      </HBox.margin>
@@ -84,7 +84,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <DatePicker fx:id="dueField" editable="false" promptText="Select date here" style="-fx-background-color: transparent;">
+                  <DatePicker fx:id="dueField" editable="false" promptText="Select date here" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets top="6.5" />
                      </HBox.margin>
@@ -98,7 +98,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <TextField fx:id="titleField" prefWidth="250.0" promptText="Type title here" style="-fx-background-color: transparent;">
+                  <TextField fx:id="titleField" prefWidth="250.0" promptText="Type title here" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets top="2.5" />
                      </HBox.margin>
@@ -112,11 +112,11 @@
             </HBox>
          </children>
       </GridPane>
-      <Button fx:id="btn" layoutX="443.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="35.0" prefWidth="149.0" style="-fx-background-color: cornflowerblue;" text="+ Create Task" textFill="WHITE">
+      <Button fx:id="btn" layoutX="443.0" layoutY="500.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="35.0" prefWidth="149.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="+ Create Task" textFill="WHITE">
          <font>
             <Font name="Avenir Black" size="16.0" />
          </font></Button>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButtonK" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Kanban" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButtonK" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="&lt; Back to Kanban" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
             <Font name="Avenir Black" size="14.0" />
          </font>
@@ -127,11 +127,6 @@
          </font>
       </Text>
       <Label fx:id="status" alignment="CENTER" layoutX="386.0" layoutY="680.0" text="Label" visible="false" />
-      <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleBackButtonD" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Deep Focus" textFill="WHITE">
-         <font>
-            <Font name="Avenir Black" size="14.0" />
-         </font>
-      </Button>
       <Label layoutX="386.0" layoutY="49.0" text="Create a New Task" textFill="CORNFLOWERBLUE">
          <font>
             <Font name="Avenir Black" size="22.0" />

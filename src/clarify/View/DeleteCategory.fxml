@@ -9,9 +9,9 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DeleteCategoryController">
    <children>
-      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButton" text="&lt; Back to Time Logging" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="&lt; Back to Time Logging" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
       <Text fx:id="prompt" layoutX="391.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Are you sure you want to delete this category?">
@@ -24,17 +24,17 @@
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
-      <Button fx:id="yesBtn" layoutX="405.0" layoutY="191.0" mnemonicParsing="false" onAction="#handleYesButton" style="-fx-background-color: cornflowerblue;" text="Yes, I'm sure" textFill="WHITE">
+      <Button fx:id="yesBtn" layoutX="405.0" layoutY="191.0" mnemonicParsing="false" onAction="#handleYesButton" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="Yes, I'm sure" textFill="WHITE">
          <font>
             <Font name="Avenir Black" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="noBtn" layoutX="579.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: cornflowerblue;" text="No" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="noBtn" layoutX="579.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;" text="No" textAlignment="CENTER">
          <font>
             <Font name="Avenir Black" size="17.0" />
          </font>
       </Button>
-      <Label fx:id="result" layoutX="321.0" layoutY="329.0" text="Label" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="200.0">
+      <Label fx:id="result" layoutX="209.0" layoutY="237.0" text="Label" textAlignment="CENTER" visible="false" AnchorPane.leftAnchor="209.0">
          <font>
             <Font size="32.0" />
          </font>

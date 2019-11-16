@@ -10,11 +10,11 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.KanbanBoardController">
    <children>
-      <HBox layoutX="28.0" layoutY="133.0" prefHeight="496.0" prefWidth="940.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="43.0" AnchorPane.topAnchor="100.0">
+      <HBox layoutX="28.0" layoutY="100.0" prefHeight="496.0" prefWidth="972.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="100.0">
          <children>
-            <VBox maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: #EFEDED; -fx-background-radius: 10;">
+            <VBox maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: linear-gradient(to bottom, cornflowerblue, #5aadcd); -fx-background-radius: 10;">
                <children>
-                  <Label text="Completed Today" textAlignment="CENTER">
+                  <Label text="Completed Today" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Avenir Roman" size="16.0" />
                      </font>
@@ -32,9 +32,9 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </VBox>
-            <VBox layoutX="10.0" layoutY="10.0" maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: #EFEDED; -fx-background-radius: 10;">
+            <VBox layoutX="10.0" layoutY="10.0" maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: linear-gradient(to bottom, cornflowerblue, #5aadcd); -fx-background-radius: 10;">
                <children>
-                  <Label text="Due Today">
+                  <Label text="Due Today" textFill="WHITE">
                      <font>
                         <Font name="Avenir Roman" size="16.0" />
                      </font>
@@ -47,7 +47,7 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button maxWidth="99.0" minWidth="99.0" mnemonicParsing="false" onAction="#handleAddTaskBtn" prefWidth="99.0" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
+                  <Button maxWidth="99.0" minWidth="99.0" mnemonicParsing="false" onAction="#handleAddTaskBtn" prefWidth="99.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="Avenir Roman" size="14.0" />
                      </font>
@@ -60,9 +60,9 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </VBox>
-            <VBox layoutX="185.0" layoutY="10.0" maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: #EFEDED; -fx-background-radius: 10;">
+            <VBox layoutX="185.0" layoutY="10.0" maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: linear-gradient(to bottom, cornflowerblue, #5aadcd); -fx-background-radius: 10;">
                <children>
-                  <Label text="Due Tomorrow" textAlignment="CENTER">
+                  <Label text="Due Tomorrow" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Avenir Roman" size="16.0" />
                      </font>
@@ -75,7 +75,7 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
+                  <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="Avenir Roman" size="14.0" />
                      </font>
@@ -88,9 +88,9 @@
                   <Insets right="10.0" />
                </HBox.margin>
             </VBox>
-            <VBox layoutX="470.0" layoutY="10.0" maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: #EFEDED; -fx-background-radius: 10;">
+            <VBox layoutX="470.0" layoutY="10.0" maxHeight="600.0" maxWidth="230.0" prefHeight="600.0" prefWidth="230.0" style="-fx-background-color: linear-gradient(to bottom, cornflowerblue, #5aadcd); -fx-background-radius: 10;">
                <children>
-                  <Label text="Due within 7 days" textAlignment="CENTER">
+                  <Label text="Due within 7 days" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="Avenir Roman" size="16.0" />
                      </font>
@@ -103,7 +103,7 @@
                         <Insets left="5.0" right="5.0" />
                      </VBox.margin>
                   </ListView>
-                  <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: #5BB545; -fx-text-fill: white;" text="+ Add Task">
+                  <Button mnemonicParsing="false" onAction="#handleAddTaskBtn" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-text-fill: white;" text="+ Add Task">
                      <font>
                         <Font name="Avenir Roman" size="14.0" />
                      </font>
@@ -123,32 +123,32 @@
             <Font name="Avenir Black" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="148.0" layoutY="608.0" mnemonicParsing="false" onAction="#compToToday" style="-fx-background-color: cornflowerblue; -fx-text-fill: white;" text="&gt;">
+      <Button layoutX="151.0" layoutY="608.0" mnemonicParsing="false" onAction="#compToToday" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-text-fill: white;" text="&gt;">
          <font>
             <Font name="PT Sans" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="387.0" layoutY="608.0" mnemonicParsing="false" onAction="#todayToTmr" style="-fx-background-color: cornflowerblue; -fx-text-fill: white;" text="&gt;">
+      <Button layoutX="390.0" layoutY="608.0" mnemonicParsing="false" onAction="#todayToTmr" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-text-fill: white;" text="&gt;">
          <font>
             <Font name="PT Sans" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="336.0" layoutY="608.0" mnemonicParsing="false" onAction="#todayToComp" style="-fx-background-color: cornflowerblue; -fx-text-fill: white;" text="&lt;">
+      <Button layoutX="339.0" layoutY="608.0" mnemonicParsing="false" onAction="#todayToComp" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-text-fill: white;" text="&lt;">
          <font>
             <Font name="PT Sans" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="622.0" layoutY="608.0" mnemonicParsing="false" onAction="#tmrToWeek" style="-fx-background-color: cornflowerblue; -fx-text-fill: white;" text="&gt;">
+      <Button layoutX="625.0" layoutY="608.0" mnemonicParsing="false" onAction="#tmrToWeek" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-text-fill: white;" text="&gt;">
          <font>
             <Font name="PT Sans" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="571.0" layoutY="608.0" mnemonicParsing="false" onAction="#tmrToToday" style="-fx-background-color: cornflowerblue; -fx-text-fill: white;" text="&lt;">
+      <Button layoutX="574.0" layoutY="608.0" mnemonicParsing="false" onAction="#tmrToToday" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-text-fill: white;" text="&lt;">
          <font>
             <Font name="PT Sans" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="812.0" layoutY="608.0" mnemonicParsing="false" onAction="#weekToTmr" style="-fx-background-color: cornflowerblue; -fx-text-fill: white;" text="&lt;">
+      <Button layoutX="815.0" layoutY="608.0" mnemonicParsing="false" onAction="#weekToTmr" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-text-fill: white;" text="&lt;">
          <font>
             <Font name="PT Sans" size="18.0" />
          </font>

@@ -24,7 +24,7 @@
             </Text>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ComboBox fx:id="startHr" prefWidth="70.0" promptText="HH" style="-fx-background-color: transparent;">
+                  <ComboBox fx:id="startHr" prefWidth="80.0" promptText="HH" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
@@ -37,12 +37,12 @@
                         <Insets left="2.0" top="10.0" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox fx:id="startMin" prefWidth="70.0" promptText="MM" style="-fx-background-color: transparent;">
+                  <ComboBox fx:id="startMin" prefWidth="80.0" promptText="MM" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets left="2.0" top="10.0" />
                      </HBox.margin>
                   </ComboBox>
-                  <DatePicker fx:id="startField" editable="false" promptText="DD/MM/YYYY" style="-fx-background-color: transparent;">
+                  <DatePicker fx:id="startField" editable="false" promptText="DD/MM/YYYY" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets left="10.0" top="10.0" />
                      </HBox.margin>
@@ -56,7 +56,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <ComboBox fx:id="endHour" prefWidth="70.0" promptText="HH" style="-fx-background-color: transparent;">
+                  <ComboBox fx:id="endHour" prefWidth="80.0" promptText="HH" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets top="7.5" />
                      </HBox.margin>
@@ -69,12 +69,12 @@
                         <Insets left="2.5" top="7.5" />
                      </HBox.margin>
                   </Label>
-                  <ComboBox fx:id="endMin" layoutX="206.0" layoutY="10.0" prefWidth="70.0" promptText="MM" style="-fx-background-color: transparent;">
+                  <ComboBox fx:id="endMin" layoutX="206.0" layoutY="10.0" maxHeight="30.0" minHeight="30.0" minWidth="80.0" prefHeight="30.0" prefWidth="80.0" promptText="MM" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets left="2.0" top="7.5" />
                      </HBox.margin>
                   </ComboBox>
-                  <DatePicker fx:id="endField" editable="false" promptText="DD/MM/YYYY" style="-fx-background-color: transparent;">
+                  <DatePicker fx:id="endField" editable="false" promptText="DD/MM/YYYY" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets left="10.0" top="7.5" />
                      </HBox.margin>
@@ -127,7 +127,7 @@
             </Text>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <ComboBox fx:id="taskBox" prefWidth="300.0" promptText="Select task here" style="-fx-background-color: transparent;">
+                  <ComboBox fx:id="taskBox" prefWidth="300.0" promptText="Select task here" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
@@ -141,7 +141,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Type description here" style="-fx-background-color: transparent;">
+                  <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Type description here" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
@@ -155,7 +155,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <ComboBox fx:id="categoryBox" prefWidth="200.0" promptText="Select category here" style="-fx-background-color: transparent;">
+                  <ComboBox fx:id="categoryBox" prefWidth="200.0" promptText="Select category here" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 6;">
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
@@ -180,12 +180,12 @@
             <RowConstraints maxHeight="74.6962890625" minHeight="10.0" prefHeight="67.0" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Button fx:id="btn" layoutX="276.0" layoutY="562.0" mnemonicParsing="false" onAction="#handleCreateButton" style="-fx-background-color: cornflowerblue;" text="+ Create Entry" textFill="WHITE">
+      <Button fx:id="btn" layoutX="276.0" layoutY="562.0" mnemonicParsing="false" onAction="#handleCreateButton" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="+ Create Entry" textFill="WHITE">
          <font>
             <Font name="Avenir Black" size="16.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Time Logging" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="&lt; Back to Time Logging" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
             <Font name="Avenir Black" size="14.0" />
          </font>
@@ -195,17 +195,17 @@
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
-      <Label fx:id="success" layoutX="277.0" layoutY="450.0" text="New Entry Has Been Created!" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.topAnchor="300.0">
+      <Label fx:id="success" layoutX="277.0" layoutY="450.0" text="New Entry Has Been Created!" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="262.0" AnchorPane.topAnchor="250.0">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Label fx:id="success1" layoutX="262.0" layoutY="440.0" text="Please click on 'Back'" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.topAnchor="350.0">
+      <Label fx:id="success1" layoutX="262.0" layoutY="440.0" text="Please click on 'Back'" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="262.0" AnchorPane.topAnchor="300.0">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Label fx:id="fail" layoutX="286.0" layoutY="680.0" text="ERROR: Please check above error messages!" textFill="RED" visible="false" />
+      <Label fx:id="fail" layoutX="216.0" layoutY="600.0" text="ERROR: Please check above error messages!" textFill="RED" visible="false" />
       <Label layoutX="273.0" layoutY="50.0" text="Add New Entry" textFill="CORNFLOWERBLUE">
          <font>
             <Font name="Avenir Black" size="22.0" />

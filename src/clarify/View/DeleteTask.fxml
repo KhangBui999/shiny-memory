@@ -10,7 +10,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DeleteTaskController">
    <children>
-      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButtonK" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Kanban" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButtonK" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="&lt; Back to Kanban" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
             <Font name="Avenir Black" size="14.0" />
          </font>
@@ -20,11 +20,6 @@
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
-      <Button layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleBackButtonD" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Deep Focus" textFill="WHITE">
-         <font>
-            <Font name="Avenir Black" size="14.0" />
-         </font>
-      </Button>
       <Text fx:id="warning" fill="RED" layoutX="350.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This task cannot be recovered if it is deleted!">
          <font>
             <Font name="PT Sans" size="16.0" />
@@ -34,12 +29,12 @@
          <font>
             <Font size="32.0" />
          </font></Label>
-      <Button fx:id="yesBtn" layoutX="425.0" layoutY="211.0" mnemonicParsing="false" onAction="#handleYesButton" style="-fx-background-color: cornflowerblue;" text="Yes, I'm sure" textFill="WHITE">
+      <Button fx:id="yesBtn" layoutX="391.0" layoutY="211.0" mnemonicParsing="false" onAction="#handleYesButton" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="Yes, I'm sure" textFill="WHITE">
          <font>
             <Font name="Avenir Black" size="17.0" />
          </font>
       </Button>
-      <Button fx:id="noBtn" layoutX="580.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="28.0" prefWidth="80.0" style="-fx-background-color: cornflowerblue;" text="No" textAlignment="CENTER" textFill="WHITE">
+      <Button fx:id="noBtn" layoutX="546.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleNoButton" prefHeight="28.0" prefWidth="80.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-background-color: transparent; -fx-border-radius: 6;" text="No" textAlignment="CENTER">
          <font>
             <Font name="Avenir Black" size="17.0" />
          </font>

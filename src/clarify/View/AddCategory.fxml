@@ -24,7 +24,7 @@
             </Text>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <children>
-                  <ColorPicker fx:id="colourField">
+                  <ColorPicker fx:id="colourField" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 5;">
                      <HBox.margin>
                         <Insets top="15.0" />
                      </HBox.margin>
@@ -38,7 +38,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <TextField fx:id="nameField" prefWidth="250.0" promptText="Type category name">
+                  <TextField fx:id="nameField" prefWidth="250.0" promptText="Type category name" style="-fx-background-color: transparent; -fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd); -fx-border-radius: 5;">
                      <HBox.margin>
                         <Insets top="20.0" />
                      </HBox.margin>
@@ -50,7 +50,7 @@
                   </Label>
                </children>
             </HBox>
-            <Button fx:id="btn" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="31.0" prefWidth="180.0" style="-fx-background-color: cornflowerblue;" text="+ Create Category" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="btn" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="31.0" prefWidth="180.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="+ Create Category" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font name="Avenir Black" size="16.0" />
                </font>
@@ -66,31 +66,32 @@
             <RowConstraints maxHeight="58.952911376953125" minHeight="0.0" prefHeight="42.05072021484375" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Time Logging" textFill="WHITE" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleBackButton" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="&lt; Back to Time Logging" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
             <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
-      <Text layoutX="273.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the following to create a new category.">
+      <Text layoutX="301.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the following to create a new category.">
          <font>
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
-      <Label fx:id="success" layoutX="267.0" layoutY="440.0" text="New Category Has Been Created!" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="330.0">
+      <Label fx:id="success" layoutX="267.0" layoutY="440.0" text="New Category Has Been Created!" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="260.0">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Label fx:id="error" layoutX="373.0" layoutY="400.0" text="Please check following errors above!" textFill="RED" AnchorPane.topAnchor="350.0">
+      <Label fx:id="error" layoutX="373.0" layoutY="400.0" text="Please check following errors above!" textFill="RED" visible="false" AnchorPane.topAnchor="350.0">
          <font>
             <Font name="Avenir Roman" size="13.0" />
-         </font></Label>
-      <Label fx:id="success1" layoutX="252.0" layoutY="430.0" text="Please click on 'Back'" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="360.0">
+         </font>
+      </Label>
+      <Label fx:id="success1" layoutY="430.0" text="Please click on 'Back'" textAlignment="CENTER" textFill="#2bff00" visible="false" AnchorPane.leftAnchor="260.0" AnchorPane.topAnchor="300.0">
          <font>
             <Font name="Avenir Roman" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="336.0" layoutY="61.0" text="Create New Category" textFill="CORNFLOWERBLUE">
+      <Label layoutX="313.0" layoutY="67.0" text="Create New Category" textFill="CORNFLOWERBLUE">
          <font>
             <Font name="Avenir Black" size="32.0" />
          </font>
