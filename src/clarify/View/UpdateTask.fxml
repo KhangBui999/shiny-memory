@@ -8,44 +8,44 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.UpdateTaskController">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.UpdateTaskController">
    <children>
-      <GridPane fx:id="gridPane" layoutX="175.0" layoutY="175.0" prefHeight="403.0" prefWidth="800.0" vgap="20.0" AnchorPane.leftAnchor="175.0" AnchorPane.topAnchor="175.0">
+      <GridPane fx:id="gridPane" layoutX="240.0" layoutY="135.0" prefHeight="362.0" prefWidth="800.0" vgap="20.0" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="135.0">
          <children>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Title*">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <Text layoutX="10.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description" GridPane.rowIndex="1">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <Text layoutX="10.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do Date*" GridPane.rowIndex="2">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Due Date*" GridPane.rowIndex="3">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Priority*" GridPane.rowIndex="4">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
-            <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="120.0" prefWidth="400.0" promptText="Type description here" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <TextArea fx:id="descArea" maxHeight="120.0" maxWidth="400.0" minHeight="90.0" minWidth="400.0" prefHeight="108.0" prefWidth="400.0" promptText="Type description here" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <children>
-                  <Slider fx:id="prioritySlider" maxWidth="250.0" minWidth="250.0" prefWidth="250.0">
+                  <Slider fx:id="prioritySlider" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" showTickLabels="true" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="7.5" />
                      </HBox.margin>
                   </Slider>
-                  <TextField fx:id="priorityField" maxWidth="100.0" minWidth="75.0" prefWidth="100.0">
+                  <TextField fx:id="priorityField" maxWidth="100.0" minWidth="53.0" prefHeight="27.0" prefWidth="53.0" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets left="5.0" top="2.5" />
                      </HBox.margin>
@@ -59,7 +59,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <children>
-                  <DatePicker fx:id="doField" editable="false" promptText="Select date here">
+                  <DatePicker fx:id="doField" editable="false" promptText="Select date here" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="7.5" />
                      </HBox.margin>
@@ -73,7 +73,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <children>
-                  <DatePicker fx:id="dueField" editable="false" promptText="Select date here">
+                  <DatePicker fx:id="dueField" editable="false" promptText="Select date here" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="6.5" />
                      </HBox.margin>
@@ -87,7 +87,7 @@
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
                <children>
-                  <TextField fx:id="titleField" prefWidth="250.0" promptText="Type title here">
+                  <TextField fx:id="titleField" prefWidth="250.0" promptText="Type title here" style="-fx-background-color: transparent;">
                      <HBox.margin>
                         <Insets top="2.5" />
                      </HBox.margin>
@@ -101,49 +101,49 @@
             </HBox>
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Current Status" GridPane.rowIndex="5">
                <font>
-                  <Font name="PT Sans" size="18.0" />
+                  <Font name="Avenir Roman" size="18.0" />
                </font>
             </Text>
-            <ComboBox fx:id="compStatus" prefWidth="200.0" promptText="Select current status" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <ComboBox fx:id="compStatus" prefWidth="200.0" promptText="Select current status" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
          <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.44561767578125" minWidth="10.0" prefWidth="220.7991943359375" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="579.2008056640625" minWidth="10.0" prefWidth="579.2008056640625" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="393.44561767578125" minWidth="10.0" prefWidth="138.96725463867188" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="662.5333251953125" minWidth="10.0" prefWidth="661.0327453613281" />
          </columnConstraints>
          <rowConstraints>
             <RowConstraints maxHeight="64.10903930664062" minHeight="0.0" prefHeight="34.68841552734375" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="150.26449584960938" minHeight="10.0" prefHeight="139.94927978515625" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="58.952911376953125" minHeight="0.0" prefHeight="42.05072021484375" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="61.6376953125" minHeight="10.0" prefHeight="39.47100830078125" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="74.6962890625" minHeight="10.0" prefHeight="31.7862548828125" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="74.6962890625" minHeight="10.0" prefHeight="31.7862548828125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="150.26449584960938" minHeight="10.0" prefHeight="82.97817993164062" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="98.52365112304688" minHeight="0.0" prefHeight="43.47998046875" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="87.52001953125" minHeight="10.0" prefHeight="37.9805908203125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="78.0194091796875" minHeight="10.0" prefHeight="35.983001708984375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="76.0181884765625" minHeight="10.0" prefHeight="73.01699829101562" vgrow="SOMETIMES" />
          </rowConstraints>
       </GridPane>
-      <Label layoutX="325.0" layoutY="40.0" text="Update Existing Task" AnchorPane.topAnchor="40.0">
+      <Button fx:id="btn" layoutX="437.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleUpdateButton" style="-fx-background-color: cornflowerblue;" text="Update Task" textFill="WHITE">
          <font>
-            <Font name="PT Sans Bold" size="42.0" />
-         </font>
-      </Label>
-      <Button fx:id="btn" layoutX="472.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleUpdateButton" text="Update Task">
-         <font>
-            <Font size="24.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
-      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButtonK" text="&lt; Back to Kanban" AnchorPane.leftAnchor="14.0">
+      <Button layoutX="14.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackButtonK" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Kanban" textFill="WHITE" AnchorPane.leftAnchor="14.0">
          <font>
-            <Font size="14.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
-      <Text layoutX="277.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please update the following fields. This will update the existing task.">
+      <Text layoutX="275.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please update the following fields to update an existing task.">
          <font>
             <Font name="PT Sans" size="16.0" />
          </font>
       </Text>
       <Label fx:id="status" alignment="CENTER" layoutX="386.0" layoutY="680.0" text="Label" visible="false" />
-      <Button layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleBackButtonD" text="&lt; Back to Deep Focus">
+      <Button layoutX="14.0" layoutY="72.0" mnemonicParsing="false" onAction="#handleBackButtonD" style="-fx-background-color: cornflowerblue;" text="&lt; Back to Deep Focus" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Avenir Black" size="14.0" />
          </font>
       </Button>
+      <Label layoutX="375.0" layoutY="32.0" text="Update Existing Task" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

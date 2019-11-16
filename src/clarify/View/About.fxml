@@ -35,5 +35,10 @@
             <Font name="Avenir Roman" size="14.0" />
          </font>
       </Text>
+      <Text layoutX="56.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Icons from www.flaticon.com">
+         <font>
+            <Font name="Avenir Roman" size="14.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
