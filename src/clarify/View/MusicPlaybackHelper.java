@@ -30,4 +30,35 @@ class MusicPlaybackHelper {
 
         return isSuccessful;
     }
+
+    public static boolean pauseMusic() {
+        boolean isSuccessful = false;
+        try {
+            MusicPlaybackHelper.globalMediaPlayer.pause();
+            isSuccessful = true;
+        } catch (Exception e) {
+            isSuccessful = false;
+        }
+
+        return isSuccessful;
+    }
+    
+    public static boolean resumeMusic() {
+        boolean isSuccessful = false;
+        try {
+            if(globalMediaPlayer != null){
+                MusicPlaybackHelper.globalMediaPlayer.play();
+                isSuccessful = true;
+            } else{
+                //DO NOTHING
+            }
+        } catch (Exception e) {
+            isSuccessful = false;
+        }
+
+        return isSuccessful;        
+    }
+    
+    //MusicPlaybackHelper.globalMediaPlayer.pause();
+    
 }

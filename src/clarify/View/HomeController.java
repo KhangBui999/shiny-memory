@@ -70,6 +70,21 @@ public class HomeController implements Initializable {
     public void addLogPressed(ActionEvent event) throws IOException{
         p.changeCenter(event, "TimeLogging.fxml");
     }
+    
+    @FXML
+    public void pressNewCat(ActionEvent event) throws IOException{
+        p.changeCenter(event, "AddCategory.fxml");
+    }
+    
+    @FXML
+    public void pressNewEntry(ActionEvent event) throws IOException{
+        p.changeCenter(event, "AddEntry.fxml");
+    }
+    
+    @FXML
+    public void pressNewTask(ActionEvent event) throws IOException{
+        p.changeCenter(event, "AddTask.fxml");
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {

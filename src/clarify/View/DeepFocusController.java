@@ -115,7 +115,6 @@ public class DeepFocusController implements Initializable {
     }
 
     public void userSelectedMood() {
-
         String output = moodBox.getSelectionModel().getSelectedItem().toString();
         if (output.equals("Upbeat")) {
             MusicPlaybackHelper.playMusic("Upbeat.mp3");
@@ -124,6 +123,22 @@ public class DeepFocusController implements Initializable {
         } else if (output.equals("Calm Piano")) {
             MusicPlaybackHelper.playMusic("Calm.mp3");
         }
-
     }
+    
+    public void userPressPause() {
+        try{
+            MusicPlaybackHelper.pauseMusic();
+        } catch (Exception e){
+            //TODO
+        }
+    }
+    
+    public void userPressPlay() {
+        try{
+            MusicPlaybackHelper.resumeMusic();
+        } catch (Exception e){
+            //TODO
+        }
+    }
+    
 }
