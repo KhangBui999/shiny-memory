@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="clarify.View.DeepFocusController">
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.DeepFocusController">
   <children>
     <Pane layoutX="35.0" layoutY="107.0" prefHeight="289.0" prefWidth="260.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);&#10;-fx-border-radius: 10;" />
     <Pane layoutX="32.0" layoutY="412.0" prefHeight="130.0" prefWidth="260.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);&#10;-fx-border-radius: 10;">
@@ -22,9 +22,9 @@
     </Pane>
     <AnchorPane layoutX="334.0" layoutY="342.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="233.0" prefWidth="630.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);&#10;-fx-background-radius: 10;">
       <children>
-        <Label fx:id="taskDesc" layoutX="16.0" layoutY="123.0" prefHeight="51.0" prefWidth="514.0" text="" textFill="WHITE">
+        <Label fx:id="taskDesc" layoutX="16.0" layoutY="123.0" prefHeight="51.0" prefWidth="514.0" textFill="WHITE">
           <font>
-            <Font size="23.0" fx:id="x2" />
+            <Font size="14.0" fx:id="x2" />
           </font>
         </Label>
         <Label fx:id="taskTitle" font="$x2" layoutX="16.0" layoutY="55.0" prefHeight="51.0" prefWidth="548.0" text="" textFill="WHITE" />
@@ -37,10 +37,14 @@
             <Font size="36.0" />
           </font>
         </Label>
-        <Label font="$x2" layoutX="51.0" layoutY="130.0" text="&quot;It's time to destroy your goals&quot;" textFill="WHITE" />
+            <Label layoutX="14.0" layoutY="107.0" text="&quot;It's time to destroy your goals&quot;" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
       </children>
     </AnchorPane>
-    <ListView fx:id="allList" layoutX="46.0" layoutY="150.0" onMouseClicked="#userClickedTask" prefHeight="233.0" prefWidth="235.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" />
+    <ListView fx:id="allList" layoutX="46.0" layoutY="150.0" onMouseClicked="#userClickedTask" prefHeight="233.0" prefWidth="235.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" />
     <Label fx:id="taskTitle1" layoutX="51.0" layoutY="107.0" prefHeight="45.0" prefWidth="336.0" text="Select a task to focus on">
       <font>
         <Font size="16.0" fx:id="x3" />
@@ -48,9 +52,9 @@
     </Label>
     <Label fx:id="taskTitle11" font="$x3" layoutX="49.0" layoutY="403.0" prefHeight="45.0" prefWidth="409.0" text="Select a mood to play music" />
     <ComboBox fx:id="moodBox" layoutX="48.0" layoutY="456.0" onAction="#userSelectedMood" prefHeight="32.0" prefWidth="230.0" promptText="Select music" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);&#10;-fx-background-color: transparent;&#10;-fx-border-radius: 6;" />
-    <Label layoutX="38.0" layoutY="14.0" text="Deep Focus" textFill="CORNFLOWERBLUE">
+    <Label layoutX="40.0" layoutY="20.0" text="Deep Focus" textFill="CORNFLOWERBLUE">
       <font>
-        <Font size="22.0" />
+        <Font name="Avenir Black" size="22.0" />
       </font>
     </Label>
   </children>

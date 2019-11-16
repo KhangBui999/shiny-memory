@@ -41,7 +41,7 @@
     </BarChart>
     <Label layoutX="40.0" layoutY="20.0" prefHeight="33.0" prefWidth="407.0" text="Your Dashboard" textFill="CORNFLOWERBLUE">
       <font>
-        <Font size="22.0" />
+        <Font name="Avenir Black" size="22.0" />
       </font>
     </Label>
     <Label layoutX="650.0" layoutY="82.0" text="Quick Access">

@@ -31,8 +31,8 @@ public class Main extends Application {
 
     public void loadDatabase() throws SQLException {
         d.createCategoriesTable();
-        d.createEntriesTable();
         d.createTaskTable();
+        d.createEntriesTable();
         d.createReflectionTable();
     }
 

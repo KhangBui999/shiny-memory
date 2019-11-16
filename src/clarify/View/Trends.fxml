@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="clarify.View.TrendsController">
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.TrendsController">
   <children>
     <LineChart fx:id="lineChart" layoutX="387.0" layoutY="142.0" prefHeight="388.0" prefWidth="588.0" title="Weekly Trends of Selected Activities">
       <xAxis>
@@ -65,7 +65,10 @@
         </VBox>
       </children>
     </AnchorPane>
-    <Label font="$x1" layoutX="38.0" layoutY="24.0" text="Weekly Trends" textFill="CORNFLOWERBLUE" />
+    <Label layoutX="40.0" layoutY="20.0" text="Weekly Trends" textFill="CORNFLOWERBLUE">
+         <font>
+            <Font name="Avenir Black" size="22.0" />
+         </font></Label>
     <Label layoutX="65.0" layoutY="90.0" text="How are you tracking every week?">
       <font>
         <Font size="18.0" />
