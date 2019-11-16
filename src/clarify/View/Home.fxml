@@ -8,24 +8,24 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="clarify.View.HomeController">
+<AnchorPane id="AnchorPane" prefHeight="755.0" prefWidth="1010.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clarify.View.HomeController">
   <children>
     <Pane layoutX="496.0" layoutY="72.0" prefHeight="275.0" prefWidth="405.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);&#10;-fx-border-radius: 10;">
       <children>
-        <Button fx:id="logTime" layoutX="120.0" layoutY="74.0" maxHeight="33.0" maxWidth="166.0" minHeight="27.0" minWidth="166.0" mnemonicParsing="false" onAction="#addLogPressed" prefHeight="30.0" prefWidth="166.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="Access Time Logging" textFill="WHITE">
+        <Button fx:id="logTime" layoutX="111.0" layoutY="74.0" maxHeight="33.0" maxWidth="184.0" minHeight="27.0" minWidth="166.0" mnemonicParsing="false" onAction="#addLogPressed" prefHeight="30.0" prefWidth="184.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="Access Time Logging" textFill="WHITE">
           <font>
             <Font size="15.0" fx:id="x1" />
           </font>
         </Button>
-        <Button id="logTime" font="$x1" layoutX="120.0" layoutY="149.0" mnemonicParsing="false" onAction="#pressNewEntry" prefWidth="166.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);;" text="Add New Entry" textFill="WHITE" />
-        <Button id="logTime" font="$x1" layoutX="120.0" layoutY="111.0" mnemonicParsing="false" onAction="#pressNewCat" prefHeight="27.0" prefWidth="166.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="Add New Category" textFill="WHITE" />
-        <Button id="logTime" font="$x1" layoutX="120.0" layoutY="187.0" mnemonicParsing="false" onAction="#pressNewTask" prefWidth="166.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="Add New Task" textFill="WHITE" />
+        <Button id="logTime" font="$x1" layoutX="111.0" layoutY="149.0" mnemonicParsing="false" onAction="#pressNewEntry" prefHeight="29.0" prefWidth="184.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);;" text="Add New Entry" textFill="WHITE" />
+        <Button id="logTime" font="$x1" layoutX="111.0" layoutY="111.0" mnemonicParsing="false" onAction="#pressNewCat" prefHeight="29.0" prefWidth="184.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="Add New Category" textFill="WHITE" />
+        <Button id="logTime" font="$x1" layoutX="111.0" layoutY="187.0" mnemonicParsing="false" onAction="#pressNewTask" prefHeight="29.0" prefWidth="184.0" style="-fx-background-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);" text="Add New Task" textFill="WHITE" />
       </children>
     </Pane>
     <PieChart fx:id="lifePieChart" legendVisible="true" prefHeight="275.0" prefWidth="405.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);&#10;-fx-border-radius: 10&#10;" title="Pie Chart of My Life" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="72.0" />
     <BarChart fx:id="dailyBarChart" legendVisible="false" prefHeight="275.0" prefWidth="405.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);&#10;-fx-border-radius: 10" title="Daily Breakdown" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="369.0">
       <xAxis>
-        <CategoryAxis fx:id="x" label="Top 5 Activities" side="BOTTOM" />
+        <CategoryAxis label="Top 5 Activities" side="BOTTOM" fx:id="x" />
       </xAxis>
       <yAxis>
         <NumberAxis fx:id="y" label="Hours per day" side="LEFT" />
@@ -33,7 +33,7 @@
     </BarChart>
     <BarChart fx:id="weeklyBarChart" layoutX="496.0" layoutY="369.0" legendVisible="false" prefHeight="275.0" prefWidth="405.0" style="-fx-border-color: linear-gradient(to bottom, #5f8ee2, #6a5acd);&#10;-fx-border-radius: 10" title="Weekly Breakdown">
       <xAxis>
-        <CategoryAxis fx:id="xWeekly" label="Top 5 Activities" side="BOTTOM" />
+        <CategoryAxis label="Top 5 Activities" side="BOTTOM" fx:id="xWeekly" />
       </xAxis>
       <yAxis>
         <NumberAxis fx:id="yWeekly" label="Hours per day" side="LEFT" />
