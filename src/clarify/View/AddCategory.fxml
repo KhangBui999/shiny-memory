@@ -81,7 +81,7 @@
             <Font size="32.0" />
          </font>
       </Label>
-      <Label fx:id="error" layoutX="395.0" layoutY="554.0" text="Please check following errors above!" textFill="RED" visible="false" AnchorPane.bottomAnchor="172.0" AnchorPane.topAnchor="554.0">
+      <Label fx:id="error" layoutX="373.0" layoutY="400.0" text="Please check following errors above!" textFill="RED" AnchorPane.topAnchor="350.0">
          <font>
             <Font name="Avenir Roman" size="13.0" />
          </font></Label>
@@ -90,9 +90,9 @@
             <Font name="Avenir Roman" size="23.0" />
          </font>
       </Label>
-      <Label layoutX="339.0" layoutY="66.0" text="Create New Category" textFill="CORNFLOWERBLUE">
+      <Label layoutX="336.0" layoutY="61.0" text="Create New Category" textFill="CORNFLOWERBLUE">
          <font>
-            <Font name="Avenir Black" size="22.0" />
+            <Font name="Avenir Black" size="32.0" />
          </font>
       </Label>
    </children>

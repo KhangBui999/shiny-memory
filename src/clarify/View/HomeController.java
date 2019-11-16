@@ -218,7 +218,7 @@ public class HomeController implements Initializable {
 
         //AVERAGE HOURS PER DAY FOR TOP 5 ENTRIES
         ArrayList<Integer> top5perDay = new ArrayList<>();
-
+        
         for (int f = 0; f < top5hours.size(); f++) {
             top5perDay.add(top5hours.get(f) / daysElapsed.get(0));
         }
@@ -227,12 +227,14 @@ public class HomeController implements Initializable {
         //ADD TO BAR CHART
         XYChart.Series set1 = new XYChart.Series<>();
 
+      
         for (int l = 0; l < 5; l++) {
             set1.getData().add(new XYChart.Data(top5entriesList.get(l), top5perDay.get(l)));
         }
 
         dailyBarChart.getData().addAll(set1);
         dailyBarChart.setLegendVisible(false);
+        
         st.close();
         conn.close();
     }
@@ -284,7 +286,7 @@ public class HomeController implements Initializable {
 
         //ADD TO BAR CHART
         XYChart.Series set1 = new XYChart.Series<>();
-
+        
         for (int l = 0; l < 5; l++) {
             set1.getData().add(new XYChart.Data(top5entriesList.get(l), top5perDay.get(l)));
         }
