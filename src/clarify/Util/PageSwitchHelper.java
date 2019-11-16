@@ -76,7 +76,7 @@ public class PageSwitchHelper {
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
-            stage.setResizable(false);
+            stage.setResizable(true);
             stage.show();
 
             cont.loadTaskUpdate(id);
@@ -99,7 +99,7 @@ public class PageSwitchHelper {
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
-            stage.setResizable(false);
+            stage.setResizable(true);
             stage.show();
 
             cont.loadTaskDelete(id);
@@ -122,7 +122,7 @@ public class PageSwitchHelper {
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
-            stage.setResizable(false);
+            stage.setResizable(true);
             stage.show();
 
             cont.loadCategoryUpdate(id);
@@ -145,7 +145,7 @@ public class PageSwitchHelper {
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
-            stage.setResizable(false);
+            stage.setResizable(true);
             stage.show();
 
             cont.loadCategoryDelete(id);
@@ -168,7 +168,7 @@ public class PageSwitchHelper {
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
-            stage.setResizable(false);
+            stage.setResizable(true);
             stage.show();
 
             cont.loadEntryUpdate(id);
@@ -191,7 +191,7 @@ public class PageSwitchHelper {
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
-            stage.setResizable(false);
+            stage.setResizable(true);
             stage.show();
 
             cont.loadEntryDelete(id);
